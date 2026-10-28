@@ -1,0 +1,63 @@
+
+<div id="ch-conv" class="chapter conv">
+  <div class="chapter-head">
+    <div>
+      <div>
+        <h1 id="conversion-factoryagents-that-evolve-site-blocks">Conversion Factory<br><em>Agents that evolve site blocks</em></h1>
+        <p>May 31 - Jun 5, 2026 · 19 commits · phase 1 complete</p>
+        <p><strong>spec-first</strong> the PRD and the architecture diagram were committed before the agents existed.</p>
+        <p>An agent runtime for conversion-rate optimization on Edge Delivery Services. A coordinator forms a theory from analytics, four spoke agents produce a variant block on a git worktree, and the change ships as a pull request into a live A/B test. Winners get promoted into the codebase by a separate PR. A retrospective agent then edits the agents' own instructions, so the system learns across cycles.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide tall">
+    <div>
+      <div>
+        <p><em>May 31, 2026</em> · PRD + architecture diagram, drawn first</p>
+        <h3 id="four-phases-one-diagram">Four phases, one diagram</h3>
+        <p>Analyst scores the block. Architect forms the theory. Builder writes the variant. Validator runs Lighthouse, accessibility, and regression.</p>
+      </div>
+      <div>
+        <p><a href="https://www.jackzhaojin.com/portfolio/conversion-factory/media_13be9c974bcf3be1b692b20fa9a149490e18c7f43.png"><picture>
+              <source type="image/webp" srcset="./media_13be9c974bcf3be1b692b20fa9a149490e18c7f43.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_13be9c974bcf3be1b692b20fa9a149490e18c7f43.png?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/png" srcset="./media_13be9c974bcf3be1b692b20fa9a149490e18c7f43.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Conversion Factory architecture: a coordinator hub orchestrates analyst, architect, builder, and validator agents through four phases - generate a PR, human review plus live A/B experiment, promote to permanent baseline, and a retrospective loop that updates agent instructions." src="./media_13be9c974bcf3be1b692b20fa9a149490e18c7f43.png?width=750&#x26;format=png&#x26;optimize=medium" width="3722" height="7155">
+            </picture></a></p>
+        <p>From the repo's ai-docs. Phase 4 is the part I care about: the retrospective agent proposes instruction changes, and humans gate how the agents reason.</p>
+      </div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-conv</div>
+    </div>
+  </div>
+  <div class="stat-chips">
+    <div>
+      <div>
+        <ul>
+          <li><strong>4</strong> spoke agents behind one coordinator</li>
+          <li><strong>A/B</strong> baseline vs variant, per visitor</li>
+          <li><strong>1</strong> false-PASS hole closed: verify wiring, not just pixels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="https://github.com/jackzhaojin/conversion-factory-eds">conversion-factory-eds ↗</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 id="related">Related</h2>
+  <div class="row-list related dynamic">
+    <div>
+      <div>Source</div>
+      <div><a href="/writing-index.json">/writing-index.json</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p><a href="/portfolio/">All projects</a></p>
+</div>

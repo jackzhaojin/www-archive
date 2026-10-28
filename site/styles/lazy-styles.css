@@ -1,0 +1,6 @@
+/* Global styles loaded after LCP. */
+
+/* Library documents carry library-metadata for the Experience Workspace library; never shown. */
+main .library-metadata {
+  display: none;
+}

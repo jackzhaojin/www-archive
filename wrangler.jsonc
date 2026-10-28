@@ -1,0 +1,18 @@
+// archive.jackzhaojin.com: site/ served as static files by a Worker with no script of its own.
+// Deploy (Jack's call, after `npm run check` passes locally): npx wrangler deploy
+{
+  "name": "www-archive",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    // /writing/x/ serves writing/x/index.html, as on Edge Delivery
+    "html_handling": "auto-trailing-slash",
+    // a missing path gets site/404.html (the site's own 404 page) with a 404 status
+    "not_found_handling": "404-page"
+  },
+  // A Custom Domain, so the Worker is the hostname's origin: another Worker in the zone (www's,
+  // if it ever falls back to the archive) can fetch it. workers.dev is the copy outside the zone.
+  "routes": [{ "pattern": "archive.jackzhaojin.com", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false
+}

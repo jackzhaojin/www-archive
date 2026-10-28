@@ -1,0 +1,60 @@
+
+<div id="ch-ciam" class="chapter ciam">
+  <div class="chapter-head">
+    <div>
+      <div>
+        <h1 id="ciam-democustomer-identity-end-to-end">CIAM Demo<br><em>Customer identity, end to end</em></h1>
+        <p>Feb - Apr 2026 · 48 commits · live demo + published video</p>
+        <p><strong>spec-first</strong> specs and prompt logs kept in the repo's ai-docs.</p>
+        <p>No agents in this one. Customer identity and access management, built out fully: identity provider, session boundary, resource API, multi-tenant authorization.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide flip">
+    <div>
+      <div>Organization-scoped claims flow from Keycloak through a backend-for-frontend into a Spring Boot API that enforces role-based access per tenant. Deployed on an ARM64 VM, demoed on video. 48 commits, Feb to Apr 2026.</div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-ciam</div>
+    </div>
+  </div>
+  <div class="panel flow">
+    <div>
+      <div>label</div>
+      <div>CIAM architecture: Keycloak to Next.js BFF to Spring Boot API</div>
+    </div>
+    <div>
+      <div>
+        <p>Keycloak</p>
+        <p>Phase Two · OIDC identity provider</p>
+      </div>
+      <div>
+        <p>Next.js BFF</p>
+        <p>Auth.js v5 · session boundary</p>
+      </div>
+      <div>
+        <p>Spring Boot API</p>
+        <p>org-scoped claims · RBAC</p>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="http://157.151.152.16:3001/" title="Served over plain HTTP from a demo VM. Your browser will flag it as not secure; use the sample logins, not real credentials.">The deployed demo ↗</a><em>plain HTTP demo VM · sample logins only</em> <a href="https://www.youtube.com/watch?v=DIWQCDbMUM8">The walkthrough video ↗</a> <a href="https://github.com/jackzhaojin/ciam-demo">ciam-demo ↗</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 id="related">Related</h2>
+  <div class="row-list related dynamic">
+    <div>
+      <div>Source</div>
+      <div><a href="/writing-index.json">/writing-index.json</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p><a href="/portfolio/">All projects</a></p>
+</div>

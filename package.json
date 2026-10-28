@@ -1,0 +1,20 @@
+{
+  "name": "www-archive",
+  "private": true,
+  "description": "The archive of www.jackzhaojin.com as served: pages, fragments, sheets, code and media",
+  "type": "module",
+  "scripts": {
+    "snapshot": "node tools/snapshot.mjs",
+    "serve": "wrangler dev --port 8790",
+    "check": "node tools/check.mjs --base http://localhost:8790",
+    "check:live": "node tools/check.mjs --base https://archive.jackzhaojin.com",
+    "deploy": "wrangler deploy",
+    "wayback": "node tools/wayback.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.154.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,207 @@
+
+<div id="ch-factory" class="chapter factory">
+  <div class="chapter-head">
+    <div>
+      <div>
+        <h1 id="the-content-factorya-decoupled-agent-mesh">The Content Factory<br><em>A decoupled agent mesh</em></h1>
+        <p>Oct 2025 - Jun 2026 · 2 repos · 317 commits · 16 core releases</p>
+        <p><strong>incremental specs</strong> Spec Kit bundles (spec, plan, tasks) in the v1 era; a dated plan in ai-docs per release in the mesh era. Six days from PRD to deployed mesh, because the spec came first.</p>
+        <p>Talk material for adaptTo() 2026, built for real: a mesh of independently-addressable A2A agents that generate, migrate, and evaluate CMS content. Different vendors compose over an open protocol. Quality is measured, not vibed.</p>
+        <p>The arc runs in three eras. Oct 2025: an MCP server for AEM's da.live, on Azure Functions. A 94-commit December push tags v1.0 on New Year's Day: evals in a Docker container, Make.com scenarios calling the Functions to do the authoring, and by mid-January, Adobe Summit 2026 blog material coming out of the same repo. Then a quiet spring. In June, v2.0 rebuilds it as four agents: coordinator, content-gen, migration, eval. Six days from PRD to a deployed mesh on Cloudflare Workers and Containers.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
+        <p><em>Jun 11, 2026</em> · v2.0.0 · the closed loop</p>
+        <h3 id="generate--migrate--evaluate-intelligently-routed">Generate → migrate → evaluate, <em>intelligently routed</em></h3>
+        <p>One pipeline, two model vendors, zero contract changes. Kimi authors. Claude judges. Neither knows the other exists.</p>
+      </div>
+      <div>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png"><picture>
+              <source type="image/webp" srcset="./media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/png" srcset="./media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="The closed-loop pipeline: a coordinator asks content-gen to fabricate a synthetic legacy page, hands it to the migration agent to author into da.live, and hands that to the eval agent to score across four dimensions." src="./media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png?width=750&#x26;format=png&#x26;optimize=medium" width="2700" height="1460">
+            </picture></a></p>
+        <p>The closed loop, from the repo's own docs. The coordinator can enter or exit the loop anywhere.</p>
+      </div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-loop</div>
+    </div>
+  </div>
+  <div class="stat-chips">
+    <div>
+      <div>
+        <ul>
+          <li><strong>91</strong> eval score on a real Kimi-authored page</li>
+          <li><strong>~9 min</strong> for a real agentic migration</li>
+          <li><strong>~11 min</strong> full closed loop, real everything</li>
+          <li><strong>4/4</strong> cloud acceptance, e2e</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story flip">
+    <div>
+      <div>
+        <p>The through-line, v1.0 → v2.5 · the biggest single component</p>
+        <h3 id="the-eval-outlived-both-architectures">The eval outlived both architectures</h3>
+        <p>If agents author content, something has to say whether it's good. That something gets versioned, deployed, and tested like a product of its own.</p>
+        <p>Four dimensions: structure, accessibility, content fidelity, visual correctness. In v1 the eval shipped as its own Docker container. In v2 it became an agent in the mesh, so every migration lands with a score attached. The payoff came in v2.5, when the numbers said the site redesign was failing: the error turned out to be in the eval's own methodology, and scoring generated pages on their own merits moved a real article from 67 to 89. Numbers you can argue with beat vibes you can't.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-eval</div>
+    </div>
+  </div>
+  <div class="panel compare">
+    <div>
+      <div>label</div>
+      <div>The eval component across v1 and v2</div>
+    </div>
+    <div>
+      <div>One eval engine, two deployments</div>
+    </div>
+    <div>
+      <div>v1.0</div>
+      <div>A deployable container: a Next.js eval app with four agents, each pairing deterministic checks (axe-core, Cheerio, Playwright) with model judgment. Still running as the frozen backup.</div>
+    </div>
+    <div>
+      <div>the engine</div>
+      <div>The scoring engine survived the rewrite. It was copied out of the v1 app, not rebuilt.</div>
+    </div>
+    <div>
+      <div>v2.0</div>
+      <div>An addressable A2A agent in the mesh: any vendor's output gets scored the same way, on every run.</div>
+    </div>
+  </div>
+  <div class="showcase story">
+    <div>
+      <div>
+        <p><em>Jun 18, 2026</em> · v2.2 · the factory runs daily</p>
+        <h3 id="a-daily-unattended-run">A daily unattended run</h3>
+        <p>A daily cron submits a run with no topic. The coordinator ideates one, generates, migrates, evaluates, and parks it in preview. A human curates later.</p>
+        <p>Two lessons came out of production. Streams die crossing the Worker-to-container hop, so the store, not the stream, is the contract: every agent persists full task state and consumers recover by polling. And containers get no native database bindings, so the Worker proxies queries.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-story</div>
+    </div>
+  </div>
+  <div class="panel compare">
+    <div>
+      <div>label</div>
+      <div>The demo story: a 2002 travel blog migrated to a modern CMS by agents</div>
+    </div>
+    <div>
+      <div>The demo, before and after</div>
+    </div>
+    <div>
+      <div>before</div>
+      <div>"Katie's Travel Journal," a hand-coded, circa-2002 travel blog. Plain HTML, zero framework.</div>
+    </div>
+    <div>
+      <div>the mesh</div>
+      <div>An agent mesh migrates it: one vendor authors into da.live, another scores structure, accessibility, fidelity, visuals.</div>
+    </div>
+    <div>
+      <div>after</div>
+      <div>The Wilderness Journal: a modern Edge Delivery Services site, 14 blocks, every migration scored.</div>
+    </div>
+  </div>
+  <div class="stat-chips">
+    <div>
+      <div>
+        <ul>
+          <li><strong>20.6K</strong> lines of TypeScript</li>
+          <li><strong>27</strong> e2e files · no mocks, ever</li>
+          <li><strong>5</strong> JSON Schema contracts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="https://github.com/jackzhaojin/azure-da-mcp">azure-da-mcp ↗</a> <a href="https://github.com/jackzhaojin/adapt-to-2026-demo">adapt-to-2026-demo ↗</a></div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
+        <p><em>Dec 2025 - Jan 2026</em> · v1.0 as designed · recovered from git</p>
+        <h3 id="the-v1-platform-in-its-planned-final-form">The v1 platform, <em>in its planned final form</em></h3>
+        <p>Five subsystems around one EDS site. Color is the semantic axis this page's diagrams still use: deterministic in blue, agentic in red, mixed in purple.</p>
+      </div>
+      <div>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png"><picture>
+              <source type="image/webp" srcset="./media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/png" srcset="./media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="The v1 content platform plan: a UI/UX specification feeds a mock-content generator (Claude Agent SDK producing PDFs and HTML into Azure Storage), a Make.com / Workfront Fusion content builder calls MCP tools (Playwright, AEM da.live get/update/create/publish) into the da.live EDS site, an evals container on an Oracle VM pairs deterministic and agentic logic four ways each, and a site-building harness runs planning and task agents through research, build, and validate with a human-in-the-loop escape hatch." src="./media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png?width=750&#x26;format=png&#x26;optimize=medium" width="2600" height="2012">
+            </picture></a></p>
+        <p>Drawn while v1 was being built: Agent SDK content generation, a Make.com builder over MCP, the evals container, and the site-building harness. The Excalidraw was later recovered from git history.</p>
+      </div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-v1plan</div>
+    </div>
+    <div>
+      <div>label</div>
+      <div>Open the v1 platform diagram full size</div>
+    </div>
+  </div>
+  <div class="showcase story flip">
+    <div>
+      <div>
+        <p><em>Oct 2025</em> · where this repo started</p>
+        <h3 id="first-aem-content-operations-became-tool-calls">First, AEM content operations became tool calls</h3>
+        <p>The origin build: an MCP server for AEM's da.live, then the same server proven from Claude, Gemini, Azure OpenAI, and n8n. No client-specific forks.</p>
+        <p>The repo's first life was interoperability with the CMS I work on professionally: expose AEM Edge Delivery's content operations, get, update, create, publish, over MCP once, and every agent that speaks the protocol inherits them. Everything else in this chapter stands on that server. The mesh grew out of asking what happens when the agents themselves get addresses too.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-origin</div>
+    </div>
+  </div>
+  <div class="panel wire">
+    <div>
+      <div>label</div>
+      <div>Diagram: request and response flowing between an agent and a CMS</div>
+    </div>
+    <div>
+      <div>agent</div>
+      <div>AEM</div>
+    </div>
+    <div>
+      <div>create page · update content · publish, as tool calls</div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 id="related">Related</h2>
+  <div class="row-list related dynamic">
+    <div>
+      <div>Source</div>
+      <div><a href="/writing-index.json">/writing-index.json</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p><a href="/portfolio/">All projects</a></p>
+</div>

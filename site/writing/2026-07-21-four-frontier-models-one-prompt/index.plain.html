@@ -1,0 +1,449 @@
+
+<div>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/writing/">Technical Writing</a></li>
+    <li>Four Frontier Models, One Prompt</li>
+  </ol>
+  <h1 id="four-frontier-models-one-1032-line-prompt-what-each-built-and-the-merge-i-kept">Four Frontier Models, One 1,032-Line Prompt: What Each Built, and the Merge I Kept</h1>
+  <p>By <a href="/">Jack Jin</a> · July 21, 2026 · Updated October 4, 2026 · 9 min read · Includes my 14:15 video</p>
+  <p>Picking which AI model to pay for is hard, so I ran my own test. GPT 5.6, Kimi K3, Gemini 3.5 Flash and Claude Fable 5 each built my portfolio site from the same 1,032-line prompt, on top of about 5,000 lines of context about my work. I graded the four sites in a paper notebook, ranked them, then had AI merge the best of all four into one site.</p>
+</div>
+<div>
+  <div class="rail">
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_18004bca08543832917137c31da8efff67b66f38e.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_18004bca08543832917137c31da8efff67b66f38e.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_18004bca08543832917137c31da8efff67b66f38e.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_18004bca08543832917137c31da8efff67b66f38e.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 1</strong><br><a href="#part-1">One prompt, four ingredients</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_157959220eacb3fd6190001e793fd7f248f70d8a9.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_157959220eacb3fd6190001e793fd7f248f70d8a9.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_157959220eacb3fd6190001e793fd7f248f70d8a9.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_157959220eacb3fd6190001e793fd7f248f70d8a9.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 2</strong><br><a href="#part-2">GPT 5.6, best home screen</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_1177781d92783434de01f6a08b58e8f386b0a2d52.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_1177781d92783434de01f6a08b58e8f386b0a2d52.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_1177781d92783434de01f6a08b58e8f386b0a2d52.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_1177781d92783434de01f6a08b58e8f386b0a2d52.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 3</strong><br><a href="#part-3">Kimi K3, deepest on context</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_128c517ef44edae0d64674c6b4efdda5f34d19d6a.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_128c517ef44edae0d64674c6b4efdda5f34d19d6a.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_128c517ef44edae0d64674c6b4efdda5f34d19d6a.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_128c517ef44edae0d64674c6b4efdda5f34d19d6a.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 4</strong><br><a href="#part-4">Gemini 3.5 Flash, most basic</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_17832cb93b374afea791ce34fba37d948f54a64d3.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_17832cb93b374afea791ce34fba37d948f54a64d3.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_17832cb93b374afea791ce34fba37d948f54a64d3.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_17832cb93b374afea791ce34fba37d948f54a64d3.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 5</strong><br><a href="#part-5">Claude Fable 5, most premium</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_1e0cd4f72eb2fd6de83c5d4ebbda7610824f3a320.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_1e0cd4f72eb2fd6de83c5d4ebbda7610824f3a320.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_1e0cd4f72eb2fd6de83c5d4ebbda7610824f3a320.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_1e0cd4f72eb2fd6de83c5d4ebbda7610824f3a320.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Part 6</strong><br><a href="#part-6">The merge, and what it kept</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_1f7fd3395aefc8971cdfa538afdf362694e6fa545.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_1f7fd3395aefc8971cdfa538afdf362694e6fa545.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_1f7fd3395aefc8971cdfa538afdf362694e6fa545.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_1f7fd3395aefc8971cdfa538afdf362694e6fa545.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Wrap-up</strong><br><a href="#part-7">What I took away, which to pay for</a></div>
+    </div>
+    <div>
+      <div><a href="#video">Watch the video, 14:15</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p>Most of the video is me going through each model's site, one at a time, with the pros and cons from my notebook. This page follows the same order, and each part links to its moment in the video.</p>
+</div>
+<div id="video">
+  <div class="figure">
+    <div>
+      <div>
+        <p><a href="https://youtu.be/twYqEHXh91U">I Made 4 Frontier Models Build My Portfolio Site With the Same 1,032-Line Prompt</a></p>
+        <p>Recorded July 21, 2026. Each part below links to its moment in the video, or <a href="https://youtu.be/twYqEHXh91U">watch it on YouTube</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fine-print">
+    <div>
+      <div>First published on LinkedIn on July 21, 2026. Rewritten for this site in October 2026. Line counts on this page come from the five builds as they were on the night of the video.</div>
+    </div>
+  </div>
+</div>
+<div id="part-1">
+  <h2 id="one-1032-line-prompt-built-from-four-ingredients">1. One 1,032-line prompt built from four ingredients</h2>
+  <p>I made it challenging on purpose. The prompt is 1,032 lines, and it is a merge of four things.</p>
+  <ul>
+    <li>A mountain of context. A library of 48 files, 4,817 lines of markdown, mined from every project, post and talk of the last 18 months. The library has its own catalogs and indexes, and the models read what they need. So this also tests whether a model can traverse a lot of context to do a thing.</li>
+    <li>A common design from Google Stitch, about 990 lines of HTML, so all four sites start from the same visual language. In theory the result should look a lot better than my old blogs and videos page, which works but isn't what I'd call premium.</li>
+    <li>Premium storytelling. I'm exploring different ways to present the material, and I called out Adobe here: I think their SLICC site looks very cool, the way it tells you a story as you scroll. My prompt asks for four themes, every project told inside one of them, as a single-page scroll story.</li>
+    <li>Ground rules. Three files, HTML, CSS and JavaScript, and build on the prior work instead of redoing it.</li>
+  </ul>
+  <div class="figure board">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_13b748fd79c33c1b7314860f4273ad164d6ab3498.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_13b748fd79c33c1b7314860f4273ad164d6ab3498.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_13b748fd79c33c1b7314860f4273ad164d6ab3498.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Page titled The Experiment: 4 frontier models, the exact same prompt. A prompt.txt panel lists four ingredients: a mountain of context (48 files, about 5,000 lines, 18 months of projects, posts and talks), a design from Stitch (about 990 lines of HTML), premium storytelling (4 themes, single-page scroll story, carousels and video) and ground rules (3 files, HTML, CSS and JS, build on prior work). To the right, cards for GPT 5.6, Gemini 3.5 Flash, Kimi K3 and Fable 5, each labeled same prompt." src="./media_13b748fd79c33c1b7314860f4273ad164d6ab3498.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1400" height="640">
+          </picture>
+        </p>
+        <p>The page I opened the video with: four ingredients in, one 1,032-line <code>prompt.txt</code>, the same input four times.</p>
+      </div>
+    </div>
+  </div>
+  <p>I judged each one on four things: how it interpreted the situation, how it handled that much context, whether it made things up, and how well it did premium storytelling on top of the design. Because they all got the same design and the same library, the four sites came back looking like siblings. The differences are in the details: animations, interactions, and what holds up and what breaks. The tabs below are the four home screens and the merged one, at the same size. Look for how alike they are; that is the shared design and library doing its job.</p>
+  <div class="compare touch">
+    <div>
+      <div>GPT 5.6</div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1e3e7487f8dec27fb780639361c9ea6226064de17.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1e3e7487f8dec27fb780639361c9ea6226064de17.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_1e3e7487f8dec27fb780639361c9ea6226064de17.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="GPT 5.6 home screen: The patterns behind working with AI, with a list of the four patterns on the right" src="./media_1e3e7487f8dec27fb780639361c9ea6226064de17.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1280" height="800">
+          </picture>
+        </p>
+        <p>GPT 5.6: my favorite home screen</p>
+      </div>
+    </div>
+    <div>
+      <div>Kimi K3</div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_10e2658dc1ea6d24b928af945a788782673b799af.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_10e2658dc1ea6d24b928af945a788782673b799af.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_10e2658dc1ea6d24b928af945a788782673b799af.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Kimi K3 home screen: Four patterns for working with AI, centered, with four pattern chips below" src="./media_10e2658dc1ea6d24b928af945a788782673b799af.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1280" height="800">
+          </picture>
+        </p>
+        <p>Kimi K3: less in front of the material</p>
+      </div>
+    </div>
+    <div>
+      <div>Gemini 3.5 Flash</div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_161c1bbc4efcdffc5e4240b5043f304e76c757899.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_161c1bbc4efcdffc5e4240b5043f304e76c757899.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_161c1bbc4efcdffc5e4240b5043f304e76c757899.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Gemini 3.5 Flash home screen: The Patterns Behind Working With AI, with two buttons and four pattern cards" src="./media_161c1bbc4efcdffc5e4240b5043f304e76c757899.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1280" height="800">
+          </picture>
+        </p>
+        <p>Gemini 3.5 Flash: the most basic of the four</p>
+      </div>
+    </div>
+    <div>
+      <div>Claude Fable 5</div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_13bbf339bfc24a30c9d16aa744906165ded96bf62.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_13bbf339bfc24a30c9d16aa744906165ded96bf62.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_13bbf339bfc24a30c9d16aa744906165ded96bf62.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Claude Fable 5 home screen: Four patterns for working with AI, with a short paragraph about eighteen months of real builds and four pattern chips" src="./media_13bbf339bfc24a30c9d16aa744906165ded96bf62.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1280" height="800">
+          </picture>
+        </p>
+        <p>Claude Fable 5: the most complete build</p>
+      </div>
+    </div>
+    <div>
+      <div>The merge</div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_19861945b00e5ba1bf9da66348c5130d47eba68c1.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_19861945b00e5ba1bf9da66348c5130d47eba68c1.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_19861945b00e5ba1bf9da66348c5130d47eba68c1.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="The merged home screen: GPT&#x27;s layout with the pattern list on the right, and Kimi&#x27;s wording, Four patterns for working with AI" src="./media_19861945b00e5ba1bf9da66348c5130d47eba68c1.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1280" height="800">
+          </picture>
+        </p>
+        <p>The merge: GPT's layout, Kimi's words</p>
+      </div>
+    </div>
+  </div>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=12">0:12 5,000 lines of context</a> <a href="https://youtu.be/twYqEHXh91U?t=43">0:43 A design from Stitch</a> <a href="https://youtu.be/twYqEHXh91U?t=83">1:23 Premium storytelling</a></p>
+</div>
+<div id="part-2">
+  <h2 id="gpt-56-had-my-favorite-home-screen-and-a-glaring-hole">2. GPT 5.6 had my favorite home screen, and a glaring hole</h2>
+  <p>First up, GPT 5.6 Sol, which I ran in Codex. When I first land on this screen, it looks quite nice. It's one of my favorite home screens. I don't love the navigation, but I like the home screen a lot.</p>
+  <p>As I scroll, the site looks pretty and it functions, but the navigation bar doesn't light up as I scroll. There is a scroll bar at the very top, but it's hard to see. The aesthetics are clean, and it did a good job mirroring Stitch. The carousel with overlapping cards is nice, there's animation as I scroll, and the slider is accurate.</p>
+  <p>What I didn't like: clickable elements that don't do anything. And then one screen came up with content missing. For a premium model, I did not expect that screen to ever come up. Overall it's visually pleasing with visual flaws, and highly usable as a base. I would use it.</p>
+  <div class="figure page">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_126d70200512b150285d32816bc582f791b5ce720.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_126d70200512b150285d32816bc582f791b5ce720.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_126d70200512b150285d32816bc582f791b5ce720.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Handwritten notebook page titled Model Comparison. At the top, circled: content needs to be reworked, common. GPT 5.6 Sol: plus home screen look and feel and animation, plus clean blocks, plus interaction, plus scrolling animation; minus second screen content, minus interaction doesn&#x27;t work, minus unfinished work, minus not working on the 4th tile, minus menu and top bar. Kimi: plus cleaner intro content, plus scrolling animation, plus content found, plus subslides with two exclamation points, minus accessibility, dark on dark." src="./media_126d70200512b150285d32816bc582f791b5ce720.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="750" height="1000">
+          </picture>
+        </p>
+        <p>My notebook, page one. The note at the top applies to every model: the content needs to be reworked.</p>
+      </div>
+    </div>
+  </div>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=142">2:22 GPT 5.6</a> <a href="https://youtu.be/twYqEHXh91U?t=207">3:27 Clickable but does nothing</a></p>
+</div>
+<div id="part-3">
+  <h2 id="kimi-k3-dug-deepest-into-the-context-and-made-some-up">3. Kimi K3 dug deepest into the context, and made some up</h2>
+  <p>Second, Kimi K3 in thinking mode, from Moonshot. It's one of the open-weight Chinese models competing with the top models right now. I've always liked Kimi's models because they're cheaper, and because I really like the slide decks it builds: pass in a few markdown files from a codebase and you get usable, editable slides full of accurate information that I'd be happy to take to a conference.</p>
+  <p>On the site, the first screen looks a little different. I still like GPT's more, but I like that there isn't a ton of information before you get to the material, and the navigation bar lights up as I scroll, which GPT's didn't. One part is very dark and hard to see; that may have come from the Stitch design, but I don't know how accessible it is. The carousel didn't have GPT's overlapping effect, but it works.</p>
+  <p>There are two animations I really liked. Agent work is tough to demonstrate, and one of them shows two things talking to each other. The other counts numbers up as you scroll down. Kimi also got the only double exclamation points in my notebook, for its subslides and its prompt animation. And it picked out the five parts of my talk. Kimi understood the 5,000 lines of context a little better than GPT did.</p>
+  <p>The part I didn't like: one piece completely missed the mark. It made up a bunch of stuff. In my notebook that's the minus next to the harness diagram. Overall, though, the navigation works better than GPT's, there's no glaring defect like GPT's missing content, and at the bottom it plotted my projects into categories on a timeline, which I don't think I asked for. I'm happy to see AI taking the premium storytelling to another level.</p>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=248">4:08 Kimi K3</a> <a href="https://youtu.be/twYqEHXh91U?t=314">5:14 The site</a> <a href="https://youtu.be/twYqEHXh91U?t=391">6:31 Five parts of my talk</a> <a href="https://youtu.be/twYqEHXh91U?t=421">7:01 Made up</a></p>
+</div>
+<div id="part-4">
+  <h2 id="gemini-35-flash-was-the-most-disappointing-of-the-four">4. Gemini 3.5 Flash was the most disappointing of the four</h2>
+  <p>Third, Gemini 3.5 Flash, set to high. I won't spend long here. It was the most disappointing model of the four we tested. It looks basic, it isn't premium storytelling, and the scrolling animation is extremely lacking. My notebook has no notes for it at all. Sorry, Google, we're moving on.</p>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=470">7:50 Gemini 3.5 Flash</a></p>
+</div>
+<div id="part-5">
+  <h2 id="claude-fable-5-looked-the-most-premium-with-too-much-animation">5. Claude Fable 5 looked the most premium, with too much animation</h2>
+  <p>Last, Claude Fable 5. It opens with a timeline chart, similar to Kimi's, except Claude made it navigable: click a project and it takes you to that part of the page. That's storytelling over a timeline, very well executed. I don't like that the items wrap onto two lines.</p>
+  <p>Some of it is too flashy. A few elements are too bright, and when I'm trying to read, things flashing next to the text are distracting. It tried a little too hard with the animation. I want interactive, but the site should be readable. Still, overall it looks very premium, and Fable took in the design system from Stitch very well. The carousel is my favorite of the four because it saves space, where Kimi's version ran too long. It also found the outbound links, so every project points to the real post, and it had a typing animation and the best slider.</p>
+  <div class="figure page">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1b83b61f9653fe0a90cfdcee8ab19480f777677e6.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1b83b61f9653fe0a90cfdcee8ab19480f777677e6.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_1b83b61f9653fe0a90cfdcee8ab19480f777677e6.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Handwritten notebook page. Kimi continued: plus prompt animation with two exclamation points, minus harness diagram, plus visual of timeline and projects. Claude: minus intro view, plus navigable timeline, plus outbound links, plus typing animation, plus slides in a carousel on diagrams, minus animation a bit distracting, I want interactive but site should be readable, plus best slider, plus good animation, some does not distract." src="./media_1b83b61f9653fe0a90cfdcee8ab19480f777677e6.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="750" height="1000">
+          </picture>
+        </p>
+        <p>Page two: the rest of Kimi, and Claude. "I want interactive, but site should be readable" became a rule for the merge.</p>
+      </div>
+    </div>
+  </div>
+  <p>Comparing all four, I'd rank Fable number one, Kimi number two and Codex, GPT 5.6, number three, especially because GPT literally had missing content in its HTML. I know it's a one-shot, but we're comparing state-of-the-art models now.</p>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=494">8:14 Claude Fable 5</a> <a href="https://youtu.be/twYqEHXh91U?t=603">10:03 My ranking</a></p>
+</div>
+<div id="part-6">
+  <h2 id="merging-the-best-of-all-four-and-what-the-merge-really-kept">6. Merging the best of all four, and what the merge really kept</h2>
+  <p>Then I took all four and told AI to merge them. This is the important part, because there are clearly elements I like and don't like in each one. I took my paper notes, photographed them and uploaded them to Fable 5: pluses are good, minuses are bad. In case it couldn't read my scribbles, it asked me eight multiple-choice questions. Then it built a combined page from the elements I liked.</p>
+  <div class="figure board">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_17ea58045d84552b42a8209fc96cf057716e2dfd2.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_17ea58045d84552b42a8209fc96cf057716e2dfd2.png?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/png" srcset="./media_17ea58045d84552b42a8209fc96cf057716e2dfd2.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="The merge session. AI summarizes: benefit is not starting from scratch, you can react to sample work and want the best of all of it combined. Then eight questions with my answers, including: Claude base makes sense, intro screen could be a lot better like GPT&#x27;s; ratio slider; calm default for looping animations; project timeline in its own section after the hero; GPT layout plus Kimi voice for the home screen; Claude and Kimi pastels; Claude&#x27;s nav; and for Gemini, nothing." src="./media_17ea58045d84552b42a8209fc96cf057716e2dfd2.png?width=750&#x26;format=png&#x26;optimize=medium" width="1056" height="830">
+          </picture>
+        </p>
+        <p>The eight questions it asked me, with my answers. The first one set Claude's build as the base the others were grafted onto.</p>
+      </div>
+    </div>
+  </div>
+  <p>So the final has GPT's home screen, Kimi's animation and scrolling, and Claude's navigation. I felt it took more of Kimi's HTML, which was a more faithful take on the original Stitch design. I also told AI to dim the animations once they stop, so they aren't overly aggressive, and it did a really good job of that. The numbers count up like in Kimi's and Claude's, and I took the carousel view.</p>
+  <p>Afterward I wanted to see what the merge actually kept, so I traced every line of the final files back to the four builds. Pick a model below. On the left is what I said I kept from it; on the right, how many lines of the final site appear only in that model's build. For Claude the two agree. For Kimi and GPT they don't, and the gap is the point of the next paragraph.</p>
+  <div class="explainer model-merge">
+    <div>
+      <div>What I said I kept, and what the lines say</div>
+    </div>
+    <div>
+      <div>Model</div>
+      <div>What I said I kept from</div>
+      <div>The final site's 1,714 lines, by where they came from</div>
+    </div>
+    <div>
+      <div>Claude Fable 5</div>
+      <div>
+        <ul>
+          <li>The foundation the others were grafted onto</li>
+          <li>The navigation and the navigable timeline</li>
+          <li>The carousel view and the slider</li>
+          <li>The numbers that count up, shared with Kimi</li>
+        </ul>
+      </div>
+      <div>They agree. Claude was the base, and 1,121 of the 1,714 lines (65%) appear only in its build.</div>
+    </div>
+    <div>
+      <div>Kimi K3</div>
+      <div>
+        <ul>
+          <li>The scrolling and the animation</li>
+          <li>The numbers that count up as you scroll</li>
+          <li>Its HTML, which I felt followed the Stitch design more faithfully</li>
+          <li>The pastel palette, shared with Claude</li>
+        </ul>
+      </div>
+      <div>They don't agree. Only 14 lines (under 1%) appear only in Kimi's build. What I kept from Kimi was a look and a behavior, and it mostly came in as new code.</div>
+    </div>
+    <div>
+      <div>GPT 5.6</div>
+      <div>
+        <ul>
+          <li>The home screen: its layout, look and feel</li>
+          <li>Paired with Kimi's words. My answer to the merge question was "GPT layout, Kimi voice"</li>
+        </ul>
+      </div>
+      <div>They don't agree. Only 25 lines (1.5%) appear only in GPT's build. The home screen I kept mostly came in as new code on Claude's skeleton.</div>
+    </div>
+    <div>
+      <div>Gemini 3.5 Flash</div>
+      <div>
+        <ul>
+          <li>Nothing. Asked whether anything was worth saving, I said no.</li>
+        </ul>
+      </div>
+      <div>They agree. I kept nothing, and only 4 lines appear only in Gemini's build.</div>
+    </div>
+    <div>
+      <div>Distinct lines in the final</div>
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JS</div>
+    </div>
+    <div>
+      <div>Only in Claude Fable 5</div>
+      <div>459</div>
+      <div>425</div>
+      <div>237</div>
+    </div>
+    <div>
+      <div>Only in Kimi K3</div>
+      <div>1</div>
+      <div>11</div>
+      <div>2</div>
+    </div>
+    <div>
+      <div>Only in GPT 5.6</div>
+      <div>5</div>
+      <div>19</div>
+      <div>1</div>
+    </div>
+    <div>
+      <div>Only in Gemini 3.5 Flash</div>
+      <div>0</div>
+      <div>0</div>
+      <div>4</div>
+    </div>
+    <div>
+      <div>In two or more builds</div>
+      <div>31</div>
+      <div>148</div>
+      <div>19</div>
+    </div>
+    <div>
+      <div>New in the merge</div>
+      <div>67</div>
+      <div>167</div>
+      <div>118</div>
+    </div>
+    <div>
+      <div>Total</div>
+      <div>563</div>
+      <div>770</div>
+      <div>381</div>
+    </div>
+    <div>
+      <div>Each distinct non-blank line of the final HTML, CSS and JavaScript (1,714 in all), matched against the four builds. A line found in exactly one build counts for that model. A line in none of them was written during the merge. The left column comes from the video and my answers to the merge questions.</div>
+    </div>
+  </div>
+  <p>The trace says something I didn't say on camera. Line for line, the final is Claude's skeleton: more than half of every file appears only in Claude's build. What I picked from GPT and Kimi, the home screen layout and the scrolling, mostly came in as new code written to match them, which is why the merge added hundreds of lines no model wrote. A line count can't see a design choice, so both views are true. The skeleton is Claude's, and the feel is a mix of all three.</p>
+  <p>The one benefit I wrote down for myself: I'm not starting from scratch. I'm not a UX designer or a content designer, but seeing four versions of the same thing, I do have some taste. I can take what I like from all four and combine it into one, and for my taste the combined result is by far the best of the five.</p>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=629">10:29 Merging all four</a> <a href="https://youtu.be/twYqEHXh91U?t=660">11:00 Eight questions</a> <a href="https://youtu.be/twYqEHXh91U?t=696">11:36 The combined site</a></p>
+</div>
+<div id="part-7">
+  <h2 id="what-i-took-away-and-which-model-to-pay-for">7. What I took away, and which model to pay for</h2>
+  <p>Being able to run this test with all four frontier models, take what I liked from each and put it together into one final output is something you could do for many different tasks, not just storytelling in HTML. You don't have to pick one model up front. Make them compete, keep the best of each, and merge.</p>
+  <div class="figure page">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_16b82fd88b3ccbef20f8259f2928611409292414d.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_16b82fd88b3ccbef20f8259f2928611409292414d.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_16b82fd88b3ccbef20f8259f2928611409292414d.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Handwritten notebook page: 1, Benefit. Not starting from scratch, I&#x27;m not UX and content designer but I see sample work and have thoughts. Best of all the work." src="./media_16b82fd88b3ccbef20f8259f2928611409292414d.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="750" height="1000">
+          </picture>
+        </p>
+        <p>Page three, the takeaway, written before I recorded.</p>
+      </div>
+    </div>
+  </div>
+  <p>On the subscription question I opened with: I'm fortunate to have a paid subscription to each of these, at enough capacity to run tests like this without draining any one of them. All of them are good. ChatGPT's plans get you further for the money than Fable's. Fable is clearly the state-of-the-art model that everyone is competing against. And Kimi K3 is good, especially if you like its slide and deck building; I pay for Kimi so I can build decks and run some of my work in its cloud.</p>
+  <p>If you've run your own bake-off on a real project, I'd like to know whether you crowned a winner or merged like I did.</p>
+  <p>Watch this part <a href="https://youtu.be/twYqEHXh91U?t=785">13:05 What I took away</a> <a href="https://youtu.be/twYqEHXh91U?t=798">13:18 Choosing a model</a></p>
+</div>
+<div class="related">
+  <h2 id="related">Related</h2>
+  <div class="row-list">
+    <div>
+      <div>Portfolio</div>
+      <div><a href="/portfolio/">Portfolio</a></div>
+      <div>The project portfolio this experiment was building toward.</div>
+    </div>
+    <div>
+      <div>Article</div>
+      <div><a href="/writing/2026-02-05-reusable-ai-development-modules/">Making AI-Driven Development Modules Reusable</a></div>
+      <div>Where I first described running one ramble through several models and merging the best.</div>
+    </div>
+    <div>
+      <div>Article</div>
+      <div><a href="/writing/2026-05-24-theming-eds-with-google-stitch/">Theming a Brand-New EDS Site with Google Stitch and MCP</a></div>
+      <div>Two months earlier, a Stitch design wired into an Edge Delivery site.</div>
+    </div>
+  </div>
+  <div class="author-box">
+    <div>
+      <div>JJ</div>
+      <div>
+        <p>Jack Jin</p>
+        <p>Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then write up what I learn.</p>
+        <p><a href="/portfolio/">Portfolio</a> <a href="/talks/">Talks</a> <a href="https://github.com/jackzhaojin">GitHub</a></p>
+      </div>
+    </div>
+  </div>
+</div>

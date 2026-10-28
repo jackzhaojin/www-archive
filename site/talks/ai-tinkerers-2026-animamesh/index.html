@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AnimaMesh: An Engine for Running a Company with Agents | Jack Jin</title>
+    <link rel="canonical" href="https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/">
+    <meta name="description" content="The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day&#x27;s work. It took second place in AI Tinkerers&#x27; global Top AI Demos that week.">
+    <meta property="og:title" content="AnimaMesh: An Engine for Running a Company with Agents | Jack Jin">
+    <meta property="og:description" content="The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day&#x27;s work. It took second place in AI Tinkerers&#x27; global Top AI Demos that week.">
+    <meta property="og:url" content="https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/">
+    <meta property="og:image" content="https://www.jackzhaojin.com/writing/2026-08-15-anima-mesh-company-of-zero/media_1365070f3bfc3eceef1a6d8c2ad6d7488bbbcecb3.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.jackzhaojin.com/writing/2026-08-15-anima-mesh-company-of-zero/media_1365070f3bfc3eceef1a6d8c2ad6d7488bbbcecb3.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:alt" content="Diagram from the AnimaMesh repo: the mesh runs on its own clock and sends the daily brief, failure DMs, nags and prep packs to the human, who spends minutes a day deciding">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AnimaMesh: An Engine for Running a Company with Agents | Jack Jin">
+    <meta name="twitter:description" content="The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day&#x27;s work. It took second place in AI Tinkerers&#x27; global Top AI Demos that week.">
+    <meta name="twitter:image" content="https://www.jackzhaojin.com/writing/2026-08-15-anima-mesh-company-of-zero/media_1365070f3bfc3eceef1a6d8c2ad6d7488bbbcecb3.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jack Jin">
+    <meta property="og:locale" content="en_US">
+    <meta name="template" content="talk">
+    <meta property="image:alt" content="Diagram from the AnimaMesh repo: the mesh runs on its own clock and sends the daily brief, failure DMs, nags and prep packs to the human, who spends minutes a day deciding">
+    <meta name="talk-id" content="ai-tinkerers-2026-animamesh">
+    <meta name="talk-order" content="5">
+    <meta name="talk-date" content="August 3, 2026">
+    <meta name="talk-kind" content="Community talk">
+    <meta name="talk-event" content="AI Tinkerers Columbus · Columbus, Ohio">
+    <meta name="video-uploaded" content="2026-08-15T21:32:38Z">
+    <meta name="video-duration" content="PT11M9S">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <script nonce="vcxEI6WWo8S65Jqq6vXao+Sy" src="/scripts/aem.js" type="module"></script>
+    <script nonce="vcxEI6WWo8S65Jqq6vXao+Sy" src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.jackzhaojin.com/#person","name":"Jack Jin","url":"https://www.jackzhaojin.com/","jobTitle":"Associate Director","worksFor":{"@type":"Organization","name":"Accenture","department":{"@type":"Organization","name":"Adobe Business Group"}},"homeLocation":{"@type":"Place","name":"Columbus, Ohio"},"sameAs":["https://www.linkedin.com/in/jackjin","https://github.com/jackzhaojin","https://www.youtube.com/@jackjin8467","https://www.credly.com/users/jack-jin"],"knowsAbout":["Adobe Experience Manager","Edge Delivery Services","DA.live","AI agents","Model Context Protocol","Cloud architecture"],"award":["Adobe Experience Manager Champion, class of 2026-2027","AEM Rockstar winner, Adobe Summit 2024"]},{"@type":"WebSite","@id":"https://www.jackzhaojin.com/#website","url":"https://www.jackzhaojin.com/","name":"Jack Jin","publisher":{"@id":"https://www.jackzhaojin.com/#person"}},{"@type":"WebPage","@id":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/#webpage","url":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/","name":"AnimaMesh: An Engine for Running a Company with Agents | Jack Jin","description":"The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day's work. It took second place in AI Tinkerers' global Top AI Demos that week.","isPartOf":{"@id":"https://www.jackzhaojin.com/#website"},"breadcrumb":{"@id":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/#breadcrumb"},"mainEntity":{"@id":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/#talk"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.jackzhaojin.com/"},{"@type":"ListItem","position":2,"name":"Talks & Presentations","item":"https://www.jackzhaojin.com/talks/"},{"@type":"ListItem","position":3,"name":"AnimaMesh: An Engine for Running a Company with Agents","item":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/"}]},{"@type":"Event","@id":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/#talk","name":"AnimaMesh: An Engine for Running a Company with Agents","description":"The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day's work. It took second place in AI Tinkerers' global Top AI Demos that week.","url":"https://www.jackzhaojin.com/talks/ai-tinkerers-2026-animamesh/","startDate":"2026-08-03","image":"https://www.jackzhaojin.com/writing/2026-08-15-anima-mesh-company-of-zero/media_1365070f3bfc3eceef1a6d8c2ad6d7488bbbcecb3.jpg?width=1200&format=pjpg&optimize=medium","additionalType":"Community talk","performer":{"@id":"https://www.jackzhaojin.com/#person"},"superEvent":{"@type":"Event","name":"AI Tinkerers Columbus"},"location":{"@type":"Place","name":"Columbus, Ohio"},"recordedIn":{"@type":"VideoObject","name":"AnimaMesh: An Engine for Running a Company with Agents","description":"The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day's work. It took second place in AI Tinkerers' global Top AI Demos that week.","thumbnailUrl":"https://i.ytimg.com/vi/zYytfy1PAkc/maxresdefault.jpg","uploadDate":"2026-08-15T21:32:38Z","duration":"PT11M9S","embedUrl":"https://www.youtube.com/embed/zYytfy1PAkc","url":"https://www.youtube.com/watch?v=zYytfy1PAkc"},"subjectOf":{"@type":"BlogPosting","url":"https://www.jackzhaojin.com/writing/2026-08-15-anima-mesh-company-of-zero/"},"about":{"@id":"https://www.jackzhaojin.com/portfolio/anima-mesh/#project"}}]}</script>
+</head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero page">
+          <div>
+            <div>
+              <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/talks/">Talks &#x26; presentations</a></li>
+                <li>AnimaMesh: An Engine for Running a Company with Agents</li>
+              </ol>
+              <h1 id="animamesh-an-engine-for-running-a-company-with-agents">AnimaMesh: An Engine for Running a Company with Agents</h1>
+              <p>AI Tinkerers Columbus · Columbus, Ohio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>August 3, 2026 · Community talk</p>
+        <p>The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day's work. It took second place in AI Tinkerers' global Top AI Demos that week.</p>
+        <p><a href="https://youtu.be/zYytfy1PAkc">Watch the recorded talk</a></p>
+        <div class="proof-links">
+          <div>
+            <div><a href="/writing/2026-08-15-anima-mesh-company-of-zero/">Read the write-up</a> <a href="https://youtu.be/zYytfy1PAkc">Watch the recorded talk</a> <a href="https://post-training.aitinkerers.org/p/top-ai-demos-40-zero-cost-companies-declarative-agents-and-llm-world-sims">Top AI Demos #40</a> <a href="/portfolio/anima-mesh/">Explore the project</a></div>
+          </div>
+        </div>
+        <p><a href="/talks/">All talks and presentations</a></p>
+      </div>
+      <div>
+        <h2 id="related">Related</h2>
+        <div class="row-list related dynamic">
+          <div>
+            <div>Source</div>
+            <div><a href="/writing-index.json">/writing-index.json</a></div>
+          </div>
+        <div><div><p>2026-08-15</p></div><div><p><a href="/writing/2026-08-15-anima-mesh-company-of-zero/">Company of Zero: How AnimaMesh Runs a Company's Back Office on Cloudflare Workers</a></p></div><div><p>AnimaMesh, an open source engine on Cloudflare Workers: one public engine, a private markdown brain per company, agents that take sick days, a brain that files its own GitHub issues past a leak guard, and AI that reaches out to the owner instead of waiting for a prompt.</p></div></div></div>
+      </div>
+      <div></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

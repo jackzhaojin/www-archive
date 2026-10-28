@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Edge CMS Shift: How Adobe EDS Stacks Up | Jack Jin</title>
+    <link rel="canonical" href="https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/">
+    <meta name="description" content="Adobe Edge Delivery Services next to Cloudflare Pages, Netlify, Next.js, Hugo and Jekyll on five enterprise needs, and Adobe&#x27;s CMS path from CQ5 to EDS.">
+    <meta property="og:title" content="The Edge CMS Shift: How Adobe EDS Stacks Up | Jack Jin">
+    <meta property="og:description" content="Adobe Edge Delivery Services next to Cloudflare Pages, Netlify, Next.js, Hugo and Jekyll on five enterprise needs, and Adobe&#x27;s CMS path from CQ5 to EDS.">
+    <meta property="og:url" content="https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/">
+    <meta property="og:image" content="https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/media_166877728c4ebdca76b36bc487c059375b5030f28.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/media_166877728c4ebdca76b36bc487c059375b5030f28.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:alt" content="Header art: How Adobe EDS Stacks Up Against the Modern Web, server racks on the left and a network of edge nodes with document icons on the right">
+    <meta property="article:published_time" content="2025-06-08">
+    <meta property="article:modified_time" content="2026-10-04">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Edge CMS Shift: How Adobe EDS Stacks Up | Jack Jin">
+    <meta name="twitter:description" content="Adobe Edge Delivery Services next to Cloudflare Pages, Netlify, Next.js, Hugo and Jekyll on five enterprise needs, and Adobe&#x27;s CMS path from CQ5 to EDS.">
+    <meta name="twitter:image" content="https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/media_166877728c4ebdca76b36bc487c059375b5030f28.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Jack Jin">
+    <meta property="og:locale" content="en_US">
+    <meta name="template" content="article">
+    <meta property="image:alt" content="Header art: How Adobe EDS Stacks Up Against the Modern Web, server racks on the left and a network of edge nodes with document icons on the right">
+    <meta name="published-time" content="2025-06-08">
+    <meta name="modified-time" content="2026-10-04">
+    <meta property="article:author" content="https://www.jackzhaojin.com/">
+    <meta name="listing-summary" content="Edge Delivery Services next to Cloudflare Pages, Netlify, Next.js, Hugo and Jekyll on five things enterprises need, plus how Adobe&#x27;s CMS thinking got from CQ5 to EDS and the gaps EDS still had in June 2025.">
+    <meta name="listing-image" content="https://www.jackzhaojin.com/writing/media_166877728c4ebdca76b36bc487c059375b5030f28.jpg?width=750&#x26;format=jpg&#x26;optimize=medium">
+    <meta name="listing-topics" content="Adobe AEM &#x26; EDS">
+    <meta name="listing-reading-time" content="6 min read">
+    <meta name="listing-keywords" content="edge delivery services aem cq5 day software aem as a cloud service static site generation cloudflare pages netlify sanity next.js hugo jekyll google docs word universal editor azure edge functions da.live experience workspace">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.jackzhaojin.com/#person",
+      "name": "Jack Jin",
+      "url": "https://www.jackzhaojin.com/",
+      "jobTitle": "Associate Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Accenture",
+        "department": {
+          "@type": "Organization",
+          "name": "Adobe Business Group"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jackjin",
+        "https://github.com/jackzhaojin",
+        "https://www.youtube.com/@jackjin8467",
+        "https://www.credly.com/users/jack-jin"
+      ],
+      "award": [
+        "Adobe Experience Manager Champion, class of 2026-2027",
+        "AEM Rockstar winner, Adobe Summit 2024"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.jackzhaojin.com/#website",
+      "url": "https://www.jackzhaojin.com/",
+      "name": "Jack Jin",
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/#article",
+      "headline": "The Edge CMS Shift: How Adobe EDS Stacks Up Against the Modern Web",
+      "description": "Adobe Edge Delivery Services next to Cloudflare Pages, Netlify, Next.js, Hugo and Jekyll on five enterprise needs, and Adobe's CMS path from CQ5 to EDS.",
+      "author": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "image": "https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/media_166877728c4ebdca76b36bc487c059375b5030f28.jpg",
+      "mainEntityOfPage": "https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/",
+      "isPartOf": {
+        "@id": "https://www.jackzhaojin.com/#website"
+      },
+      "about": [
+        "Edge Delivery Services",
+        "Adobe Experience Manager",
+        "Static site generation",
+        "Cloudflare Pages",
+        "Netlify",
+        "Next.js",
+        "Hugo",
+        "Jekyll"
+      ],
+      "datePublished": "2025-06-08",
+      "dateModified": "2026-10-04",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.jackzhaojin.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Writing",
+          "item": "https://www.jackzhaojin.com/writing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Edge CMS Shift",
+          "item": "https://www.jackzhaojin.com/writing/2025-06-08-edge-cms-shift-adobe-eds/"
+        }
+      ]
+    }
+  ]
+}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <script nonce="xyCQm7E71/reOnlKQ3k5aee5" src="/scripts/aem.js" type="module"></script>
+    <script nonce="xyCQm7E71/reOnlKQ3k5aee5" src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/writing/">Technical Writing</a></li>
+          <li>The Edge CMS Shift</li>
+        </ol>
+        <h1 id="the-edge-cms-shift-how-adobe-eds-stacks-up-against-the-modern-web">The Edge CMS Shift: How Adobe EDS Stacks Up Against the Modern Web</h1>
+        <p>By <a href="/">Jack Jin</a> · June 8, 2025 · Updated October 4, 2026 · 6 min read</p>
+        <p>Adobe's Edge Delivery Services (EDS) keeps content in Word or Google Docs, code in GitHub, and renders pages at the edge. Here is how it compares with Cloudflare Pages, Netlify with a composable CMS, Next.js static generation, Hugo and Jekyll on five things enterprises need: the authoring surface, preview, personalization, enterprise workflows and edge support. Along the way, how Adobe's CMS thinking got from CQ5 to EDS, and the gaps EDS still had in June 2025.</p>
+      </div>
+      <div>
+        <div class="rail">
+          <div>
+            <div></div>
+            <div><strong>Since 2025</strong><br><a href="#what-changed">What changed since I wrote this</a></div>
+          </div>
+          <div>
+            <div></div>
+            <div><strong>Situation</strong><br><a href="#ready-for-edge">Why the enterprise is ready for the edge</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1d7f165fd5fd1a6ab95c167e697639dd95a4186ac.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1d7f165fd5fd1a6ab95c167e697639dd95a4186ac.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1d7f165fd5fd1a6ab95c167e697639dd95a4186ac.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1d7f165fd5fd1a6ab95c167e697639dd95a4186ac.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+              </picture>
+            </div>
+            <div><strong>History</strong><br><a href="#cq5-to-eds">From CQ5 to EDS</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1597aa743ad1e69c61203815440e4918918171059.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1597aa743ad1e69c61203815440e4918918171059.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1597aa743ad1e69c61203815440e4918918171059.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1597aa743ad1e69c61203815440e4918918171059.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+              </picture>
+            </div>
+            <div><strong>Comparison</strong><br><a href="#compared">EDS and five other platforms</a></div>
+          </div>
+          <div>
+            <div></div>
+            <div><strong>Result</strong><br><a href="#where-next">Where EDS could go</a></div>
+          </div>
+          <div>
+            <div><a href="#compared">Compare by capability</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="fine-print">
+          <div>
+            <div>First published as a LinkedIn article on June 8, 2025. Rewritten for this site in October 2026. Client scenarios are illustrative: "it's possible to do this", not "we did this x times".</div>
+          </div>
+        </div>
+      </div>
+      <div id="what-changed">
+        <h2 id="what-changed-since-i-wrote-this">What changed since I wrote this</h2>
+        <p>Two things moved. The first is authoring. In July 2025 Adobe added da.live, then in early access, as a third supported way to author Edge Delivery sites, which I covered in <a href="/writing/2025-07-13-three-eds-offerings/">Making sense of the three EDS offerings</a>. Document Authoring has since been <a href="https://www.aem.live/docs/ew/da-is-ew">renamed Experience Workspace</a>, and Adobe's guide <a href="https://www.aem.live/docs/authoring-guide">Where to author your site</a> lists four options: Experience Workspace, Microsoft SharePoint, Google Drive, and Universal Editor in AEM Sites.</p>
+        <p>The second is code at the edge. Below I say EDS has no backend code. In 2026 Adobe made Edge Functions generally available: your own code running on Adobe's CDN in front of an Edge Delivery site, and I used them to add Google sign-in and members-only pages in <a href="/writing/2026-09-20-aem-edge-functions-google-sign-in/">AEM Edge Functions on a laptop</a>. The pages are still static and cached. What's new is that you can choose to run code in front of them.</p>
+        <p>The rest is my June 2025 view, including the platform comparison, which I haven't re-checked against those products since.</p>
+      </div>
+      <div id="ready-for-edge">
+        <h2 id="why-the-enterprise-is-ready-for-the-edge">Why the enterprise is ready for the edge</h2>
+        <p>There's a clear shift in how enterprise content is delivered. Traditional CMS platforms, once deeply embedded in monolithic infrastructure, are being split apart. Systems are going modular. Authoring is becoming more distributed. The frontend is decoupled, the backend is lean, and publishing needs to be instant.</p>
+        <p>Many organizations feel this tension. Marketing teams need to move faster. Developers want to simplify their stacks. Authors want fewer tools to learn. Docs are intuitive; Google Docs or Word already feel like home. The idea that those surfaces can power live websites is no longer science fiction. It's architecture.</p>
+        <p>Adobe isn't entering an overcrowded space this time. It's bringing something new at the enterprise level. Edge Delivery Services brings static generation, content workflows and edge rendering together in one system, ready for enterprise scale.</p>
+      </div>
+      <div id="cq5-to-eds">
+        <h2 id="how-adobes-cms-went-from-cq5-to-edge-delivery">How Adobe's CMS went from CQ5 to Edge Delivery</h2>
+        <p>When Day entered the CMS space with CQ5, it wasn't first. But it was better. Authoring stood out, Dispatcher came bundled, and TarMK made deployment easier. Compared to Documentum and others, CQ offered a unified way to manage content that was both powerful and intuitive.</p>
+        <p>Then came AEM as a Cloud Service, a big step forward. Infrastructure became Adobe's responsibility, and clients stopped worrying about replication queues and JVM tuning. It moved AEM into the containerized world. Even so, many of the legacy assumptions stayed. Authoring was still tied to Sites. Deployment pipelines still needed DevOps overhead. Monoliths got smaller, but they didn't disappear.</p>
+      </div>
+      <div id="eras-figure">
+        <div class="explainer era-steps">
+          <div>
+            <div>
+              <p>CQ5 and on-premise AEM</p>
+              <p>Better, not first</p>
+              <ul>
+                <li>Authoring that stood out</li>
+                <li>Dispatcher bundled</li>
+                <li>TarMK made deployment easier</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>AEM as a Cloud Service</p>
+              <p>Infrastructure becomes Adobe's job</p>
+              <ul>
+                <li>Containers, no JVM tuning</li>
+                <li>Authoring still tied to Sites</li>
+                <li>Pipelines still need DevOps</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Edge Delivery Services</p>
+              <p>A reimagining</p>
+              <ul>
+                <li>No backend code, no Dispatcher</li>
+                <li>GitHub for templates and blocks</li>
+                <li>Word or Google Docs for content</li>
+                <li>Rendered at the edge</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>The three steps as I described them in June 2025, from the platform that won on authoring to the one that moved rendering to the edge.</div>
+          </div>
+        </div>
+        <p>Edge Delivery Services is the next big leap. It's not an upgrade of AEM; it's a reimagining. Fully cloud native. No backend code, no runtime errors, no Dispatcher. Templates live in GitHub, content lives in Word or Google Docs, and the path to edge rendering is fast. AEM came later as a content repository, with the same concept.</p>
+        <p>In my view the model is foolproof by design. There's nothing to compile, and nothing to break and give you a 500. Business teams use Docs. Developers define templates and blocks. Pages get rendered at the edge, which means fast performance, easy collaboration and no cold starts.</p>
+        <p>Cloud platforms like Azure are more and more the invisible backbone of modern websites, and next to an edge-native delivery system like EDS they shine. They're more than hosting environments: they offer API orchestration, durable functions and serverless compute. These are the tools of a modern cloud engineer, and they complement Edge Delivery well.</p>
+        <p>And Adobe is betting early. I didn't see this as a trend-following move. I saw it as a market-breaking one.</p>
+      </div>
+      <div id="compared">
+        <h2 id="how-eds-compares-with-five-other-platforms">How EDS compares with five other platforms</h2>
+        <p>It's tempting to put EDS in the same category as static site generators or edge-hosted frameworks. On the surface the architecture looks familiar: static HTML, Git-based deployments, fast global delivery. That's where the similarities end.</p>
+        <p>Most developer-first platforms focus on building fast websites, and they assume developers do the authoring. Markdown, YAML and command line tools are fine for personal blogs or startups. Enterprise organizations need more: legal reviews, structured approvals, personalized content delivery, and preview links that don't require standing up a preview server.</p>
+        <p>That's where I think EDS shines. It isn't cobbled together from third-party services or custom glue code. Authoring, previewing, publishing and personalization come as one, with edge performance, and it meets legal and compliance needs without giving up speed. Here's how I compared it with five popular options in June 2025, on the same five capabilities.</p>
+        <p>Pick a capability below to line up all six platforms on that one row. Authoring and enterprise workflows are where they split most: the other five assume a developer does the authoring, or leave approvals to custom work.</p>
+        <div class="explainer capability-pivot">
+          <div>
+            <div>Pick a capability</div>
+          </div>
+          <div>
+            <div>Six platforms, five enterprise capabilities, as I saw them in June 2025</div>
+          </div>
+          <div>
+            <div>Platform</div>
+            <div>Authoring surface</div>
+            <div>Preview support</div>
+            <div>Personalization</div>
+            <div>Enterprise workflows</div>
+            <div>Edge support</div>
+          </div>
+          <div>
+            <div>Full table</div>
+            <div>Authoring</div>
+            <div>Preview</div>
+            <div>Personalization</div>
+            <div>Workflows</div>
+            <div>Edge</div>
+          </div>
+          <div>
+            <div><strong>Adobe EDS</strong></div>
+            <div>Google Docs or Word</div>
+            <div>Live with Universal Editor, or preview on aem.live</div>
+            <div>Can be integrated manually with AEP and Adobe Target</div>
+            <div>Native review, approval and legal compatibility with Universal Editor and Sites</div>
+            <div>First-class, deeply integrated</div>
+          </div>
+          <div>
+            <div>Cloudflare Pages</div>
+            <div>Markdown</div>
+            <div>Manual or CLI-based</div>
+            <div>Not natively supported</div>
+            <div>Requires custom implementation</div>
+            <div>Excellent, but developer-driven</div>
+          </div>
+          <div>
+            <div>Netlify + composable CMS (for example Sanity)</div>
+            <div>CMS UI + Markdown</div>
+            <div>Possible with configuration</div>
+            <div>Varies with the CMS integration</div>
+            <div>Partial, often pieced together</div>
+            <div>Strong, but fragmented</div>
+          </div>
+          <div>
+            <div>Next.js static generation</div>
+            <div>Developer-built, or a headless CMS</div>
+            <div>Available, but takes effort</div>
+            <div>Possible with middleware or APIs</div>
+            <div>Not native, needs architecture</div>
+            <div>Optimized with the Next.js Edge Runtime</div>
+          </div>
+          <div>
+            <div>Hugo</div>
+            <div>Markdown, Word with extensions</div>
+            <div>Local preview with the CLI</div>
+            <div>Not built in</div>
+            <div>Manual. The Word-to-Hugo workflow exists, but it's fragile</div>
+            <div>Requires configuration, not native</div>
+          </div>
+          <div>
+            <div>Jekyll</div>
+            <div>Markdown</div>
+            <div>Local only</div>
+            <div>Not supported</div>
+            <div>Minimal</div>
+            <div>Limited without a custom CDN setup</div>
+          </div>
+          <div>
+            <div>Each view reads from the same table. "Full table" shows all five capabilities at once. My June 2025 view, not re-checked against these products since.</div>
+          </div>
+        </div>
+        <p>The Hugo row is from experience. I built jackconsults.com with Hugo and explored pipelines that turn Word documents into Hugo pages. The workflow exists, but it's fragile.</p>
+        <p>The bigger difference is in what these platforms prioritize. Most developer-first tools treat authoring as an afterthought. They optimize for builds, not for business enablement. EDS flips that. It starts with authors, not code. It supports the preview cycle, not just the publish. And it supports teams beyond marketing: legal, governance, campaign managers. Everyone gets a seat at the table.</p>
+        <p>My conclusion in June 2025: EDS is complete, from authoring to publishing and from compliance to performance. To me it was the first enterprise-ready edge CMS.</p>
+      </div>
+      <div id="where-next">
+        <h2 id="where-eds-could-go-and-what-it-still-lacked-in-june-2025">Where EDS could go, and what it still lacked in June 2025</h2>
+        <p>Adobe's move with EDS is bold. Unlike the early days of CQ, there's no crowd to stand out from. This is new territory, and Adobe is leading it.</p>
+        <p>EDS is more than a shift in technology. It reshapes how teams think and operate. Business users keep working in tools they already know and trust, like Word or Google Docs. Developers define templates and step aside, so authors can publish confidently and independently.</p>
+        <p>The backend doesn't slow things down. There's no complex infrastructure to debug or deploy, and pages render fast and reliably from the edge. Frontend teams are still critical: they build the templates and the scaffolding. Once that's done, business teams can preview and publish on their own, without waiting.</p>
+        <p>My notes from that week also had a wishlist. For business teams to run campaigns without developers, Edge Delivery needed more parity with Sites: content fragments, variations, and easy authoring for personalization. And since marketing briefs already live in documents, maybe EDS just needs a better default template to deliver them.</p>
+        <p>This is the kind of architecture shift that changes more than platforms. It changes how teams work. In June 2025 I was doubling down on Adobe's bet on EDS, and I liked my odds.</p>
+      </div>
+      <div class="related">
+        <h2 id="related">Related</h2>
+        <div class="row-list">
+          <div>
+            <div>Article</div>
+            <div><a href="/writing/2025-06-04-seven-aem-capabilities-tradeoffs/">Making sense of 7 AEM capabilities</a></div>
+            <div>The week before: EDS next to the other six ways to build on AEM.</div>
+          </div>
+          <div>
+            <div>Article</div>
+            <div><a href="/writing/2025-07-13-three-eds-offerings/">Making sense of the three EDS offerings</a></div>
+            <div>Docs, Universal Editor and da.live, a month later.</div>
+          </div>
+          <div>
+            <div>Article</div>
+            <div><a href="/writing/2026-09-20-aem-edge-functions-google-sign-in/">AEM Edge Functions on a laptop</a></div>
+            <div>Code back at the edge: Google sign-in on an Edge Delivery site.</div>
+          </div>
+        </div>
+        <div class="author-box">
+          <div>
+            <div>JJ</div>
+            <div>
+              <p>Jack Jin</p>
+              <p>Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then write up what I learn.</p>
+              <p><a href="/portfolio/">Portfolio</a> <a href="/talks/">Talks</a> <a href="https://github.com/jackzhaojin">GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

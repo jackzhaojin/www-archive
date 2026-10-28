@@ -1,0 +1,272 @@
+
+<div>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/writing/">Technical Writing</a></li>
+    <li>AEM Headless When Frontend Teams Lead</li>
+  </ol>
+  <h1 id="why-aem-headless-makes-sense-when-frontend-teams-lead">Why AEM Headless Makes Sense When Frontend Teams Lead</h1>
+  <p>By <a href="/">Jack Jin</a> · May 28, 2025 · Updated October 4, 2026 · 5 min read</p>
+  <p>Some clients have already put years into their frontend: a Next.js or Vue application, or a UI tightly coupled to an ERP or commerce system. When AEM comes into that picture, I think AEM headless, with Universal Editor added on top, can be a better call than forcing classic Sites authoring. Here is how I'd start that kind of project, the parts that need care, and when I would not recommend it.</p>
+</div>
+<div>
+  <div class="rail">
+    <div>
+      <div></div>
+      <div><strong>Since 2025</strong><br><a href="#what-changed">What changed since I wrote this</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_1e6a907df624bdaa2765c77d3c53727b40d0557df.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_1e6a907df624bdaa2765c77d3c53727b40d0557df.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/jpeg" srcset="./media_1e6a907df624bdaa2765c77d3c53727b40d0557df.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_1e6a907df624bdaa2765c77d3c53727b40d0557df.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Situation</strong><br><a href="#situation">When the frontend came first</a></div>
+    </div>
+    <div>
+      <div></div>
+      <div><strong>Approach</strong><br><a href="#start-small">One page, three components</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_1e40d465053e36b4626b9ba2e2edfe0d7f63d5f54.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_1e40d465053e36b4626b9ba2e2edfe0d7f63d5f54.png?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/png" srcset="./media_1e40d465053e36b4626b9ba2e2edfe0d7f63d5f54.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_1e40d465053e36b4626b9ba2e2edfe0d7f63d5f54.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Caching</strong><br><a href="#persisted-queries">Persisted queries for caching</a></div>
+    </div>
+    <div>
+      <div></div>
+      <div><strong>Authoring</strong><br><a href="#global-and-preview">Translation, personalization, preview</a></div>
+    </div>
+    <div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="./media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+          <source type="image/webp" srcset="./media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+          <source type="image/jpeg" srcset="./media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+          <img loading="lazy" alt="" src="./media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="144" height="92">
+        </picture>
+      </div>
+      <div><strong>Result</strong><br><a href="#outcome">Where it works, where it doesn't</a></div>
+    </div>
+    <div>
+      <div><a href="#persisted-queries">Try the cache lab</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="fine-print">
+    <div>
+      <div>First published as a LinkedIn article on May 28, 2025. Rewritten for this site in October 2026. The scenarios are illustrative: I write "it's possible to do this" rather than "we did this x times" to protect current and past clients.</div>
+    </div>
+  </div>
+</div>
+<div id="what-changed">
+  <h2 id="what-changed-since-i-wrote-this">What changed since I wrote this</h2>
+  <p>I kept the original article light on omnichannel strategy and AEM's full headless capabilities on purpose, and said I'd come back to them. I did in July 2025: <a href="/writing/2025-07-12-aem-headless-omnichannel-architecture/">AEM headless and omnichannel architecture</a> walks through three diagrams for getting content out of AEM to websites, apps and email. A week after this article, I also put headless next to the other ways to build on AEM in <a href="/writing/2025-06-04-seven-aem-capabilities-tradeoffs/">Making sense of 7 AEM capabilities</a>.</p>
+  <p>The advice below is what I wrote in May 2025. The two Adobe mechanics I show, persisted queries and Universal Editor instrumentation, are checked against Adobe's current documentation and linked.</p>
+</div>
+<div id="situation">
+  <h2 id="when-the-frontend-came-before-the-cms">When the frontend came before the CMS</h2>
+  <p>Picture a client that has invested heavily in its frontend stack. Maybe it's a sleek Next.js application, or maybe the team has fallen in love with Vue. Maybe the UI is tightly coupled to an ERP or an ecommerce system. Switching all of that out to fit a CMS feels like a non-starter. In many modern organizations the frontend is no longer just a layer. It's the foundation.</p>
+  <p>Sometimes content comes second, if at all. The UI must go live, and content follows.</p>
+  <div class="figure board">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1e127c90d96939b00bbf50f0e6e48756bdc7dc8c1.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1e127c90d96939b00bbf50f0e6e48756bdc7dc8c1.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_1e127c90d96939b00bbf50f0e6e48756bdc7dc8c1.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Illustration: a frontend platform connected to an ERP system, an e-commerce system, a database and a customer, with a cloud service above them." src="./media_1e127c90d96939b00bbf50f0e6e48756bdc7dc8c1.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1200" height="800">
+          </picture>
+        </p>
+        <p>The starting point in this kind of project: the frontend is already wired to the systems the business runs on, and the CMS arrives last. Header art from the original post.</p>
+      </div>
+    </div>
+  </div>
+  <p>When AEM comes in as a headless CMS, some clients worry they're stepping back in time. They expect to lose WYSIWYG, in-context editing and the power their authors once had. I've seen this cycle repeat across 18 years in content management. This time, it can be different.</p>
+  <p>Frontend teams often want full ownership, too. HTL components were a step up from JSPs, sure. A fully decoupled frontend lets the team own the entire experience, from layout to routing, animation to rendering.</p>
+</div>
+<div id="start-small">
+  <h2 id="start-with-one-page-and-three-components">Start with one page and three components</h2>
+  <p>A smart starting point is to start together and start small. One approach: spin up a single page with just three components. Don't boil the ocean. Build trust and a shared vocabulary first. Get one working pattern, and learn together.</p>
+  <p>In the explorations that go well, you'll often find working sessions every day, sometimes twice a day, during the proof of concept. They're more than a sync. The teams solve problems together and walk through the code and the content structures side by side.</p>
+</div>
+<div id="persisted-queries" class="code-wrap-wide">
+  <h2 id="use-persisted-queries-so-responses-can-be-cached">Use persisted queries so responses can be cached</h2>
+  <p>GraphQL persisted queries have emerged as a clear win for security and caching. Adobe's <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries">persisted queries documentation</a> explains the mechanism. A standard GraphQL query is sent as a POST, and the response to a POST can't easily be cached. A persisted query is saved in AEM ahead of time and run with a GET, and a GET response can be cached at the Dispatcher and the CDN. The two URL formats, as Adobe documents them:</p>
+  <pre><code>GET &#x3C;AEM_HOST>/graphql/execute.json/&#x3C;PERSISTENT_PATH>
+GET &#x3C;AEM_HOST>/graphql/execute.json/&#x3C;PERSISTENT_QUERY_PATH>;variable1=value1;variable2=value2
+</code></pre>
+  <p>Variables go on the end of the URL, each after a semicolon. That detail matters for caching. Every combination of values is its own URL, so it's its own cache entry.</p>
+  <p>The model below shows what that means for traffic. Each press of "Send request" is one request from the frontend, and it starts with five already sent. Pick the regular query or the persisted one, pick a locale, and send: a POST goes to AEM every time, while a repeat GET for the same URL is answered by the cache and never reaches AEM.</p>
+  <div class="explainer persisted-query">
+    <div>
+      <div>cache lab · regular query vs persisted query</div>
+      <div>illustrative names</div>
+    </div>
+    <div>
+      <div>Query</div>
+      <div>Regular, POST</div>
+      <div>Persisted, GET</div>
+    </div>
+    <div>
+      <div>Variable <code>locale</code></div>
+      <div>en</div>
+      <div>de</div>
+      <div>fr</div>
+    </div>
+    <div>
+      <div>Send request</div>
+      <div>Start over</div>
+    </div>
+    <div>
+      <div><code>/graphql/execute.json/my-site/articles-by-locale;locale={locale}</code></div>
+      <div><code>&#x3C;GraphQL endpoint>, with the query and locale "{locale}" in the request body</code></div>
+    </div>
+    <div>
+      <div>Browser</div>
+      <div>CDN and Dispatcher cache</div>
+      <div>AEM publish</div>
+    </div>
+    <div>
+      <div>#</div>
+      <div>Request</div>
+      <div>Cache</div>
+      <div>Reached AEM</div>
+    </div>
+    <div>
+      <div>1</div>
+      <div><code>POST</code> locale=en</div>
+      <div>not cacheable</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div>2</div>
+      <div><code>POST</code> locale=en</div>
+      <div>not cacheable</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div>3</div>
+      <div><code>GET</code> ;locale=en</div>
+      <div>miss, stored</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div>4</div>
+      <div><code>GET</code> ;locale=en</div>
+      <div>hit</div>
+      <div>no</div>
+    </div>
+    <div>
+      <div>5</div>
+      <div><code>GET</code> ;locale=de</div>
+      <div>miss, stored</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div><strong>Not cacheable.</strong> A POST goes past the cache to AEM every time, even when it asks for exactly the same thing.</div>
+      <div>not cacheable</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div><strong>Cache hit.</strong> This exact URL was stored by an earlier request, so AEM never sees this one.</div>
+      <div>hit</div>
+      <div>no</div>
+    </div>
+    <div>
+      <div><strong>Cache miss.</strong> First time this URL is asked for, so AEM answers and the response is stored under <code>;locale={locale}</code>. Send it again.</div>
+      <div>miss, stored</div>
+      <div>yes</div>
+    </div>
+    <div>
+      <div>Five requests, in order. Two POSTs and the first GET for each locale reach AEM. The repeated GET is served from the cache.</div>
+    </div>
+    <div>
+      <div><strong>Five requests so far:</strong> both POSTs reached AEM, the first GET for each locale reached AEM once, and the repeat GET came from the cache. Send <code>;locale=en</code> again and AEM never sees it.</div>
+    </div>
+    <div>
+      <div>Started over with an empty cache. Pick a query and a locale, then send a request, and send the same persisted query twice.</div>
+    </div>
+    <div>
+      <div>{sent} sent · {reached} reached AEM · {cached} served from cache</div>
+    </div>
+    <div>
+      <div>A simplified model of the rule in Adobe's documentation: a POST is not served from the cache, and a GET is cached under its full URL, variables included. The project and query names are made up, the CDN and Dispatcher are drawn as one cache, and real caches also expire entries, which this leaves out.</div>
+    </div>
+  </div>
+  <p>There's nuance, though. With 12 page templates and a library of 30 or more components, you'll want to avoid writing the same query definitions over and over.</p>
+</div>
+<div id="global-and-preview" class="code-wrap-wide">
+  <h2 id="plan-for-translation-personalization-and-preview">Plan for translation, personalization and preview</h2>
+  <p>Internationalization is front and center too. In AEM as a Cloud Service, structured content, language roots and translation workflows help manage global scale. Going headless doesn't mean ignoring localization. Translation workflows and translation projects apply here just as much.</p>
+  <p>Personalization is another layer that fits well. It's possible to publish content fragments into Adobe Target or other personalization platforms. In some cases those fragments are personalized for persona segments mapped from Adobe Experience Platform or other data sources. I'd prefer the targeting tool to choose which content to show, and avoid persona tagging in AEM. Sometimes that isn't practical, and that's OK. All of this allows scalable, dynamic experiences without coupling the logic into the frontend.</p>
+  <p>Finally, preview matters. In-context preview in AEM as a Cloud Service reconnects authors to what they're publishing, even in a decoupled setup. With Universal Editor instrumentation, editors see their edits reflected live in the experience. Instrumentation is work the frontend team does in its own markup. These lines are from Adobe's <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started">Universal Editor getting started guide</a>:</p>
+  <pre><code>&#x3C;meta name="urn:adobe:aue:system:aemconnection" content="aem:https://localhost:4502">
+&#x3C;script src="https://universal-editor-service.adobe.io/cors.js" async>&#x3C;/script>
+
+&#x3C;ul data-aue-resource="urn:aemconnection:/content/example/list" data-aue-type="container">
+  &#x3C;p data-aue-prop="name" data-aue-type="text">Jane Doe&#x3C;/p>
+</code></pre>
+  <p>The meta tag points the editor at the AEM instance, the script lets the editor talk to the page, and the <code>data-aue-*</code> attributes tie each element to the content and property behind it. The frontend still renders the page its own way. The attributes are what let an author click an element and edit the content behind it.</p>
+</div>
+<div id="outcome">
+  <h2 id="where-it-works-and-when-i-wouldnt-recommend-it">Where it works, and when I wouldn't recommend it</h2>
+  <p>In successful models, the frontend is already up and running. Universal Editor becomes an additive layer rather than a blocker. Strong frontend teams thrive here. They move fast, deliver rich experiences, and AEM becomes the source of structured truth.</p>
+  <p>If the frontend leans into server-side rendering, for example Next.js in production mode with React Server Components, the performance story is strong: fast loads, prefetching, and SEO-friendly markup with minimal compromise.</p>
+  <div class="figure board">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1e3c64c108a2a6c8454b8fd3281018ee1284f624c.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1e3c64c108a2a6c8454b8fd3281018ee1284f624c.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_1e3c64c108a2a6c8454b8fd3281018ee1284f624c.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Illustration titled Robust UI + AEM UE: a monitor showing a rich web page with charts inside a Universal Editor window." src="./media_1e3c64c108a2a6c8454b8fd3281018ee1284f624c.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1200" height="800">
+          </picture>
+        </p>
+        <p>The end state I was arguing for: the frontend team's UI stays, and Universal Editor is added on top for authors. Header art from the original post.</p>
+      </div>
+    </div>
+  </div>
+  <p>Would I recommend AEM headless to everyone? Not quite. It depends on your team setup. If you have a passionate frontend team deeply committed to its stack, or a UI tightly coupled with another system, then forcing classic AEM Sites authoring might be the real architectural mistake. Maybe even an architectural sin.</p>
+</div>
+<div class="related">
+  <h2 id="related">Related</h2>
+  <div class="row-list">
+    <div>
+      <div>Article</div>
+      <div><a href="/writing/2025-07-12-aem-headless-omnichannel-architecture/">AEM headless and omnichannel architecture</a></div>
+      <div>The omnichannel follow-up this article promised, with three diagrams.</div>
+    </div>
+    <div>
+      <div>Article</div>
+      <div><a href="/writing/2025-06-04-seven-aem-capabilities-tradeoffs/">Making sense of 7 AEM capabilities</a></div>
+      <div>Headless next to six other ways to build on AEM, side by side.</div>
+    </div>
+    <div>
+      <div>Article</div>
+      <div><a href="/writing/2025-09-01-aem-caching-production-architectures/">AEM caching in production architectures</a></div>
+      <div>More on the caching layers a persisted query lands in.</div>
+    </div>
+  </div>
+  <div class="author-box">
+    <div>
+      <div>JJ</div>
+      <div>
+        <p>Jack Jin</p>
+        <p>Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then write up what I learn.</p>
+        <p><a href="/portfolio/">Portfolio</a> <a href="/talks/">Talks</a> <a href="https://github.com/jackzhaojin">GitHub</a></p>
+      </div>
+    </div>
+  </div>
+</div>

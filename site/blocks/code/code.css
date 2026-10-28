@@ -1,0 +1,136 @@
+/* Code: css/explainers.css .code, .code--static, .bar, .ln and the token colors. */
+.code {
+  margin-block: var(--space-6);
+}
+
+.code .code-frame {
+  margin: 0;
+  background: var(--color-code-ground, var(--palette-night-850));
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .code .code-frame {
+  --color-code-ground: var(--palette-night-950);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"], [data-theme="dark"]) .code .code-frame {
+    --color-code-ground: var(--palette-night-950);
+  }
+}
+
+.code .code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--palette-line-night);
+  font: 500 12px/1 var(--font-mono);
+  color: var(--palette-bone-400);
+  letter-spacing: 0.02em;
+}
+
+.code .code-bar p {
+  margin: 0;
+}
+
+/* In the source the link is a flex item of the bar, so its rule adds to the bar's height. */
+.code .code-bar p:has(a) {
+  display: flex;
+}
+
+.code.wrap .code-bar p:not(:has(a)) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+.code.wrap .code-bar p:has(a) {
+  flex: none;
+  white-space: nowrap;
+}
+
+.code .code-bar a:any-link {
+  color: var(--palette-lavender-300);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  border-bottom: 1px solid var(--palette-line-night);
+}
+
+.code .code-bar a:hover {
+  color: var(--palette-bone-100);
+}
+
+.code pre {
+  position: relative;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: auto;
+  padding: 12px 0;
+  font: 400 13px/1.7 var(--font-mono);
+  color: var(--palette-bone-100);
+  font-variant-ligatures: none;
+  white-space: pre;
+}
+
+.code pre code {
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* Lines stay inline: their own newline breaks them, so the code reads the same while it is
+   edited (the editor shows the plain text with the same newlines). */
+.code .ln {
+  padding: 0 20px 0 0;
+  border-left: 2px solid transparent;
+}
+
+.code.prose .ln {
+  display: block;
+  white-space: pre-wrap;
+  padding-left: 3.2em;
+  text-indent: -3.2em;
+}
+
+.code .ln::before {
+  content: attr(data-n);
+  display: inline-block;
+  width: 3.2em;
+  padding-right: 1.2em;
+  text-align: right;
+  color: #5c5955;
+  user-select: none;
+}
+
+.code .tk-c {
+  color: #9a958f;
+  font-style: italic;
+}
+
+.code .tk-s {
+  color: var(--palette-mint-300);
+}
+
+.code .tk-k {
+  color: var(--palette-lavender-300);
+}
+
+.code .tk-n {
+  color: var(--palette-gold-300);
+}
+
+@media (width <= 640px) {
+  .code.stack .code-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

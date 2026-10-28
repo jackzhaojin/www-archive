@@ -1,0 +1,63 @@
+
+<div id="ch-rockstar" class="chapter lofi">
+  <div class="chapter-head">
+    <div>
+      <div>
+        <h1 id="aem-rockstar-2024the-prologue">AEM Rockstar 2024<br><em>The prologue</em></h1>
+        <p>Aug 2023 - Mar 2024 · won at Adobe Summit · repo public Nov 2024</p>
+        <p><strong>ad hoc</strong> hand-written Java and jQuery, versioned 1.0 → 1.2 through fall 2023. The AI was the feature, not the author.</p>
+        <p>The pitch that won AEM Rockstar at Adobe Summit 2024: personalization at scale, inside AEM's own authoring UI. An author opens an experience fragment, types "rewrite this for ages 13 to 17," reviews a side-by-side table of every proposed change, and one click later has a new fragment variation open in the editor.</p>
+        <p>The design constraint that shaped it: add capability without adding surface. Generation is a Sling selector on the stock experience-fragment page type, the UI is one clientlib injected into the stock properties editor, and writes go through AEM's own copy and POST machinery. No new endpoints, no new editor, no writes without review.</p>
+      </div>
+    </div>
+  </div>
+  <div class="frame diagram">
+    <div>
+      <div>label</div>
+      <div>Open the Rockstar 2024 flow diagram full size</div>
+    </div>
+    <div>
+      <div>
+        <p><a href="https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/media_1daebae29162cf75b2538c707f9e832d905ed389a.svg"><picture>
+              <source type="image/webp" srcset="./media_1daebae29162cf75b2538c707f9e832d905ed389a.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_1daebae29162cf75b2538c707f9e832d905ed389a.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_1daebae29162cf75b2538c707f9e832d905ed389a.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Flow of the Rockstar 2024 build: an injected jQuery clientlib in AEM&#x27;s properties editor sends the author&#x27;s prompt to ExfragGptServlet, a Sling selector on the stock experience-fragment page type; QueryBuilder collects the fragment&#x27;s text properties; ChatGptService runs each through Chat Completions with a per-fragment chat log; results return to a review table of path, original, and generated values; on approval, AEM&#x27;s own wcmcommand copyPage plus a Sling POST write the accepted values into a new fragment variation." src="./media_1daebae29162cf75b2538c707f9e832d905ed389a.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="660">
+            </picture></a></p>
+        <p>The whole flow. Drawn for this page from the repo's code.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
+        <p>The frontend is where most of the craft went. A ~270-line Granite/jQuery clientlib hooks <code>foundation-contentloaded</code>, derives the fragment path from the properties-editor URL, and builds the review table in the DOM: path, original value, generated value, one row per property the QueryBuilder walk found. A continue-chat toggle threads the chat id back, so the model refines its last answer instead of starting over. Approval clones the variation through <code>/bin/wcmcommand</code>, writes the accepted values with a Sling POST, and links straight into the new fragment's editor. A second clientlib does the same for whole pages.</p>
+        <p>None of this code was AI-written; in August 2023 the AI was the product, GPT-3.5 by default with GPT-4 behind a config. The shape it demoed is the one everything above formalizes later as propose and dispose: the model proposes values, a human reviews every row, and deterministic machinery does the writing. In 2023 that pattern was a jQuery table.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-rockstar</div>
+    </div>
+  </div>
+  <div class="stat-chips">
+    <div>
+      <div>
+        <ul>
+          <li><strong>0</strong> new endpoints · Sling selectors on stock types</li>
+          <li><strong>2</strong> clientlibs: fragments + pages</li>
+          <li><strong>1.0 → 1.2</strong> releases, Aug - Nov 2023</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="https://github.com/jackzhaojin/acn-aem-genai-rockstar-2024">acn-aem-genai-rockstar-2024 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p><a href="/portfolio/">All projects</a></p>
+</div>

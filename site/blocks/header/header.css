@@ -1,0 +1,307 @@
+
+/* v3 site header (design-system/v3/components.css "site header", "theme control"; css/site.css).
+   One row at every width: wordmark, links, then the theme control at the right end of the nav.
+   Below 1024px the whole nav folds behind the Menu toggle. */
+.header .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  row-gap: 0;
+  min-height: var(--header-height);
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  width: 100%;
+}
+
+.header .site-header-brand p {
+  margin: 0;
+}
+
+.header .site-header-brand a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: 19px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.header .site-header-brand a:hover {
+  color: var(--color-accent);
+}
+
+.header .nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--target-min);
+  padding: 0 14px;
+  border: var(--border-width) solid var(--color-line-strong);
+  border-radius: var(--button-radius);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  margin-left: auto;
+}
+
+.header .nav-toggle .icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.header .nav-toggle-close,
+.header .nav-toggle[aria-expanded="true"] .nav-toggle-open {
+  display: none;
+}
+
+.header .nav-toggle[aria-expanded="true"] .nav-toggle-close {
+  display: inline;
+}
+
+.header .site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-5);
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: auto;
+}
+
+.header .site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .site-nav ul a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.header .site-nav ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: 10px;
+  height: var(--border-width);
+  background: transparent;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.header .site-nav ul a:hover {
+  color: var(--color-text);
+}
+
+.header .site-nav ul a:hover::after {
+  background: var(--color-line-strong);
+}
+
+.header .site-nav ul a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+.header .site-nav ul a[aria-current="page"]::after {
+  background: var(--color-accent);
+}
+
+.header .site-nav-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header .site-nav-tools::before {
+  content: "";
+  flex: none;
+  width: var(--border-width);
+  height: 24px;
+  margin-right: var(--space-5);
+  background: var(--color-line-strong);
+  opacity: 0.35;
+}
+
+.header .theme-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--button-radius);
+  background: transparent;
+}
+
+.header .theme-control-button {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  min-height: 44px;
+  padding: 0 11px;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.header .theme-control-button:hover {
+  color: var(--color-text);
+}
+
+.header .theme-control-button[aria-pressed="true"] {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 var(--border-width) color-mix(in srgb, var(--color-accent) 38%, transparent);
+}
+
+.header .theme-control-button:focus-visible {
+  outline-offset: 0;
+}
+
+@media (width <= 1023px) {
+  .header .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .header .site-nav {
+    display: none;
+    flex-basis: 100%;
+    order: 10;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    margin-left: 0;
+    border-top: var(--border-width) solid var(--color-line);
+    padding: var(--space-2) 0 var(--space-4);
+  }
+
+  .header .site-nav.is-open {
+    display: flex;
+  }
+
+  .header .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .header .site-nav ul a {
+    display: flex;
+    align-items: center;
+    min-height: var(--target-min);
+    padding: 10px 0;
+    font-size: 15px;
+    border-bottom: var(--border-width) solid var(--color-line);
+  }
+
+  .header .site-nav ul a[aria-current="page"] {
+    color: var(--color-accent);
+  }
+
+  .header .site-nav ul a::after {
+    content: none;
+  }
+
+  .header .site-nav-tools {
+    margin-left: 0;
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+  }
+
+  .header .site-nav-tools::before {
+    content: none;
+  }
+}
+
+/* The design system v3 page (template design-docs) shows v3's own nav: its last item, Book a
+   talk, is the small primary button (components.css .btn--primary.btn--sm), in the tools row at
+   desktop and beside the toggle below 1024px; the toggle swaps v3's menu and close glyphs and
+   the theme buttons are 34px at desktop. Scoped to that page; the default header is unchanged. */
+body.design-docs .header .site-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  padding: var(--button-pad-sm);
+  border-radius: var(--button-radius);
+  border: var(--border-width) solid var(--color-inverse-bg);
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  text-decoration: none;
+}
+
+body.design-docs .header .nav-toggle .icon {
+  stroke-width: 1.6;
+}
+
+body.design-docs .header .nav-toggle .icon-close,
+body.design-docs .header .nav-toggle[aria-expanded="true"] .icon-menu {
+  display: none;
+}
+
+body.design-docs .header .nav-toggle[aria-expanded="true"] .icon-close {
+  display: inline-block;
+}
+
+body.design-docs .header .site-header-cta-bar {
+  display: none;
+}
+
+@media (width >= 1024px) {
+  body.design-docs .header .theme-control-button {
+    min-height: 34px;
+  }
+}
+
+@media (width <= 1023px) {
+  body.design-docs .header .site-header-cta-bar {
+    display: inline-flex;
+    min-height: var(--target-min);
+    margin-left: auto;
+  }
+
+  body.design-docs .header .site-nav-tools .site-header-cta {
+    display: none;
+  }
+
+  body.design-docs .header .site-header-cta + .nav-toggle {
+    margin-left: 0;
+  }
+}

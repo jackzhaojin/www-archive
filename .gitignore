@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.snapshot-next/
+.DS_Store
+.env
+.env.*
+*.log
+.dev.vars

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STAR Story Generator on Azure: Prompt and JSON Parser | Jack Jin</title>
+    <link rel="canonical" href="https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/">
+    <meta name="description" content="How my STAR story generator on Azure Functions prompts GPT-4o-mini for JSON, parses the reply with a fallback, and the one reply that slips past validation.">
+    <meta property="og:title" content="STAR Story Generator on Azure: Prompt and JSON Parser | Jack Jin">
+    <meta property="og:description" content="How my STAR story generator on Azure Functions prompts GPT-4o-mini for JSON, parses the reply with a fallback, and the one reply that slips past validation.">
+    <meta property="og:url" content="https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/">
+    <meta property="og:image" content="https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:alt" content="The STAR Story Generator page: upload a feedback CSV, pick an audience, and read the generated Situation, Task, Action and Result">
+    <meta property="article:published_time" content="2025-04-13">
+    <meta property="article:modified_time" content="2026-10-04">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STAR Story Generator on Azure: Prompt and JSON Parser | Jack Jin">
+    <meta name="twitter:description" content="How my STAR story generator on Azure Functions prompts GPT-4o-mini for JSON, parses the reply with a fallback, and the one reply that slips past validation.">
+    <meta name="twitter:image" content="https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Jack Jin">
+    <meta property="og:locale" content="en_US">
+    <meta name="template" content="article">
+    <meta property="image:alt" content="The STAR Story Generator page: upload a feedback CSV, pick an audience, and read the generated Situation, Task, Action and Result">
+    <meta name="published-time" content="2025-04-13">
+    <meta name="modified-time" content="2026-10-04">
+    <meta property="article:author" content="https://www.jackzhaojin.com/">
+    <meta name="listing-summary" content="How a STAR story generator on Azure Functions prompts GPT-4o-mini for JSON, the parser that copes when the reply isn&#x27;t clean JSON (with a lab you can break), the one reply that slips past validation, and how the five AI tools I vibe coded it with ranked in April 2025.">
+    <meta name="listing-image" content="https://www.jackzhaojin.com/writing/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg?width=750&#x26;format=jpg&#x26;optimize=medium">
+    <meta name="listing-topics" content="AI Engineering">
+    <meta name="listing-reading-time" content="7 min read">
+    <meta name="listing-keywords" content="vibe coding star method azure functions azure openai azure ai foundry gpt-4o-mini claude code claude 3.7 github copilot chatgpt-4o perplexity defaultazurecredential json parsing">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.jackzhaojin.com/#person",
+      "name": "Jack Jin",
+      "url": "https://www.jackzhaojin.com/",
+      "jobTitle": "Associate Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Accenture",
+        "department": {
+          "@type": "Organization",
+          "name": "Adobe Business Group"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jackjin",
+        "https://github.com/jackzhaojin",
+        "https://www.youtube.com/@jackjin8467",
+        "https://www.credly.com/users/jack-jin"
+      ],
+      "award": [
+        "Adobe Experience Manager Champion, class of 2026-2027",
+        "AEM Rockstar winner, Adobe Summit 2024"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.jackzhaojin.com/#website",
+      "url": "https://www.jackzhaojin.com/",
+      "name": "Jack Jin",
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/#article",
+      "headline": "A STAR Story Generator on Azure: Prompting GPT-4o-mini for JSON and Parsing What Comes Back",
+      "description": "How my STAR story generator on Azure Functions prompts GPT-4o-mini for JSON, parses the reply with a fallback, and the one reply that slips past validation.",
+      "author": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "image": "https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg",
+      "mainEntityOfPage": "https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/",
+      "isPartOf": {
+        "@id": "https://www.jackzhaojin.com/#website"
+      },
+      "about": [
+        "Vibe coding",
+        "AI coding tools",
+        "Azure Functions",
+        "Azure OpenAI",
+        "GPT-4o-mini",
+        "STAR method"
+      ],
+      "datePublished": "2025-04-13",
+      "dateModified": "2026-10-04",
+      "inLanguage": "en",
+      "wordCount": 1618
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.jackzhaojin.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Writing",
+          "item": "https://www.jackzhaojin.com/writing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "STAR story generator on Azure",
+          "item": "https://www.jackzhaojin.com/writing/2025-04-13-vibe-coding-star-story-generator/"
+        }
+      ]
+    }
+  ]
+}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <script nonce="ojmxzW4PolP/jbyhECGNgQ6l" src="/scripts/aem.js" type="module"></script>
+    <script nonce="ojmxzW4PolP/jbyhECGNgQ6l" src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/writing/">Technical Writing</a></li>
+          <li>STAR story generator on Azure</li>
+        </ol>
+        <h1 id="a-star-story-generator-on-azure-prompting-gpt-4o-mini-for-json-and-parsing-what-comes-back">A STAR Story Generator on Azure: Prompting GPT-4o-mini for JSON and Parsing What Comes Back</h1>
+        <p>By <a href="/">Jack Jin</a> · April 13, 2025 · Updated October 4, 2026 · 7 min read</p>
+        <p>The STAR Story Generator turns feedback into STAR stories (Situation, Task, Action, Result) with GPT-4o-mini on Azure AI Foundry, served from one Azure Functions app. This walks through the prompt that pins down each part of a story, the parser that copes when the model doesn't send clean JSON, and one reply that gets past its validation. I vibe coded it in a day in April 2025 with five AI tools, and how they ranked is at the end.</p>
+      </div>
+      <div>
+        <div class="rail">
+          <div>
+            <div></div>
+            <div><strong>Since 2025</strong><br><a href="#what-changed">What changed</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+              </picture>
+            </div>
+            <div><strong>Part 1</strong><br><a href="#built">What it does, how it's wired</a></div>
+          </div>
+          <div>
+            <div></div>
+            <div><strong>Part 2</strong><br><a href="#prompt">How the prompt asks for STAR</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png?width=750&#x26;format=png&#x26;optimize=medium" width="144" height="92">
+              </picture>
+            </div>
+            <div><strong>Part 3</strong><br><a href="#parser">The parser fallback, and its gap</a></div>
+          </div>
+          <div>
+            <div></div>
+            <div><strong>Part 4</strong><br><a href="#tools">Five AI tools, ranked April 2025</a></div>
+          </div>
+          <div>
+            <div><a href="https://github.com/jackzhaojin/azure-star-generator/tree/da712d5">Code on GitHub</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="fine-print">
+          <div>
+            <div>First published as a LinkedIn article on April 13, 2025. Rewritten for this site in October 2026. Code: <a href="https://github.com/jackzhaojin/azure-star-generator/tree/da712d5">azure-star-generator</a> at <code>da712d5</code>, the last commit of that Sunday.</div>
+          </div>
+        </div>
+      </div>
+      <div id="what-changed">
+        <h2 id="what-changed-since-i-wrote-this">What changed since I wrote this</h2>
+        <p>I came back to the repo twice in 2026. In April I gave the page a loading state, an error banner instead of a browser alert, and a better copy button (<a href="https://github.com/jackzhaojin/azure-star-generator/commit/98bf9ea">98bf9ea</a>). In May I added GitHub Actions: a build and test run on every push, and a deploy to the Function App that signs in to Azure with OIDC instead of a stored password (<a href="https://github.com/jackzhaojin/azure-star-generator/commit/c1cf6b4">c1cf6b4</a>). Both workflows passed on May 9, 2026. That passwordless pattern is the subject of <a href="/writing/2025-06-12-azure-rbac-cicd-for-ai-agents/">my June 2025 article on Azure RBAC for AI agents</a>.</p>
+        <p>The tool ranking below is a snapshot of April 2025, and I've left it as I wrote it. The tools have moved a lot since. For a newer comparison, see <a href="/writing/2026-07-21-four-frontier-models-one-prompt/">four frontier models given one prompt</a>, from July 2026.</p>
+      </div>
+      <div id="built">
+        <h2 id="what-the-app-does-and-how-its-wired">1. What the app does and how it's wired</h2>
+        <p>The app takes feedback you've received and writes STAR stories from it, the kind you'd prepare for an interview or a self-review. You upload a CSV of feedback, or flip a toggle to use the sample file, which is fictional feedback for a UX designer. Then you pick who the story is for: your top five to prepare, leadership, technical, sales, a colleague, a client, an employer, or a custom prompt. GPT-4o-mini writes the stories and the page lets you step through them.</p>
+        <div class="figure board open">
+          <div>
+            <div>
+              <p><a href="https://content.da.live/jackzhaojin/www-eds/media/writing/2025-04-13-vibe-coding-star-story-generator/star-ui.jpg"><picture>
+                    <source type="image/webp" srcset="./media_103ea48e0e2acf4593296fd2a72673e3b2fa949d5.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                    <source type="image/webp" srcset="./media_103ea48e0e2acf4593296fd2a72673e3b2fa949d5.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                    <source type="image/jpeg" srcset="./media_103ea48e0e2acf4593296fd2a72673e3b2fa949d5.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                    <img loading="lazy" alt="The STAR Story Generator page. Left: Upload Your Feedback, with a CSV drop zone, a toggle to use the fictional UX designer sample, and a dropdown set to Generate top 5 STAR stories to prepare. Right: a short explainer of the STAR method. Below: Your Professional Stories, story 1 of 5, with Situation, Task and a bulleted Action list." src="./media_103ea48e0e2acf4593296fd2a72673e3b2fa949d5.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1200" height="1023">
+                  </picture></a></p>
+              <p>The deployed app, from the screenshot in my April 2025 post, running the fictional sample data. The story on screen is generated, not real.</p>
+            </div>
+          </div>
+        </div>
+        <p>All of it runs on one Azure Functions app with three HTTP functions. One serves the page, its CSS and its scripts. One parses the CSV. One generates the stories, and that one is split into a controller, a service, a prompt builder, an Azure OpenAI client and a response processor. That split came partway through the build, in a commit called "Refactoring the open ai integration into an MVC pattern".</p>
+        <div class="explainer request-pipe">
+          <div>
+            <div><strong>Load the page</strong></div>
+            <div>A GET returns the HTML; the same function serves the CSS and each script by query string.</div>
+            <div>DisplayStoryUIHtml</div>
+          </div>
+          <div>
+            <div><strong>Get the feedback</strong></div>
+            <div>Your upload, or the sample CSV from a public Blob Storage container.</div>
+            <div>browser</div>
+          </div>
+          <div>
+            <div><strong>Parse the CSV</strong></div>
+            <div>A POST turns CSV text into rows with Date, Source, Feedback Type, Tags and the feedback itself.</div>
+            <div>ProcessCsvData</div>
+          </div>
+          <div>
+            <div><strong>Build the prompt</strong></div>
+            <div>Up to 50 rows, the STAR rules, the audience guideline, a JSON example.</div>
+            <div>GenerateStarStories</div>
+          </div>
+          <div>
+            <div><strong>Call GPT-4o-mini</strong></div>
+            <div>A bearer token from <code>DefaultAzureCredential</code>, no API key in the request.</div>
+            <div>openAIDao.js</div>
+          </div>
+          <div>
+            <div><strong>Parse and validate</strong></div>
+            <div>JSON first, a text fallback second, then every story checked for all four parts.</div>
+            <div>responseProcessor.js</div>
+          </div>
+          <div>
+            <div>One request, top to bottom, at <code>da712d5</code>. Steps 4 to 6 happen inside a single function call.</div>
+          </div>
+        </div>
+        <p>One detail from the code: the Azure OpenAI client authenticates with <code>DefaultAzureCredential</code> and a bearer token. The README still lists an <code>AZURE_OPENAI_KEY</code> setting, and the code reads it, but nothing uses it. I picked GPT-4o-mini for cost. In April 2025 I noted it at $0.15 per million input tokens; check Azure's pricing page for today's number. My Azure takeaway at the time: Azure AI Foundry's integration with base and fine-tuned models made deploying this surprisingly straightforward.</p>
+      </div>
+      <div id="prompt">
+        <h2 id="how-the-prompt-asks-for-a-star-story">2. How the prompt asks for a STAR story</h2>
+        <p>The prompt does most of the work. Its base spells out each part of STAR, down to the sentence count:</p>
+        <div class="code prose plain stack">
+          <div>
+            <div>
+              <p>promptBuilder.js, lines 18 to 31</p>
+              <p><a href="https://github.com/jackzhaojin/azure-star-generator/blob/da712d5/code/Functions/azure-star-generator-node-v1/src/services/promptBuilder.js#L18-L31">da712d5 on GitHub</a></p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <pre><code>    const basePrompt = `You are an expert in crafting professional STAR (Situation, Task, Action, Result) stories.
+    Create compelling and authentic narratives based on the following feedback data that I've received.
+
+    Each story must follow this specific structure:
+    - Situation: Exactly ONE concise sentence that sets the context with specific details about the challenge or opportunity. Be specific and quantitative where possible.
+    - Task: ONE to TWO sentences clearly explaining my specific responsibilities or objectives in this situation. Focus on what I needed to accomplish.
+    - Action: A BULLETED LIST of specific steps I took, focusing on MY individual contribution even in team settings. Include 4-6 concrete actions. Feel free to extrapolate reasonable details based on the information provided.
+    - Result: EXACTLY THREE sentences quantifying the positive outcomes where possible and linking them directly to my actions. The first sentence should focus on immediate impacts, the second on metrics or quantifiable outcomes, and the third on longer-term or broader implications.
+
+    IMPORTANT: Each story must strictly adhere to this structure. Do not deviate from the format or omit any required elements. Ensure that the Situation, Task, Action, and Result are clearly distinct and follow the specified guidelines.
+    Guidelines needs to be extrapolated, for example, if it's a sales topic we need to talk about revenue. If it's about technical we need to focus on result for a technical.
+
+    ${contextInfo.instructions}
+    ${contextInfo.audience}`;
+</code></pre>
+            </div>
+          </div>
+        </div>
+        <p>Then the prompt gets three more pieces. The audience you picked adds one guideline, for example "Focus on STAR stories that emphasize my ability to lead and inspire others" for leadership. Each feedback row goes in as a numbered entry, capped at 50 so the prompt stays a reasonable size. And the end of the prompt asks for a JSON array, shows two complete example stories, and says the reply must be "directly parseable by JSON.parse() without any modifications".</p>
+        <p>The JSON example was a late fix. The commit where the app first worked end to end says it "could use a JSON as an example of a story", and the next commit, "Backend Updates with Action and better Prompting", added the example and the bulleted action list.</p>
+        <p>The prompt also tells the model to "extrapolate reasonable details" and to quantify results where it can. The stories sound better for it. They can also carry numbers your feedback never mentioned. Check them against what really happened.</p>
+      </div>
+      <div id="parser">
+        <h2 id="why-the-parser-has-a-fallback-and-the-reply-that-slips-past-it">3. Why the parser has a fallback, and the reply that slips past it</h2>
+        <p>Asking for JSON doesn't guarantee JSON. A model can wrap the array in a friendly sentence, put it in a code fence, or skip JSON and write labeled paragraphs. So the response processor tries three things in order: cut from the first <code>[</code> to the last <code>]</code>, run <code>JSON.parse</code>, and if that throws, fall back to a text parser that looks for Situation, Task, Action and Result labels. Whatever comes out is validated, and a story missing any part is dropped.</p>
+        <div class="code stack">
+          <div>
+            <div>
+              <p>responseProcessor.js, lines 32 to 58</p>
+              <p><a href="https://github.com/jackzhaojin/azure-star-generator/blob/da712d5/code/Functions/azure-star-generator-node-v1/src/services/responseProcessor.js#L32-L58">da712d5 on GitHub</a></p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <pre><code>function parseAIResponse(responseText) {
+    try {
+        // Try to extract JSON if it's wrapped in other text
+        let jsonText = responseText;
+
+        // Look for JSON array brackets if the response contains other text
+        const jsonStartIndex = responseText.indexOf('[');
+        const jsonEndIndex = responseText.lastIndexOf(']');
+
+        if (jsonStartIndex >= 0 &#x26;&#x26; jsonEndIndex > jsonStartIndex) {
+            jsonText = responseText.substring(jsonStartIndex, jsonEndIndex + 1);
+        }
+
+        // Parse the JSON
+        const stories = JSON.parse(jsonText);
+
+        // Validate that we have an array
+        if (!Array.isArray(stories)) {
+            throw new Error('Response is not a valid array');
+        }
+
+        return stories;
+    } catch (error) {
+        // Fallback to the text parsing method if JSON parsing fails
+        return parseAIResponseText(responseText);
+    }
+}
+</code></pre>
+            </div>
+          </div>
+        </div>
+        <p>Below, that same code runs in your browser. Pick an example reply on the left and the right side shows which of the four steps it went through and what the API would send back. It starts on "JSON inside prose", the everyday case the bracket cut exists for. The last example, a "[Note]" before the JSON, is the one that gets through validation as junk.</p>
+        <div class="explainer parser-lab">
+          <div>
+            <div>parser lab · responseProcessor.js ported line for line</div>
+            <div><a href="https://github.com/jackzhaojin/azure-star-generator/blob/da712d5/code/Functions/azure-star-generator-node-v1/src/services/responseProcessor.js">source at da712d5</a></div>
+          </div>
+          <div>
+            <div>
+              <p>Pick a model reply</p>
+              <p>The reply from the model (editable)</p>
+              <p>Model reply to parse</p>
+              <p>The replies are examples written for this page, not real model output.</p>
+            </div>
+            <div>
+              <p>What the processor does</p>
+              <ul>
+                <li><strong>1. Cut to the brackets</strong></li>
+                <li><strong>2. JSON.parse</strong></li>
+                <li><strong>3. Text fallback</strong></li>
+                <li><strong>4. Validate each story</strong></li>
+              </ul>
+              <p>Your own edit: the steps above show the path it took.</p>
+            </div>
+          </div>
+          <div>
+            <div>Clean JSON</div>
+            <div>
+              <pre><code>[
+  {
+    "situation": "A client's checkout redesign was two weeks behind because design and engineering kept reworking the same screens.",
+    "task": "I needed to get both teams working from one set of components before the next release.",
+    "action": [
+      "Audited the screens that were reworked most often.",
+      "Set up a shared component library with the engineering lead.",
+      "Ran a weekly review where both teams signed off on changes.",
+      "Documented the rules for adding a new component."
+    ],
+    "result": "The next release shipped on time. Rework tickets dropped in the following sprint. The library became the starting point for the next project."
+  }
+]
+</code></pre>
+            </div>
+            <div>The happy path: the reply is already a JSON array, so JSON.parse takes it as is.</div>
+          </div>
+          <div>
+            <div><strong>JSON inside prose</strong></div>
+            <div>
+              <pre><code>Here are your STAR stories:
+
+```json
+[
+  {
+    "situation": "A new client team had little experience with the design tools we used.",
+    "task": "I was asked to get them productive before the first design review.",
+    "action": ["Ran two hands-on training sessions.", "Paired with each designer on a real screen.", "Wrote a one-page guide to our file conventions."],
+    "result": "The team presented their own screens at the first review. Questions to our team dropped in the following weeks. The guide was reused for the next onboarding."
+  }
+]
+```
+
+Let me know if you want more stories!
+</code></pre>
+            </div>
+            <div>The model added a sentence and a code fence. Cutting to the brackets strips them, so JSON.parse still works.</div>
+          </div>
+          <div>
+            <div>One result left empty</div>
+            <div>
+              <pre><code>[
+  {
+    "situation": "Stakeholders disagreed on the priorities for a portal redesign.",
+    "task": "I had to get one agreed list before design started.",
+    "action": ["Interviewed each stakeholder group.", "Ran a prioritization workshop.", "Published the agreed list."],
+    "result": "Design started with one backlog. Fewer change requests came in mid-project. The workshop format was reused on other projects."
+  },
+  {
+    "situation": "A partner team asked for help with accessibility fixes late in a release.",
+    "task": "I offered to review their highest-traffic pages.",
+    "action": ["Ran an audit of the top pages.", "Paired on the fixes."],
+    "result": ""
+  }
+]
+</code></pre>
+            </div>
+            <div>Story 2 has an empty result, so validation drops it. The API still returns 200, with one story.</div>
+          </div>
+          <div>
+            <div>Plain text with labels</div>
+            <div>
+              <pre><code>Situation: A client's mobile app had inconsistent navigation across its main sections.
+Task: I needed to propose one navigation pattern the client could approve.
+Action:
+- Mapped the current navigation in each section.
+- Sketched three options and tested them with five users.
+- Presented the winning option with the test notes.
+Result: The client approved the new navigation in one meeting. Development started the following sprint. The pattern was applied to the web app later.
+</code></pre>
+            </div>
+            <div>No JSON at all. JSON.parse fails, and the text fallback rebuilds the story from the Situation, Task, Action and Result labels.</div>
+          </div>
+          <div>
+            <div>No story at all</div>
+            <div>
+              <pre><code>I could not find enough feedback in the file to write a story. Could you upload more entries?
+</code></pre>
+            </div>
+            <div>Nothing usable. Both parsers come up empty, and the API returns a 500 with the error text from the repo.</div>
+          </div>
+          <div>
+            <div>A [Note] before the JSON (the gap)</div>
+            <div>
+              <pre><code>[Note] I only had a few feedback entries to work with.
+
+Here is one story:
+{
+  "situation": "A design review kept slipping because feedback came in late.",
+  "task": "I set out to get feedback earlier.",
+  "action": ["Moved reviews to a fixed weekly slot."],
+  "result": "Reviews stopped slipping. Feedback arrived on time. The slot is still on the calendar."
+}
+</code></pre>
+            </div>
+            <div>The gap: "[Note]" makes the cut start in the wrong place, JSON.parse fails, and the text fallback builds a story out of JSON fragments. The API still reports success, because validation only checks that each part exists.</div>
+          </div>
+          <div>
+            <div>Model reply</div>
+            <div>Path</div>
+            <div>What the API returns</div>
+          </div>
+          <div>
+            <div>Clean JSON array</div>
+            <div>JSON.parse</div>
+            <div>200, one story</div>
+          </div>
+          <div>
+            <div>JSON inside a sentence and a code fence</div>
+            <div>Cut to the brackets, then JSON.parse</div>
+            <div>200, one story</div>
+          </div>
+          <div>
+            <div>Two stories, one with an empty result</div>
+            <div>JSON.parse, then validation drops story 2</div>
+            <div>200, one story</div>
+          </div>
+          <div>
+            <div>Plain text with Situation, Task, Action, Result labels</div>
+            <div>JSON.parse fails, text fallback</div>
+            <div>200, one story with three actions</div>
+          </div>
+          <div>
+            <div>No story at all</div>
+            <div>JSON.parse fails, text fallback finds nothing</div>
+            <div>500, "Failed to generate stories: Story generation failed: Failed to process AI response: No valid stories were parsed from the response"</div>
+          </div>
+          <div>
+            <div>A "[Note]" line before a JSON object</div>
+            <div>Cut from [Note], JSON.parse fails, text fallback finds the labels inside the JSON</div>
+            <div>200, one story full of JSON fragments</div>
+          </div>
+          <div>
+            <div>The four steps and the error text are the repo's, at <code>da712d5</code>. The table lists what each example reply returns.</div>
+          </div>
+        </div>
+        <p>Porting the parser to this page turned up that last case, and it's worth knowing. If the reply has a bracket before the JSON, like "[Note]", the cut grabs the wrong span, <code>JSON.parse</code> fails, and the text fallback finds the words "situation" and "task" inside the JSON keys. The API returns 200 with a story made of JSON fragments. Validation only checks that each part exists.</p>
+      </div>
+      <div id="tools">
+        <h2 id="how-five-ai-coding-tools-ranked-in-april-2025">4. How five AI coding tools ranked in April 2025</h2>
+        <p>I vibe coded the app, meaning I described what I wanted and let AI tools write the code. I used five of them and ranked them on four things: functional vibe, refactoring, handling outside context, and getting it right with minimal feedback. This is the ranking as I wrote it on April 13, 2025. The tools have changed a lot since, so read it as a snapshot.</p>
+        <div class="data-table rank stack">
+          <div>
+            <div>Rank</div>
+            <div>Tool</div>
+            <div>Where it was best</div>
+            <div>What held it back</div>
+          </div>
+          <div>
+            <div>1</div>
+            <div><strong>Claude 3.7 CLI</strong> (<code>@anthropic-ai/claude-code</code>)</div>
+            <div>Terminal native. It understood the whole codebase, edited files, ran tests and handled Git, with very little handholding. Shockingly good at multi-step tasks like "refactor this file and update its dependencies across the repo".</div>
+            <div>Expensive: I was averaging about $0.15 per query. A research preview, so rough edges, like not working on Windows.</div>
+          </div>
+          <div>
+            <div>2</div>
+            <div><strong>Claude 3.7 on the web</strong></div>
+            <div>Large-context refactoring, breaking big components into smaller files, and exploring a design. Clear, maintainable code, and it took follow-up instructions well.</div>
+            <div>Copy and paste by hand. I couldn't switch branches in its GitHub context, which led to a messy spree of commits on main. Writing out every file took a while.</div>
+          </div>
+          <div>
+            <div>3</div>
+            <div><strong>GitHub Copilot</strong></div>
+            <div>Cheap, easy to set up, and fast for quick completions. The new agent mode cut a lot of the copy and paste, and you can set the context by hand.</div>
+            <div>Not as sharp on multi-file or abstract tasks, and no project-wide understanding.</div>
+          </div>
+          <div>
+            <div>4</div>
+            <div><strong>ChatGPT-4o</strong></div>
+            <div>Thinking out loud, checking logic, and breaking a problem down before taking it to another tool.</div>
+            <div>Not the best for accurate, scalable code, and it made things up the most for me.</div>
+          </div>
+          <div>
+            <div>5</div>
+            <div><strong>Perplexity</strong></div>
+            <div>Even with the Pro requests, I didn't have a great time with it.</div>
+          </div>
+        </div>
+        <p>The tool I ranked first was the one that could see the whole codebase and work in my terminal, and it was also the one that needed the least handholding. The repo's README lists four of the tools and what each one did.</p>
+        <p>Have you tried vibe coding something like this yet? I'd like to hear how it went.</p>
+      </div>
+      <div class="related">
+        <h2 id="related">Related</h2>
+        <div class="row-list">
+          <div>
+            <div>Portfolio</div>
+            <div><a href="/portfolio/azure-star-generator/">Azure STAR Generator</a></div>
+            <div>Where this project sits in the timeline of what I built next.</div>
+          </div>
+          <div>
+            <div>Article</div>
+            <div><a href="/writing/2025-06-12-azure-rbac-cicd-for-ai-agents/">Azure RBAC and CI/CD for AI coding agents</a></div>
+            <div>Two months later: the passwordless patterns, written up properly.</div>
+          </div>
+          <div>
+            <div>Article</div>
+            <div><a href="/writing/2025-07-06-ai-coded-nextjs-agent-release-1/">An AI-coded Next.js agent, release 1.0</a></div>
+            <div>The next project, where I wrote none of the code.</div>
+          </div>
+        </div>
+        <div class="author-box">
+          <div>
+            <div>JJ</div>
+            <div>
+              <p>Jack Jin</p>
+              <p>Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then write up what I learn.</p>
+              <p><a href="/portfolio/">Portfolio</a> <a href="/talks/">Talks</a> <a href="https://github.com/jackzhaojin">GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

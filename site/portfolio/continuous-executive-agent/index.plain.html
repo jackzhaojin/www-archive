@@ -1,0 +1,315 @@
+
+<div id="ch-cea" class="chapter cea">
+  <div class="chapter-head">
+    <div>
+      <div>
+        <h1 id="continuous-executive-agenta-247-coding-agent">Continuous Executive Agent<br><em>A 24/7 coding agent</em></h1>
+        <p>Jan 24 - May 31, 2026 · 374 commits · 16 releases · ran 24/7 for four months</p>
+        <p><strong>incremental specs</strong> to build it: a dated spec and plan per release, ai-docs v1 through v3. <strong>dark factory</strong> when it ran: nobody watched the overnight builds.</p>
+        <p>A coding agent that runs around the clock under PM2. It selects work from a priority queue, spawns isolated workers, validates with deterministic verifiers, retries with a different strategy on each failure, and escalates to a human only when stuck.</p>
+        <p>This section goes release by release: a foundation era, an identity-and-multi-vendor era, and a memory era. Four months. The output repo ended up with thirty projects, most of them built overnight.</p>
+      </div>
+    </div>
+  </div>
+  <div class="stats lifetime">
+    <div>
+      <div>label</div>
+      <div>Lifetime metrics of the continuous agent</div>
+    </div>
+    <div>
+      <div>Lifetime, measured from its own ledgers</div>
+    </div>
+    <div>
+      <div>
+        <ul>
+          <li><strong>571</strong> worker contracts</li>
+          <li><strong>41</strong> goals completed autonomously</li>
+          <li><strong>30</strong> projects built</li>
+          <li><strong>3338</strong> verifier runs</li>
+          <li><em><strong>8</strong></em> human interventions, total</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div>Counted from the append-only ledgers in the repo.</div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
+        <p>v1.0.0 → v3.0.0 · 16 tags</p>
+        <h3 id="release-history">Release history</h3>
+        <p>Dates from git tags. Summaries from the changelog.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-cea-ladder</div>
+    </div>
+  </div>
+  <div class="timeline ladder">
+    <div>
+      <div>Era 1 · Foundation · Jan 24 - Feb 4</div>
+    </div>
+    <div>
+      <div>v1.0</div>
+      <div>
+        <p>Jan 24, 2026 · built in a single day</p>
+        <h4 id="foundation">Foundation</h4>
+        <p>The 8-phase executive loop. Two-repo architecture: the brain never receives worker output. A constitution of 8 immutable limits, including a $20/month spend cap. Contracts, deterministic verifiers, PM2, append-only ledgers.</p>
+      </div>
+    </div>
+    <div>
+      <div>v1.1</div>
+      <div>
+        <p>Jan 25, 2026</p>
+        <h4 id="intelligence">Intelligence</h4>
+        <p>Goals over 100 turns auto-split into steps. Strategy rotation: every retry must try something different. Agentic diagnosis after three failures. The needs-you.md protocol: I answer in a markdown table, it notices within thirty seconds.</p>
+      </div>
+    </div>
+    <div>
+      <div>v1.2</div>
+      <div>
+        <p>Jan 28, 2026</p>
+        <h4 id="organization">Organization</h4>
+        <p>Goal bundles: each goal a directory with its own prompt, machine-readable steps, contract log, and progress log. Workspace lifecycle drafts → ondeck → in-progress → completed, promoted by priority.</p>
+      </div>
+    </div>
+    <div>
+      <div>v1.3</div>
+      <div>
+        <p>Feb 4, 2026</p>
+        <h4 id="security">Security</h4>
+        <p>Three physically separated credential tiers with leak detection on every spawn. OAuth-first: the whole system runs on a Claude subscription, no API key.</p>
+      </div>
+    </div>
+    <div>
+      <div>Era 2 · Identity &#x26; Multi-Vendor · Mar 29 - Apr 19</div>
+    </div>
+    <div>
+      <div>v2.0</div>
+      <div>
+        <p>Mar 29, 2026</p>
+        <h4 id="identity-the-agent-gets-its-own-accounts">Identity: the agent gets its own accounts</h4>
+        <p>Its own Gmail: it receives goals by email. Its own Discord: it reports completions and blocks. Skills and playbooks with a track record: every skill carries a success rate. A read-only dashboard. I became a guest in my agent's workspace.</p>
+      </div>
+    </div>
+    <div>
+      <div>v2.1</div>
+      <div>
+        <p>Apr 1 - 5, 2026</p>
+        <h4 id="multi-vendor-the-bake-off">Multi-vendor: the bake-off</h4>
+        <p>A vendor abstraction layer: Claude, OpenAI Codex, and Kimi workers behind one interface. Then the experiment: the same finance-dashboard spec run across all four vendor modes, deployed live, and scored by the harness itself.</p>
+      </div>
+    </div>
+    <div>
+      <div>v2.2</div>
+      <div>
+        <p>Apr 12, 2026</p>
+        <h4 id="harness-framework">Harness framework</h4>
+        <p>Three multi-agent plan-then-build pipelines became first-class citizens, runnable standalone or driven by the executive. 105 passing tests; the whole orchestrator exercised end-to-end in about a second with zero API calls.</p>
+      </div>
+    </div>
+    <div>
+      <div>v2.3-2.4</div>
+      <div>
+        <p>Apr 18 - 19, 2026</p>
+        <h4 id="build-targets--hard-lessons">Build targets &#x26; hard lessons</h4>
+        <p>Worktree isolation per project. Progressive skill disclosure with a verifier that fails a contract if a required skill was never consulted. And a favorite war story: a prompt saying "No UI, no database" got post-processed into a plan whose step zero provisioned database tables. The hallucinating prerequisite-inserter was found and fixed.</p>
+      </div>
+    </div>
+    <div>
+      <div>Era 3 · The Second Brain · May 16 - 31</div>
+    </div>
+    <div>
+      <div>v3.0</div>
+      <div>
+        <p>May 31, 2026</p>
+        <h4 id="memory">Memory</h4>
+        <p>A mem0-backed second brain. Five memory types, five lifecycle hooks, memory packs baked into each worker's context, ~134 memories backfilled. Git stays canonical: if the store and the repo disagree, the repo wins. The riskiest hook stayed off until the memories earned trust.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story">
+    <div>
+      <div>
+        <p><em>Apr 6, 2026</em> · demoed live at AI Tinkerers Columbus</p>
+        <h3 id="the-multi-vendor-bake-off">The multi-vendor bake-off</h3>
+        <p>Same spec, four vendor modes, seven verifiers each. The harness did the scoring.</p>
+        <p>Demoed on the running system, no slides. One night that week the ledger shows Codex finishing its build and passing validation at 3:56 AM, with nobody awake. The demo video shown was produced by the agent end to end: 81 seconds, zero keystrokes.</p>
+        <blockquote>
+          <p>"Is it perfect? No. Is it close? Also no. But I'm proud of where it's at."</p>
+        </blockquote>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-cea-bakeoff</div>
+    </div>
+  </div>
+  <div class="panel bakeoff">
+    <div>
+      <div>label</div>
+      <div>Multi-vendor bake-off scores out of 130</div>
+    </div>
+    <div>
+      <div>replay</div>
+      <div>Replay the bake-off bars</div>
+    </div>
+    <div>
+      <div>max</div>
+      <div>130</div>
+    </div>
+    <div>
+      <div>Same spec · four vendor modes · scored /130 by the harness</div>
+    </div>
+    <div>
+      <div>OpenAI Codex</div>
+      <div>115</div>
+    </div>
+    <div>
+      <div>Kimi K2.5 CLI</div>
+      <div>92</div>
+    </div>
+    <div>
+      <div>Claude</div>
+      <div>88</div>
+    </div>
+    <div>
+      <div>Kimi Wire</div>
+      <div>87</div>
+    </div>
+    <div>
+      <div>All four deployed live from the agent's own output repo.</div>
+    </div>
+    <div>
+      <div>↻ replay</div>
+    </div>
+  </div>
+  <div class="frame sub portrait">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1a8bd467b72556e1f8080e23b1e04a7e52140bb18.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1a8bd467b72556e1f8080e23b1e04a7e52140bb18.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/jpeg" srcset="./media_1a8bd467b72556e1f8080e23b1e04a7e52140bb18.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="AI Tinkerers Community Spotlight graphic: a black and gold halftone portrait of Jack, arms crossed, with the text Top Global Demo, number one top pick, my own version of OpenClaw focused on 24x7 development, Columbus, April 20, 2026." src="./media_1a8bd467b72556e1f8080e23b1e04a7e52140bb18.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="800" height="1071">
+          </picture>
+        </p>
+        <p>Two weeks later, AI Tinkerers picked the demo as their #1 top pick globally that week and made this graphic. Their design, not mine.</p>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="https://www.jackzhaojin.com/ai-sandbox/">All four dashboards, deployed ↗</a> <a href="https://github.com/jackzhaojin/continuous-agent">continuous-agent, open source ↗</a> <a href="https://github.com/jackzhaojin/ai-sandbox">ai-sandbox, its output repo ↗</a></div>
+    </div>
+  </div>
+  <div class="showcase story flip">
+    <div>
+      <div>
+        <p><em>Mar - Apr 2026</em> · the identity era, up close</p>
+        <h3 id="its-own-gmail-discord-and-notion">Its own Gmail, Discord, <em>and Notion</em></h3>
+        <p>An always-on agent needs its own accounts, not borrowed ones.</p>
+        <p>It receives goals by email and reports to its own Discord channel. I am a guest in the agent's workspace, and the working rhythm is reading the overnight commits in the morning. Human interaction is markdown files, not a chat box waiting for input.</p>
+      </div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1150aca0fa772527411056ec242c94d2bee10b797.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1150aca0fa772527411056ec242c94d2bee10b797.png?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/png" srcset="./media_1150aca0fa772527411056ec242c94d2bee10b797.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Discord workspace owned and operated by the autonomous agent, posting its own status updates" src="./media_1150aca0fa772527411056ec242c94d2bee10b797.png?width=750&#x26;format=png&#x26;optimize=medium" width="1536" height="1340">
+          </picture>
+        </p>
+        <p>The agent's own Discord. I read it like a colleague's channel.</p>
+      </div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-cea-identity</div>
+    </div>
+  </div>
+  <div class="frame sub">
+    <div>
+      <div>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="./media_1fe703736ea6e41fc7b7cdb8678c8dd6c6c445412.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+            <source type="image/webp" srcset="./media_1fe703736ea6e41fc7b7cdb8678c8dd6c6c445412.png?width=750&#x26;format=webply&#x26;optimize=medium">
+            <source type="image/png" srcset="./media_1fe703736ea6e41fc7b7cdb8678c8dd6c6c445412.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+            <img loading="lazy" alt="Hand-drawn architecture diagram of Continuous Executive Agent v2.1: executive brain, multi-vendor worker execution, and self-correcting feedback loop" src="./media_1fe703736ea6e41fc7b7cdb8678c8dd6c6c445412.png?width=750&#x26;format=png&#x26;optimize=medium" width="3039" height="2160">
+          </picture>
+        </p>
+        <p>The v2.1 system map, hand-drawn: executive brain, worker execution, feedback loop.</p>
+      </div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div></div>
+    </div>
+  </div>
+  <div class="showcase story">
+    <div>
+      <div>
+        <p><em>May 31, 2026</em> · v3.0 · the closing release</p>
+        <h3 id="the-agent-gets-a-second-brain">The agent gets a second brain</h3>
+        <p>Storage is the easy half. Retrieval decides whether a memory was ever real.</p>
+        <p>Five memory types, from immutable principles to reflective lessons. Workers never touch the store: they get a curated, two-thousand-token memory pack baked into their context. The best war story is the silent bug: an empty-string config value made every single write fail while the logs said "ok." Found, fixed, and the logging redesigned so a total failure can never look like success again.</p>
+      </div>
+      <div>
+        <p><a href="https://www.jackzhaojin.com/portfolio/continuous-executive-agent/media_189e5a24b2bfd7e8d5ba58b0146cf55368e9c7acd.png"><picture>
+              <source type="image/webp" srcset="./media_189e5a24b2bfd7e8d5ba58b0146cf55368e9c7acd.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_189e5a24b2bfd7e8d5ba58b0146cf55368e9c7acd.png?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/png" srcset="./media_189e5a24b2bfd7e8d5ba58b0146cf55368e9c7acd.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Diagram of the memory system&#x27;s write path (hooks feed a harvester that validates and writes to mem0) and read path (a reader runs natural-language searches and builds memory packs)" src="./media_189e5a24b2bfd7e8d5ba58b0146cf55368e9c7acd.png?width=750&#x26;format=png&#x26;optimize=medium" width="4220" height="1754">
+            </picture></a></p>
+        <p>The write path and the read path. One writer, one reader, no agent scribbles wherever it wants.</p>
+      </div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-cea-brain</div>
+    </div>
+  </div>
+  <div class="proof-links">
+    <div>
+      <div><a href="https://github.com/jackzhaojin/continuous-agent">The memory design, in the repo ↗</a></div>
+    </div>
+  </div>
+  <div class="panel edge">
+    <div>
+      <div>label</div>
+      <div>Where the continuous agent story goes next</div>
+    </div>
+    <div>
+      <div>Where it went next</div>
+    </div>
+    <div>
+      <div>
+        <h4 id="the-roadmap-said-multi-agent">The roadmap said multi-agent</h4>
+        <p>The v3.0 deck closes with "Multi-Agent (V4.0): parallel agents, partitioned scope." That version was never tagged here.</p>
+      </div>
+      <div>
+        <h4 id="it-shipped-as-a-different-repo">It shipped as a different repo</h4>
+        <p>Five weeks after v3.0, Anima Mesh's first commit landed. The founding document names this system as its predecessor. The monolith's V4 is the mesh at the top of this page.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 id="related">Related</h2>
+  <div class="row-list related dynamic">
+    <div>
+      <div>Source</div>
+      <div><a href="/writing-index.json">/writing-index.json</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <p><a href="/portfolio/">All projects</a></p>
+</div>
