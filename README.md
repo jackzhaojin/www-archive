@@ -51,7 +51,13 @@ Links that turned out not to be pages (redirects, 404s) are listed in `snapshot.
 
 ## If Adobe goes away
 
-1. **Keep www up:** www's Worker ([www-eds/edge](https://github.com/jackzhaojin/www-eds/tree/main/edge)) fetches Edge Delivery from `ORIGIN_HOSTNAME`. Set it to `www-archive.jackzhaojin.workers.dev` in `edge/wrangler.toml` and deploy, and www serves this snapshot. On www the Worker drops the noindex header, so search is unaffected.
+1. **Keep www up:** www's Worker ([www-eds/edge](https://github.com/jackzhaojin/www-eds/tree/main/edge), since v1.1.6) serves this snapshot instead of Edge Delivery when `ARCHIVE_ORIGIN` is set. From `www-eds/edge`:
+
+   ```bash
+   npx wrangler deploy --env="" --var ARCHIVE_ORIGIN:https://www-archive.jackzhaojin.workers.dev
+   ```
+
+   The project sites keep passing through to GitHub Pages, and on www the Worker drops this host's noindex header, so search is unaffected. Deploy without the var to go back. (Pointing `ORIGIN_HOSTNAME` here doesn't work: Adobe's worker only accepts `*.aem.live` origins.) Checked on 2026-10-28 with the Worker in-process against this archive: every page kind, the fragments, code, sheets, crawler files, a redirect and the 404 answered as the archive does.
 2. **Or host it anywhere** that reads `_redirects` and `_headers` (Cloudflare, Netlify): take the noindex rule out of `_headers` first if it is to be the site itself.
 3. **To rebuild on another platform,** the `.md` copies are the content and `site/` shows how each page looked.
 
