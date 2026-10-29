@@ -4,9 +4,10 @@
     <div>
       <div>
         <h1 id="anima-meshthe-company-of-0-experiment">Anima Mesh<br><em>The company-of-0 experiment</em></h1>
-        <p>Jul - Aug 2026 · 2 repos</p>
-        <p><strong>ad hoc</strong> no spec preceded the code. The structure came from releases: 38 tags through v0.16.2, a changelog per minor line, and platform failures written down as learnings.</p>
-        <p>AnimaMesh runs recurring back-office work from a private repo: compliance checks, bookkeeping prep, document memory, governance, research, and inbound triage. A human remains the approval gate for money, filings, publishing, credentials, and access.</p>
+        <p>Jul - Oct 2026 · 3 repos</p>
+        <p><strong>ad hoc</strong> no spec preceded the code. The structure came from releases: 57 tags through v2.4.0, a changelog per minor line, and platform failures written down as learnings.</p>
+        <p>AnimaMesh runs a mesh of brains with agents. Each brain is one layer of someone's world, kept as a private knowledge bundle: a person's life, a company, or a team or group in between. Agents wake on their own heartbeat, do the preparable work, and bring back a draft to approve or edit. A human remains the approval gate for money, filings, publishing, credentials, and access.</p>
+        <p>It started as the company-of-0, a company's back office run from one private repo: compliance checks, bookkeeping prep, document memory, governance, research, and inbound triage. Version 2.0 made a brain a layer. Brains link only when both sides agree, the brain that owns the data decides what crosses, and members with roles make a brain multi-player. Since v2.3 a brain can live in a Slack channel, and since v2.4 it can be kept in git, OneDrive, SharePoint, Google Drive, or Dropbox.</p>
         <p>Cloud execution is primary. A Worker reads the brain as one tarball, runs the agents that are due, verifies their artifacts, and lands one commit before a brief or reply is sent. The CLI uses the same engine for setup, recovery, and subprocess-only harnesses.</p>
       </div>
     </div>
@@ -14,7 +15,7 @@
       <div>
         <p>Engine source, public</p>
         <p><a href="https://github.com/jackzhaojin/anima-mesh">github.com/jackzhaojin/anima-mesh ↗</a></p>
-        <p>Apache 2.0 · v0.16.2 · TypeScript on Cloudflare Workers · the company brain stays private</p>
+        <p>Apache 2.0 · v2.4.0 · TypeScript on Cloudflare Workers · the brains stay private</p>
         <p><a href="https://github.com/jackzhaojin/anima-mesh#readme">README ↗</a> <a href="https://github.com/jackzhaojin/anima-mesh/blob/main/docs/architecture.md">Architecture notes ↗</a> <a href="https://github.com/jackzhaojin/anima-mesh/tree/main/docs/sample-brain">Scrubbed sample brain ↗</a></p>
       </div>
     </div>
@@ -56,7 +57,7 @@
   <div class="showcase story wide">
     <div>
       <div>
-        <p>v0.16.0 · Cloudflare Workers + Durable Objects + GitHub</p>
+        <p>Since v0.3 · Cloudflare Workers + Durable Objects + GitHub</p>
         <h3 id="cloud-first-one-private-brain-per-instance">Cloud first, one private brain per instance</h3>
         <p>Durable Objects hold alarms, locks, queues, and budgets. The private GitHub repo holds knowledge and evidence. Read sources stay external.</p>
       </div>
@@ -242,7 +243,7 @@
   <div class="showcase story flip">
     <div>
       <div>
-        <p>38 tags through v0.16.2 · Apache-2.0</p>
+        <p>57 tags through v2.4.0 · Apache-2.0</p>
         <h3 id="safety-lives-in-code-never-in-prompts">Safety lives in code, never in prompts</h3>
         <p>Everything between wake-up and gate is model judgment. Gates, ladder, ledger, and verifiers are deterministic code.</p>
         <p>Five constitutionally gated action classes cover money movement, government filings, publishing, credentials, and access expansion. Three reversible write paths ship today: schedule updates, draft writes, and defect reports. Each request is parsed, checked against the same ladder and whitelist gate, and ledgered whether applied or denied.</p>
