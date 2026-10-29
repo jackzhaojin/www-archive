@@ -3683,7 +3683,7 @@ light
 
 dark
 
-- **Credentials** [22 certifications](/certifications/)\
+- **Credentials** [25 certifications](/certifications/)\
   Adobe Certified Master · AEM Champion 2026
 - **Shipping** [Anima Mesh](/portfolio/anima-mesh/)\
   v0.16.2 · 36 tags in 29 days
@@ -3992,7 +3992,7 @@ The motif layer: six tiny accent dots tiled at half opacity. Decorative only.
 |                                                                                                                |
 | AEM \+ AI                                                                                                      |
 |                                                                                                                |
-| [All 22 certifications](/certifications/)                                                                      |
+| [All 25 certifications](/certifications/)                                                                      |
 +----------------------------------------------------------------------------------------------------------------+
 
 +------------------------------------+
