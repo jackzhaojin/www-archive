@@ -11,6 +11,27 @@
 | OpenAI, turning CSV feedback exports into STAR-format career stories.                                                 |
 +-----------------------------------------------------------------------------------------------------------------------+
 
++---------------------------------------------------------------------+
+| Scene (loom)                                                        |
++---------+-----------------------------------------------------------+
+| label   | A tapestry loom. CSV feedback rows rise from the lower    |
+|         | beam as warp threads, knotted at their commas. An Azure   |
+|         | OpenAI shuttle passes four times for each story, laying   |
+|         | its Situation, Task, Action and Result as four bands, and |
+|         | the woven cloth rolls up onto the top beam as a stack of  |
+|         | STAR-format career stories.                               |
++---------+-----------------------------------------------------------+
+| stories | **STAR-format**                                           |
+|         |                                                           |
+|         | career stories                                            |
++---------+-----------------------------------------------------------+
+| openai  | **Azure OpenAI**                                          |
++---------+-----------------------------------------------------------+
+| csv     | **CSV feedback**                                          |
+|         |                                                           |
+|         | exports                                                   |
++---------+-----------------------------------------------------------+
+
 +----------------------------------------------------------------------+
 | Showcase (story, wide)                                               |
 +----------------------------------------------------------+-----------+

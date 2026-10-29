@@ -11,6 +11,32 @@
 | use them. Two of them get detail here, because they carry the most engineering.                                       |
 +-----------------------------------------------------------------------------------------------------------------------+
 
++----------------------------------------------------------------------+
+| Scene (multi tool)                                                   |
++----------+-----------------------------------------------------------+
+| label    | A folding multi-tool. Its handle is the plugin            |
+|          | marketplace, with nine nail nicks for the nine published  |
+|          | skills, every blade folded away. A task slides along the  |
+|          | nicks until it finds the skill whose description matches; |
+|          | that blade swings out and works, then folds back. The     |
+|          | draw\.io blade renders its diagram, views it and fixes    |
+|          | what is wrong, pass after pass; the Playwright blade runs |
+|          | a test spec through as film for a narrated MP4. Dash-dot  |
+|          | outlines mark where the two featured blades open.         |
++----------+-----------------------------------------------------------+
+| kit      | **Plugin marketplace**                                    |
+|          |                                                           |
+|          | nine published skills                                     |
++----------+-----------------------------------------------------------+
+| drawio   | **draw\.io XML**                                          |
+|          |                                                           |
+|          | render-view-fix                                           |
++----------+-----------------------------------------------------------+
+| video    | **Playwright spec**                                       |
+|          |                                                           |
+|          | → narrated MP4                                            |
++----------+-----------------------------------------------------------+
+
 +--------------------------------------------------------------------------------------------------------------------------------------+
 | Showcase (story)                                                                                                                     |
 +-----------------------------------------------------------+--------------------------------------------------------------------------+

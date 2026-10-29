@@ -23,8 +23,8 @@
     <meta name="project-anchors" content="ch-factory p-factory-loop p-factory-eval p-factory-story p-factory-v1plan p-factory-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico">
-    <script nonce="cqpj8uI+vmBk6aY4Rwq4YIFb" src="/scripts/aem.js" type="module"></script>
-    <script nonce="cqpj8uI+vmBk6aY4Rwq4YIFb" src="/scripts/scripts.js" type="module"></script>
+    <script nonce="snIH+KPoSjgNx2pOOynnVHAF" src="/scripts/aem.js" type="module"></script>
+    <script nonce="snIH+KPoSjgNx2pOOynnVHAF" src="/scripts/scripts.js" type="module"></script>
     <link rel="stylesheet" href="/styles/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.jackzhaojin.com/#person","name":"Jack Jin","url":"https://www.jackzhaojin.com/","jobTitle":"Associate Director","worksFor":{"@type":"Organization","name":"Accenture","department":{"@type":"Organization","name":"Adobe Business Group"}},"homeLocation":{"@type":"Place","name":"Columbus, Ohio"},"sameAs":["https://www.linkedin.com/in/jackjin","https://github.com/jackzhaojin","https://www.youtube.com/@jackjin8467","https://www.credly.com/users/jack-jin"],"knowsAbout":["Adobe Experience Manager","Edge Delivery Services","DA.live","AI agents","Model Context Protocol","Cloud architecture"],"award":["Adobe Experience Manager Champion, class of 2026-2027","AEM Rockstar winner, Adobe Summit 2024"]},{"@type":"WebSite","@id":"https://www.jackzhaojin.com/#website","url":"https://www.jackzhaojin.com/","name":"Jack Jin","publisher":{"@id":"https://www.jackzhaojin.com/#person"}},{"@type":"WebPage","@id":"https://www.jackzhaojin.com/portfolio/content-factory/#webpage","url":"https://www.jackzhaojin.com/portfolio/content-factory/","name":"The Content Factory | Jack Jin","description":"Talk material for adaptTo() 2026, built for real: a mesh of independently-addressable A2A agents that generate, migrate, and evaluate CMS content.","isPartOf":{"@id":"https://www.jackzhaojin.com/#website"},"breadcrumb":{"@id":"https://www.jackzhaojin.com/portfolio/content-factory/#breadcrumb"},"mainEntity":{"@id":"https://www.jackzhaojin.com/portfolio/content-factory/#project"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.jackzhaojin.com/portfolio/content-factory/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.jackzhaojin.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.jackzhaojin.com/portfolio/"},{"@type":"ListItem","position":3,"name":"The Content Factory","item":"https://www.jackzhaojin.com/portfolio/content-factory/"}]},{"@type":"SoftwareSourceCode","@id":"https://www.jackzhaojin.com/portfolio/content-factory/#project","name":"The Content Factory","alternativeHeadline":"A decoupled agent mesh","description":"Talk material for adaptTo() 2026, built for real: a mesh of independently-addressable A2A agents that generate, migrate, and evaluate CMS content.","url":"https://www.jackzhaojin.com/portfolio/content-factory/","image":"https://www.jackzhaojin.com/portfolio/content-factory/media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png?width=1200&format=pjpg&optimize=medium","author":{"@id":"https://www.jackzhaojin.com/#person"},"temporalCoverage":"2025/2026","codeRepository":["https://github.com/jackzhaojin/azure-da-mcp","https://github.com/jackzhaojin/adapt-to-2026-demo"]}]}</script>
 </head>
@@ -40,6 +40,40 @@
               <p><strong>incremental specs</strong> Spec Kit bundles (spec, plan, tasks) in the v1 era; a dated plan in ai-docs per release in the mesh era. Six days from PRD to deployed mesh, because the spec came first.</p>
               <p>Talk material for adaptTo() 2026, built for real: a mesh of independently-addressable A2A agents that generate, migrate, and evaluate CMS content. Different vendors compose over an open protocol. Quality is measured, not vibed.</p>
               <p>The arc runs in three eras. Oct 2025: an MCP server for AEM's da.live, on Azure Functions. A 94-commit December push tags v1.0 on New Year's Day: evals in a Docker container, Make.com scenarios calling the Functions to do the authoring, and by mid-January, Adobe Summit 2026 blog material coming out of the same repo. Then a quiet spring. In June, v2.0 rebuilds it as four agents: coordinator, content-gen, migration, eval. Six days from PRD to a deployed mesh on Cloudflare Workers and Containers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="scene closed-loop">
+          <div>
+            <div>label</div>
+            <div>A three-petal loop through the coordinator: one run goes out to content-gen, migration and eval in turn and always comes back through the coordinator, leaving a messy legacy page, the same page as clean blocks, and four score bars, until the coordinator's ring closes.</div>
+          </div>
+          <div>
+            <div>coordinator</div>
+            <div>
+              <p><strong>Coordinator</strong></p>
+              <p>routes the loop</p>
+            </div>
+          </div>
+          <div>
+            <div>content-gen</div>
+            <div>
+              <p><strong>Content-gen</strong></p>
+              <p>legacy page</p>
+            </div>
+          </div>
+          <div>
+            <div>migration</div>
+            <div>
+              <p><strong>Migration</strong></p>
+              <p>Kimi authors</p>
+            </div>
+          </div>
+          <div>
+            <div>eval</div>
+            <div>
+              <p><strong>Eval</strong></p>
+              <p>Claude judges</p>
             </div>
           </div>
         </div>

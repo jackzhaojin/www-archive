@@ -11,6 +11,32 @@
 | resource API, multi-tenant authorization.                                                                             |
 +-----------------------------------------------------------------------------------------------------------------------+
 
++----------------------------------------------------------------------+
+| Scene (pin tumbler)                                                  |
++----------+-----------------------------------------------------------+
+| label    | A cutaway of two tenant locks inside the Spring Boot API: |
+|          | a key cut from one organization's claims lifts every pin  |
+|          | of its own tenant's lock to the shear line and draws the  |
+|          | bolt back, then leaves three pins across the shear line   |
+|          | in another tenant's lock, which stays locked.             |
++----------+-----------------------------------------------------------+
+| claims   | **Org-scoped claims**                                     |
+|          |                                                           |
+|          | from Keycloak                                             |
++----------+-----------------------------------------------------------+
+| api      | **Spring Boot API**                                       |
+|          |                                                           |
+|          | RBAC per tenant                                           |
++----------+-----------------------------------------------------------+
+| own      | **Its own tenant**                                        |
+|          |                                                           |
+|          | opens                                                     |
++----------+-----------------------------------------------------------+
+| other    | **Another tenant**                                        |
+|          |                                                           |
+|          | stays locked                                              |
++----------+-----------------------------------------------------------+
+
 +--------------------------------------------------------------------------+
 | Showcase (story, wide, flip)                                             |
 +-----------------------------------------------------------+--------------+

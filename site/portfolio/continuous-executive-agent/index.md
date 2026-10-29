@@ -14,6 +14,29 @@
 | projects, most of them built overnight.                                                                                                                         |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
++-----------------------------------------------------------------------+
+| Scene (clock tower)                                                   |
++------------+----------------------------------------------------------+
+| label      | A clock tower whose movement is three meshing gears: the |
+|            | large executive wheel turns the dial's single hand       |
+|            | through the eight phases of its loop and drives the      |
+|            | management wheel, which drives the small worker pinion,  |
+|            | and each turn of the pinion lays one stone of the piece  |
+|            | at the tower's foot.                                     |
++------------+----------------------------------------------------------+
+| executive  | **Executive**                                            |
+|            |                                                          |
+|            | picks the goal                                           |
++------------+----------------------------------------------------------+
+| management | **Management**                                           |
+|            |                                                          |
+|            | breaks it down                                           |
++------------+----------------------------------------------------------+
+| worker     | **Worker**                                               |
+|            |                                                          |
+|            | builds it                                                |
++------------+----------------------------------------------------------+
+
 +--------------------------------------------------------------------+
 | Stats (lifetime)                                                   |
 +-------------------------+------------------------------------------+
