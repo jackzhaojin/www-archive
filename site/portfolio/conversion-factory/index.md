@@ -73,6 +73,27 @@
 | [conversion-factory-eds ↗](https://github.com/jackzhaojin/conversion-factory-eds) |
 +-----------------------------------------------------------------------------------+
 
++--------------------------------------------------------------------------------------------------------------------+
+| Showcase (story)                                                                                                   |
++----------------------------------------------------------+---------------------------------------------------------+
+| *Sep 2026* · lightning talk, adaptTo() 2026, Berlin      | The recorded talk, adaptTo() 2026                       |
+|                                                          |                                                         |
+| ### Conversion Factory, *the lightning talk*             | [Watch the recorded talk](https://youtu.be/owIrEDroGJs) |
+|                                                          |                                                         |
+| A ten-minute talk on a work in progress: agents that     |                                                         |
+| propose and validate block variants for an Edge Delivery |                                                         |
+| site, then ship them through an experiment framework so  |                                                         |
+| both versions run live.                                  |                                                         |
++----------------------------------------------------------+---------------------------------------------------------+
+| id                                                       | adaptto-2026-lightning                                  |
++----------------------------------------------------------+---------------------------------------------------------+
+
++------------------------------------------------------------------------------------------+
+| Proof Links                                                                              |
++------------------------------------------------------------------------------------------+
+| [View event source ↗](https://adapt.to/2026/schedule/lightning-talks/conversion-factory) |
++------------------------------------------------------------------------------------------+
+
 +-------------------------+
 | Section Metadata        |
 +---------+---------------+

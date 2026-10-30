@@ -220,6 +220,53 @@
 |             |
 +-------------+
 
++----------------------------------------------------------------------------------------------------------------------------+
+| Showcase (story)                                                                                                           |
++------------------------------------------------------------------+---------------------------------------------------------+
+| *Sep 29, 2026* · conference session, adaptTo() 2026, Berlin      | The recorded talk, adaptTo() 2026                       |
+|                                                                  |                                                         |
+| ### AI Agent-Driven Content Migration for Edge Delivery Services | [Watch the recorded talk](https://youtu.be/V6vqbTWOiRU) |
+|                                                                  |                                                         |
+| AI-assisted migration into DA.live and EDS, with orchestration,  |                                                         |
+| evaluation, and human review.                                    |                                                         |
+|                                                                  |                                                         |
+| Our talk, Katie Phillips from Best Buy and me, the first talk of |                                                         |
+| the second day: AI agents that migrate content to Edge Delivery  |                                                         |
+| Services.                                                        |                                                         |
+|                                                                  |                                                         |
+| **My take**                                                      |                                                         |
+|                                                                  |                                                         |
+| Three things I'd call out:                                       |                                                         |
+|                                                                  |                                                         |
+| - Like most talks at the conference, ours is very agentic. It's  |                                                         |
+|   also AI using AI, where most of the other talks were about     |                                                         |
+|   humans using AI.                                               |                                                         |
+| - We think about evals.                                          |                                                         |
+| - It's a multi-step process, and the AI agents share a common    |                                                         |
+|   working process.                                               |                                                         |
+|                                                                  |                                                         |
+| That fits content migration well, because you want to run things |                                                         |
+| in parallel. Sometimes you spin up tens or hundreds of agents to |                                                         |
+| migrate a bunch of pages, run evals, throw the results away and  |                                                         |
+| do it again. AI using AI can do that in a very scalable way.     |                                                         |
++------------------------------------------------------------------+---------------------------------------------------------+
+| id                                                               | adaptto-2026                                            |
++------------------------------------------------------------------+---------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Frame (sub)                                                                                                                                                                                                                                                                                                        |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled Conceptually: One Framework, Any Content Process: any trigger (human UI, deterministic, AI trigger) flows through a migrator, an eval step, an orchestrator, a generator and a human step to human oversight, preview publish and final publish, with human governance on the entire flow.][image2] |
+|                                                                                                                                                                                                                                                                                                                    |
+| From our slides: one framework for any content process, with any trigger, any route through the agents, and four places a human can step in. Slide: Jack Jin and Katie Phillips, adaptTo() 2026.                                                                                                                   |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Proof Links                                                                                                                                                                                                                                            |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [View event source ↗](https://adapt.to/2026/schedule/ai-agent-driven-content-migration-for-edge-delivery-services) [Slides (PDF) ↗](https://adapt.to/2026/presentations/adaptto-2026-ai-agent-driven-content-migration-for-edge-delivery-services.pdf) |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 +----------------------------+
 | Section Metadata           |
 +---------+------------------+
@@ -265,3 +312,5 @@
 [image0]: https://main--www-eds--jackzhaojin.aem.page/media_11c940e5626375d2bbd50ff1f01d01dad41f70a86.png#width=2700&height=1460
 
 [image1]: https://main--www-eds--jackzhaojin.aem.page/media_10de7b658d46847194e3aacd11e51d1ddd14c324f.png#width=2600&height=2012
+
+[image2]: https://main--www-eds--jackzhaojin.aem.page/media_171df61d09bc33c267241324008e5305eb073f5ea.jpg#width=1600&height=900

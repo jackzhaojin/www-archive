@@ -66,7 +66,7 @@ One MCP server for da.live content can serve Claude, Gemini 2.5 Pro and Azure Op
 
 ## What changed since I wrote this
 
-This server didn't stay on Azure Functions or stay this small. The same repo grew into [the Content Factory](/portfolio/content-factory/). Its v2.0, in June 2026, rebuilt it as four agents on Cloudflare Workers and Containers, and that work became my [adaptTo() 2026 talk](/talks/adaptto-2026/).
+This server didn't stay on Azure Functions or stay this small. The same repo grew into [the Content Factory](/portfolio/content-factory/). Its v2.0, in June 2026, rebuilt it as four agents on Cloudflare Workers and Containers, and that work became my [adaptTo() 2026 talk](/portfolio/content-factory/#adaptto-2026).
 
 +-------------------+
 | Section Metadata  |
@@ -388,7 +388,7 @@ The repo kept going after that weekend: by New Year's Day it had evals running i
 |           |                                                                                                                 | generate, migrate and evaluate       |
 |           |                                                                                                                 | content.                             |
 +-----------+-----------------------------------------------------------------------------------------------------------------+--------------------------------------+
-| Talk      | [AI Agent-Driven Content Migration for Edge Delivery Services](/talks/adaptto-2026/)                            | adaptTo() 2026, Berlin.              |
+| Talk      | [AI Agent-Driven Content Migration for Edge Delivery Services](/portfolio/content-factory/#adaptto-2026)        | adaptTo() 2026, Berlin.              |
 +-----------+-----------------------------------------------------------------------------------------------------------------+--------------------------------------+
 
 +-------------------------------------------------------------------------------------------+

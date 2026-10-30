@@ -69,7 +69,7 @@ There are two ways to let a model edit a da.live page, the newest way to author 
 
 A week later I pushed the same server much harder: Claude, Gemini and Azure OpenAI on one MCP server, a deploy to Azure Functions, and n8n on top. That's [part two](/writing/2025-10-12-da-live-mcp-across-ai-platforms/).
 
-The repo kept going after that. In November 2025 it picked up tools to [preview and publish](https://github.com/jackzhaojin/azure-da-mcp/commit/6b67c39), [create pages](https://github.com/jackzhaojin/azure-da-mcp/commit/8b8c137) and [create folders](https://github.com/jackzhaojin/azure-da-mcp/commit/bb7bdfe). Over the next months it grew into [the Content Factory](/portfolio/content-factory/), agents that generate, migrate and evaluate da.live content, which became my [adaptTo() 2026 talk](/talks/adaptto-2026/). This article stays with the October 2025 version: two tools, one weekend.
+The repo kept going after that. In November 2025 it picked up tools to [preview and publish](https://github.com/jackzhaojin/azure-da-mcp/commit/6b67c39), [create pages](https://github.com/jackzhaojin/azure-da-mcp/commit/8b8c137) and [create folders](https://github.com/jackzhaojin/azure-da-mcp/commit/bb7bdfe). Over the next months it grew into [the Content Factory](/portfolio/content-factory/), agents that generate, migrate and evaluate da.live content, which became my [adaptTo() 2026 talk](/portfolio/content-factory/#adaptto-2026). This article stays with the October 2025 version: two tools, one weekend.
 
 +-------------------+
 | Section Metadata  |
@@ -476,7 +476,7 @@ Watch this part [9:32 Wrap-up](https://youtu.be/r_L1tHBKeZQ?t=572)
 |           |                                                                                                                            | agents that generate, migrate and |
 |           |                                                                                                                            | evaluate content.                 |
 +-----------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
-| Talk      | [AI Agent-Driven Content Migration for Edge Delivery Services](/talks/adaptto-2026/)                                       | adaptTo() 2026, Berlin.           |
+| Talk      | [AI Agent-Driven Content Migration for Edge Delivery Services](/portfolio/content-factory/#adaptto-2026)                   | adaptTo() 2026, Berlin.           |
 +-----------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
 
 +-------------------------------------------------------------------------------------------+

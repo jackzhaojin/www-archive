@@ -345,7 +345,7 @@ Watch this part [11:39 Can both design?](https://youtu.be/THAk36FGZps?t=699) [13
 |         |                                                                                                                | content-driven-development from the   |
 |         |                                                                                                                | same repo.                            |
 +---------+----------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| Talk    | [AI Agent-Driven Content Migration for Edge Delivery Services](/talks/adaptto-2026/)                           | adaptTo() 2026, Berlin. The demo      |
+| Talk    | [AI Agent-Driven Content Migration for Edge Delivery Services](/portfolio/content-factory/#adaptto-2026)       | adaptTo() 2026, Berlin. The demo      |
 |         |                                                                                                                | site's home.                          |
 +---------+----------------------------------------------------------------------------------------------------------------+---------------------------------------+
 

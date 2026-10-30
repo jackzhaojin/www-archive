@@ -6,7 +6,7 @@
 | Adobe Experience Manager.\                                | [![Adobe Experience Manager Champion, class of 2026-2027][image0]](https://business.adobe.com/blog/introducing-the-adobe-champion-class-of-2026-2027) |
 | AI agents.\                                               |                                                                                                                                                       |
 | *Work you can explore.*                                   | - [AEM Champion 2026-2027](https://business.adobe.com/blog/introducing-the-adobe-champion-class-of-2026-2027) Announced by Adobe on Sep 1, 2026       |
-|                                                           | - [AEM Rockstar winner](/talks/aem-rockstar-2024/) Adobe Summit 2024, Las Vegas                                                                       |
+|                                                           | - [AEM Rockstar winner](/portfolio/aem-rockstar-2024/) Adobe Summit 2024, Las Vegas                                                                   |
 | I'm an Adobe Experience Manager Champion (class of        | - [Adobe Certified Master](/certifications/#adobe-experience-manager-sites-architect) AEM Sites Architect, valid through Jul 2027                     |
 | 2026-2027), AEM Rockstar winner at Adobe Summit 2024, and |                                                                                                                                                       |
 | an Adobe Certified Master. As an Associate Director in    | [View all certifications](/certifications/)                                                                                                           |
