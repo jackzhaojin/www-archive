@@ -1,9 +1,9 @@
 {
-  "taken": "2026-10-30T18:06:41.676Z",
+  "taken": "2026-10-30T18:19:38.031Z",
   "base": "https://www.jackzhaojin.com",
   "code": {
     "repo": "jackzhaojin/www-eds",
-    "commit": "8e064d51c0d8ff5629da9573c6522a36df05aea9"
+    "commit": "26a0e8040518ad1f89c63b270802cc77c8696d76"
   },
   "counts": {
     "crawler": 2,
@@ -16,7 +16,7 @@
     "media": 820,
     "generated": 2
   },
-  "bytes": 65131207,
+  "bytes": 65131793,
   "warnings": [],
   "notPages": [
     "page /design-systems/v3/...: 404",
@@ -767,7 +767,7 @@
     "templates/listing/listing.css": {"url":"/templates/listing/listing.css","kind":"code","type":"text/css; charset=utf-8","bytes":551,"sha256":"610da942b0288a2b8cb7ad6c14927e59ee4542ea7688c2e68e3b972766f26702"},
     "templates/listing/listing.js": {"url":"/templates/listing/listing.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":370,"sha256":"03823c763403509aa27e38ce8358a4b49ab91a3bddae54e481dcac1da2b0ba9f"},
     "templates/portfolio/portfolio.css": {"url":"/templates/portfolio/portfolio.css","kind":"code","type":"text/css; charset=utf-8","bytes":13160,"sha256":"d5ba6353ed39269000dd86f7dd20fef44372c5074aa97ac38e428d6d632ea578"},
-    "templates/portfolio/portfolio.js": {"url":"/templates/portfolio/portfolio.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":14269,"sha256":"f0a96e4159c97595cd88c9791941662ad71339f15f7ddce330a29f807bd62a39"},
+    "templates/portfolio/portfolio.js": {"url":"/templates/portfolio/portfolio.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":14855,"sha256":"32e89e9bbc2ddcbdc55e7cb7465349744744efe0e256d83a2caaefc0e82b0499"},
     "templates/static/static.css": {"url":"/templates/static/static.css","kind":"code","type":"text/css; charset=utf-8","bytes":2743,"sha256":"3044daa77b662f15982e734f8f32a076fb9409c89c46e0615405712aed468e6e"},
     "templates/static/static.js": {"url":"/templates/static/static.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":214,"sha256":"7bf80d9f319204696fe1f2e1b1c6e8b016011b59cdd4e18ad6be4e59d228f37a"},
     "terms/index.html": {"url":"/terms/","kind":"page","type":"text/html; charset=utf-8","bytes":13056,"sha256":"1c099d9ac1cd3c8cf1ba888758c7400fc3f797714c139f630da07b2840643b5c"},
