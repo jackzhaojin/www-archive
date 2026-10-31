@@ -16,7 +16,8 @@
  * - the crawler files: robots.txt and sitemap.xml;
  * - the code: every file www-eds serves (its files at origin/main, minus .hlxignore);
  * - media: every media_<hash> file a page, fragment or sheet uses, at full size. The names are
- *   content hashes, so a file kept from the last snapshot is copied, not fetched again.
+ *   content hashes, so a file kept from the last snapshot is copied, not fetched again;
+ * - documents: every same-site PDF a page links to (slides next to the page that links them).
  * Written for the host: _redirects from the redirects sheet, _headers with noindex.
  * Exit 1 when a page, fragment, sheet or code file can't be fetched.
  */
@@ -43,6 +44,7 @@ const CRAWLER = ['/robots.txt', '/sitemap.xml'];
 const MEDIA_HOSTS = new Set([new URL(base).host, 'www.jackzhaojin.com',
   'main--www-eds--jackzhaojin.aem.live', 'main--www-eds--jackzhaojin.aem.page']);
 const MEDIA = /(?:https?:\/\/[a-z0-9.-]+)?[^\s"'()<>,[\]]*media_[0-9a-f]{8,}\.[a-z0-9]+/gi;
+const DOCUMENT = /href="([^"#?]+\.pdf)(?:[#?][^"]*)?"/gi;
 
 const git = (...cmd) => execFileSync('git', ['-C', code, ...cmd], { encoding: 'utf8' });
 const files = {};
@@ -110,6 +112,18 @@ function mediaRefs(text, from) {
   for (const [match] of text.matchAll(MEDIA)) {
     try {
       const url = new URL(match, from);
+      if (MEDIA_HOSTS.has(url.host)) out.add(url.pathname);
+    } catch { /* not a URL */ }
+  }
+  return out;
+}
+
+/** Same-site documents a text links to: www or EDS origin URLs, or relative to where it is served. */
+function documentRefs(text, from) {
+  const out = new Set();
+  for (const [, href] of text.matchAll(DOCUMENT)) {
+    try {
+      const url = new URL(href.replaceAll('&amp;', '&'), from);
       if (MEDIA_HOSTS.has(url.host)) out.add(url.pathname);
     } catch { /* not a URL */ }
   }
@@ -186,6 +200,10 @@ await pool([...media].sort(), async (path) => {
   await save(path, 'media', { required: false });
 });
 
+// Documents: few and not content-hashed, so fetched every time.
+const documents = new Set(texts.flatMap(([text, from]) => (text ? [...documentRefs(text, from)] : [])));
+await pool([...documents].sort(), (path) => save(path, 'document', { required: false }));
+
 // For the host: the redirects sheet as _redirects, and noindex everywhere.
 const redirects = JSON.parse(await readFile(join(NEXT, 'redirects.json'), 'utf8')).data
   .filter((row) => row.Source?.startsWith('/') && row.Destination)
@@ -233,7 +251,7 @@ console.log(`  code: www-eds ${commit.slice(0, 7)}`);
 if (previous) {
   console.log(`  since ${previous.taken}: ${added.length} added, ${changed.length} changed, ${removed.length} removed`);
   for (const [label, list] of [['+', added], ['~', changed], ['-', removed]]) {
-    list.filter((file) => /^(page|sheet|fragment)$/.test((files[file] || before[file]).kind))
+    list.filter((file) => /^(page|sheet|fragment|document)$/.test((files[file] || before[file]).kind))
       .forEach((file) => console.log(`    ${label} ${(files[file] || before[file]).url}`));
   }
 }

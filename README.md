@@ -38,6 +38,7 @@ There's no schedule yet: a snapshot is taken by hand after a publish.
 | crawler | `robots.txt`, `sitemap.xml` | as is |
 | code | every file www-eds serves: its tracked files at `origin/main` minus `.hlxignore` (blocks, scripts, styles, templates, widgets, fonts, icons, `head.html`, `404.html`, the root files) | as is |
 | media | every `media_<hash>` file a page, fragment or sheet uses, at full size. The names are content hashes, so a later snapshot copies them instead of fetching them again | next to the page that uses it |
+| document | every same-site PDF a page links to, such as a talk's slides (since 2026-10-31) | next to the page that links it |
 | generated | `_redirects` from the redirects sheet (301s), `_headers` with `X-Robots-Tag: noindex, nofollow` | the host reads them; they aren't served |
 
 Links that turned out not to be pages (redirects, 404s) are listed in `snapshot.json` under `notPages`.
