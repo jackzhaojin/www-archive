@@ -1,0 +1,403 @@
+1. [Home](/)
+2. [Technical Writing](/writing/)
+3. AI in Professional Services
+
+# AI in Professional Services: Winning the AI Race
+
+By [Jack Jin](/) · September 10, 2025 · 13 min read · My Columbus AI Week talk
+
+At Columbus AI Week in September 2025, I gave my first talk there: AI in professional services, from where I sit as a senior manager in Accenture's Adobe Business Group. It opens with a meme about who really writes the AI strategy, then covers why AI breaks the old consulting model, how firms like mine are investing, and the outcomes we were already seeing, and it ends with six things I think the winning firms will do.
+
+---
+
++-----------------------------------------------------------------------------------+
+| Rail                                                                              |
++---------------------------------+-------------------------------------------------+
+| ![][image0]                     | **The meme**\                                   |
+|                                 | [Who wrote the AI strategy?](#first-a-meme)     |
++---------------------------------+-------------------------------------------------+
+| ![][image1]                     | **Why**\                                        |
+|                                 | [The silos break down](#why)                    |
++---------------------------------+-------------------------------------------------+
+| ![][image2]                     | **How**\                                        |
+|                                 | [A $3 billion investment](#ai-investment)       |
++---------------------------------+-------------------------------------------------+
+| ![][image3]                     | **How**\                                        |
+|                                 | [Models, products, assessments](#partners)      |
++---------------------------------+-------------------------------------------------+
+| ![][image4]                     | **How**\                                        |
+|                                 | [AI-driven development](#ai-driven-development) |
++---------------------------------+-------------------------------------------------+
+| ![][image5]                     | **Outcome**\                                    |
+|                                 | [What we already see](#outcomes)                |
++---------------------------------+-------------------------------------------------+
+| ![][image6]                     | **Outcome**\                                    |
+|                                 | [How firms will win](#how-firms-win)            |
++---------------------------------+-------------------------------------------------+
+| [The 2026 talk](/writing/2026-09-11-knowledge-work-as-a-product/)                 |
+|                                                                                   |
+| [All talks](/talks/)                                                              |
++-----------------------------------------------------------------------------------+
+
+---
+
++------------------------------------------------------------------------------------------------------------------+
+| Fine Print                                                                                                       |
++------------------------------------------------------------------------------------------------------------------+
+| Columbus AI Week 2025, Columbus, Ohio, September 10 and 11, 2025. Written up from my last rehearsal of the talk, |
+| recorded September 7, and the deck I presented. My views are my own, not my employer's.                          |
++------------------------------------------------------------------------------------------------------------------+
+
+---
+
+## First, a meme: who wrote the AI strategy?
+
+I started with a story, told in four frames.
+
+In the first frame, a client CEO hires Bob, a top senior strategy firm, for an AI strategy. She wants to know how best to use AI to take the company to the next level, a very common request these days.
+
+In the second frame, Jim, a client director, gets a call: the CEO is doing this, and he has a meeting with the Bobs in two days. Jim sees the opportunity of a lifetime to show what he can do in the age of AI. He hangs up and calls George, his consulting partner, whose team has done implementation work for him for five years. It's a key moment in Jim's career, so George's team has to stop everything and put together an AI strategy deck. George knows exactly how the business runs; his team just has to figure out how to use AI to do the work.
+
+In the third frame, George's team, who have never done strategy work and don't know what an AI strategy even looks like, use AI to do it. What they do have is five years of context on the client's business, and the data. In the fourth frame, Jim hands the deck to Bob. Bob is extremely impressed by Jim's AI-forward thinking, passes very positive notes along to the CEO and the board, and Jim gets promoted. Everything good happens.
+
+There are three memes in there. The Bobs borrow Jim's work to repeat it back to the board, the old joke about consultants borrowing your watch to tell you the time. Jim gets all the credit for George's team's work, another consulting meme, and the client getting the credit is fine. And everyone is trying to figure out what AI means: if George's team could put together an AI strategy deck that made Bob happy, does anyone actually know what AI strategy is?
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Four illustrated frames: a client CEO shakes hands with Bob of a strategy firm; Jim, a client director, takes a call and turns to George, his implementation partner; George's team works with AI; Jim hands an AI strategy deck to Bob][image7] |
+|                                                                                                                                                                                                                                                    |
+| The story, frame by frame.                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++------------------------+
+| Section Metadata       |
++---------+--------------+
+| id      | first-a-meme |
++---------+--------------+
+
+---
+
+## Why: AI breaks the silos professional services was built on
+
+Memes aside, the AI race matters for professional services, and the talk had three parts: why it matters, how firms are investing in talent, processes and tools to stand out, and the outcomes we're already seeing that will define the winners.
+
+Why does it matter so much? Professional services is literally what AI can enhance. We aren't the clients ourselves; what we care about is delivering the best value for our clients, and a lot of what we know can be augmented, or replaced, with AI. Before AI and after AI look different in three ways.
+
+First, the silos. Before AI, each firm had its own trenches and specialties, what I call product-market fit. McKinsey, Bain and BCG had their niche. Infosys, Cognizant and others had a different fit. The tax firms, the auditing firms, Deloitte and Accenture all had their own value propositions. After AI, that is blending together. With enough prompting and platforms like lovable.dev, a firm can spin up a proof of concept for a client without a full development team onshore or in India. A strategy firm like McKinsey can do that now. And as the meme suggests, an implementation firm has much more client context and execution experience, and once you have that knowledge, strategy work turns out to be not all that special either. The silos built over the last 20, 30, 40 years are going to break down, and they may re-form in unpredictable ways.
+
+Second, geography. Before AI, geographic arbitrage was one of the winning recipes. For much of my career I've worked with friends in India and China. They're good people, they need the work to support their families, and the paradigm was always how to shift more work to the less expensive teams. After AI, the winning strategy is less about moving work offshore to save the client cost. It was onshore and offshore; now it's human, onshore and offshore, plus AI. It's about the value we create, not the labor cost difference.
+
+Third, time. Before AI, clients were fine with long transformations and very large teams; anything less and they worried the project would fail, or wondered why it was so short and cheap. After AI, clients ask how we're using AI to do the work faster. One of the competitive criteria now seems to be that clients expect AI baked into the solution, and demoed to them, before they sign with anyone. The firms that can demonstrate it and actually do the work will win.
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                          |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled Why: Revolutionizing Consulting, From Silos to AI-Driven Networks, comparing Before AI and After AI on three points: separate strategy and implementation firms, geographic arbitrage, and 6 to 18 month engagements][image8] |
+|                                                                                                                                                                                                                                              |
+| Before AI and after AI. The bold lines on the right are the predictions: AI-enabled teams drive value across functional verticals, human plus AI with value creation as king, and ways of engagement will change.                            |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++------------------+
+| Section Metadata |
++---------+--------+
+| id      | why    |
++---------+--------+
+
+---
+
+## How: what a $3 billion investment buys
+
+So how is Accenture handling it? Accenture is one of the largest professional services firms in the world, and two years ago it announced a $3 billion investment in AI. Truthfully, I have no idea where all of that $3 billion went, and no one I've talked to at my level knows either. That's okay. What I do know is three things.
+
+The first is accelerators and solutions. AI is something you have to build to understand, and I think Accenture had the wisdom to get into AI solutions before clients came asking, then build accelerators so the next ones go faster. By the time clients ask for it, it may be too late to develop deep expertise. Products like GenWizard and MyNav came out of that, and they're covered in Accenture's newsroom.
+
+The second is talent. In professional services, people are literally the revenue. Companies like Wendy's, here in Columbus, say people are their business. No: selling burgers is your business. In professional services, people really are the revenue, so this is the moment to retool, retrain and acquire the right AI talent.
+
+The third came together very recently. On September 1, Accenture started its new fiscal year with what is, to my knowledge, the biggest restructure in the firm's history: the traditional pillars that had been around forever, like Strategy and Song, came together as one Accenture focused on reinvention with AI for our clients. It's a big deal.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled How: Accenture's $3 Billion AI Investment, with three cards: AI investments in accelerators and solutions, a Gen AI-enabled workforce of 800,000 professionals, and September 1, 2025: Reinvention Services][image9] |
+|                                                                                                                                                                                                                                     |
+| Three things the investment means from where I sit: accelerators, the workforce, and Reinvention Services.                                                                                                                          |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++-------------------------+
+| Section Metadata        |
++---------+---------------+
+| id      | ai-investment |
++---------+---------------+
+
+---
+
+## How: models, products and the assessment business
+
+Stepping back from Accenture: how does professional services approach this whole AI thing? I see three ways.
+
+First, we partner with the foundation model providers, the people who actually make the models: Anthropic, OpenAI, Microsoft. Some solutions are best built on the models themselves, used natively or fine-tuned, so a firm has to understand how the models work and drive client solutions with them.
+
+Second, we partner with almost every software as a service company, and they're all building AI capabilities. I'm part of the Adobe Business Group, I've worked with Adobe products for 14 years, and this is dear to my heart. Adobe has a lot of AI capabilities, including AI agents, and it's up to me and my firm to be the best implementers and solution strategists for them. So professional services has to be good with the general foundation models and the best at the productized AI capabilities, even the emerging ones from the billions of venture dollars pouring into AI startups. If those companies pick up steam, we should know what they're good for.
+
+Third, and less about technology: the consulting services themselves. Clients are bombarded with questions like "I have 20 AI-driven CRMs to choose from, which one makes sense for me?" Or: "We're doing this AI thing, and we need help with change management." It's not that they can't do it; they don't have the staff for a change this big. Professional services firms specialize in things a company does once a decade, from mergers and acquisitions to migrations, and we have people who do them year after year. AI transformation is no different.
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled How: Partner Ecosystem, Model and Product Agnostic Approach: a table of foundation model providers, platform and SaaS companies, and consulting services, with examples, the strategic insight and the outcome for each][image10] |
+|                                                                                                                                                                                                                                                  |
+| Model and product agnostic: foundation models, platforms, and the consulting services around them.                                                                                                                                               |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++--------------------+
+| Section Metadata   |
++---------+----------+
+| id      | partners |
++---------+----------+
+
+---
+
+## How: AI-driven development, the part I'm passionate about
+
+The last piece of the how is the part I'm very passionate about: AI-driven development, and how it will change consulting and how a lot of code gets written in our industry.
+
+It started with prompting, very basic stuff. Then came what I call intermediate, where people get more thoughtful: you're no longer asking for simple fixes, you're working out what happens if AI understands this snippet of code, these files, or has memory of the past prompts and the code base. Now we're moving to advanced, where AI gets tools to look up documentation and validate its own work, and can test what it's doing. That's where the self-coding, and the vibe coding talked about at this conference, comes in. If AI can code and test in the same loop, with the instruction not to exit the loop until the test cycle has passed, that's pretty good, and it means a lot in professional services.
+
+The industry context: this is already happening in San Francisco and Silicon Valley. Consulting companies are diving in headfirst too, working out how to bring the new technology to their clients. Whoever does it best and earliest will see client success, and set the trend for everyone else.
+
++-------------------------------------------------------------------------------------------------------------------+
+| Explainer (era steps)                                                                                             |
++-------------------------------------------------------------------------------------------------------------------+
+| Early stage                                                                                                       |
+|                                                                                                                   |
+| Prompting                                                                                                         |
+|                                                                                                                   |
+| - Simple prompts                                                                                                  |
+| - Basic bug fixes                                                                                                 |
++-------------------------------------------------------------------------------------------------------------------+
+| Intermediate                                                                                                      |
+|                                                                                                                   |
+| Memory and context                                                                                                |
+|                                                                                                                   |
+| - AI reads the snippet, the files, the code base                                                                  |
+| - Memory of past prompts                                                                                          |
++-------------------------------------------------------------------------------------------------------------------+
+| Advanced                                                                                                          |
+|                                                                                                                   |
+| Self-coding                                                                                                       |
+|                                                                                                                   |
+| - Tools to look up documentation and validate                                                                     |
+| - Code and test in the same loop                                                                                  |
+| - No exit until the tests pass                                                                                    |
++-------------------------------------------------------------------------------------------------------------------+
+| Spec-driven development                                                                                           |
+|                                                                                                                   |
+| English is the new code                                                                                           |
+|                                                                                                                   |
+| - Focus on documentation                                                                                          |
++-------------------------------------------------------------------------------------------------------------------+
+| Applied in professional services                                                                                  |
+|                                                                                                                   |
+| Client success                                                                                                    |
+|                                                                                                                   |
+| - Value faster, at lower cost                                                                                     |
+| - Whoever does it best and earliest sets the trend                                                                |
++-------------------------------------------------------------------------------------------------------------------+
+| The evolution of AI-driven development as the deck drew it in September 2025, from simple prompts to client work. |
++-------------------------------------------------------------------------------------------------------------------+
+
+The deck also broke the path into nine stages to AI mastery. Pick a half to see it.
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Compare                                                                                                                                                                                                                                                   |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Stages 1 to 5 | ![Slide titled How: 9 Stages to AI Mastery Part 1: use single prompts, engage in multi-turn conversations, understand when to use different AI models, explore AI capabilities with advanced tools, implement AI memory systems][image11] |
+|               |                                                                                                                                                                                                                                           |
+|               | Stages 1 to 5: single prompts, multi-turn conversations, picking the model, tools, memory.                                                                                                                                                |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Stages 6 to 9 | ![Slide titled How: 9 Stages to AI Mastery Part 2: master AI flow, harness context engineering with advanced prompts, implement spec-driven development, utilize agent patterns for autonomous problem-solving][image12]                  |
+|               |                                                                                                                                                                                                                                           |
+|               | Stages 6 to 9: AI flow, context engineering, spec-driven development, agent patterns.                                                                                                                                                     |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++---------------------------------+
+| Section Metadata                |
++---------+-----------------------+
+| id      | ai-driven-development |
++---------+-----------------------+
+
+---
+
+## Outcomes we were already seeing
+
+Part three: the outcomes we were already seeing.
+
+The first is accelerating client innovation with rapid prototyping. Before, we had Figma designs and PowerPoints; Accenture and everyone else are known for building PowerPoints to share a concept. With AI, instead of showing the client what their website will look like, you have the system running their website. That's better than any PowerPoint slide you can give a client.
+
+The second is supporting very old code bases. Accenture does a lot of managed services as well as new platform builds, and clients come to us saying: we have this system running COBOL, it's 20 years old, we don't have the engineers anymore, but we have to maintain it. That was challenging, to say the least. A lot of banking and legacy applications are really old, written by client engineers 20 years ago or by a different consultancy, with no documentation. AI can help reverse engineer them, work out what the requirements were supposed to be, and fix bugs, and we're already seeing a lot of client value there.
+
+The third is really big: generative AI has changed how we think about analytics and data migration. Both used to have what I call tight data binding: data in, data out, strict transformation rules and strict schemas. With generative AI it can be loosely coupled. You paste in the HTML, AI interprets the structure, you keep enough transformation rules in the middle, and at the end a mapping tells AI to return exact JSON with exactly the data types you need. If you spend enough time and money scaffolding that capability, the better the model gets, the better the outcome. It's quite insane how much we can migrate websites onto any platform automatically. If you can generate code, you can surely generate content.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                                         |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled Outcome: AI-Enabled Development Transforms Our Impact, with three cards: accelerate client innovation with rapid prototyping, transform legacy codebases with AI-driven insights, and enhance data migration and analytics with AI][image13] |
+|                                                                                                                                                                                                                                                             |
+| Three outcomes already showing up in client work: prototypes, legacy code, data and content migration.                                                                                                                                                      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++--------------------+
+| Section Metadata   |
++---------+----------+
+| id      | outcomes |
++---------+----------+
+
+---
+
+## How professional services firms will win
+
+My last slide was an opinion piece: what I really think.
+
+First, invest strategically in AI skills. You don't need to learn every AI skill. Professional services has to understand the fundamentals of AI, then go deep on how to deliver value to clients.
+
+Second, drive success through innovation. I don't mean the word people use when they have nothing better to say. I mean be curious again. Following your boss isn't innovation: when your boss did your job, they never had AI, so you can't follow their recipe. Everyone needs the agency to explore what AI means for their own work.
+
+Third, integrate AI into core services, end to end, not just coding or data migration: how you prepare for client conversations, how you synthesize the notes and turn them into deliverables, whether that's a user story, code or a production deployment.
+
+Fourth, collaborate within the product ecosystem. Professional services shouldn't think like a product company; we're not building products. But we owe it to our clients and ourselves to know what's in the market, with billions of private equity dollars pouring into AI products, and to work with the product makers on what makes sense for each client.
+
+Fifth, understand the ecosystem. Clients are bombarded with AI-driven products and don't know which one is best. Every salesperson thinks theirs is, which is part of the game. So clients look to professional services for an assessment that recommends what makes sense for them, and maybe makes it real with the partner.
+
+Sixth, embrace AI responsibly. It's a very fast-moving world. We have to do it safely, make sure we don't discriminate, and get a lot of things right, because it's easy to get things wrong, and no professional services firm wants to be the one caught doing it, all over the news.
+
+With that, I opened it up for questions.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Figure (shot, open)                                                                                                                                                                                                                                                                                                                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![Slide titled Outcome: The Future of Professional Services in an AI-Driven World, with six cards: invest strategically in AI skills and talent, drive success through innovation, integrate AI into core services, collaborate within the product ecosystem, understand the ecosystem, and embrace AI responsibly to win][image14] |
+|                                                                                                                                                                                                                                                                                                                                     |
+| Six ways I think the best professional services firms will win.                                                                                                                                                                                                                                                                     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++-------------------------+
+| Section Metadata        |
++---------+---------------+
+| id      | how-firms-win |
++---------+---------------+
+
+---
+
+## Related
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Row List                                                                                                                                                |
++---------+---------------------------------------------------------------------------------------------------------+-------------------------------------+
+| Article | [Knowledge Work as a Product](/writing/2026-09-11-knowledge-work-as-a-product/)                         | My Columbus AI Week talk a year     |
+|         |                                                                                                         | later, September 2026.              |
++---------+---------------------------------------------------------------------------------------------------------+-------------------------------------+
+| Article | [Scaling AI coding into a delivery method](/writing/2025-07-11-scaling-ai-coding-delivery-methodology/) | AI-driven development as a delivery |
+|         |                                                                                                         | practice, from July 2025.           |
++---------+---------------------------------------------------------------------------------------------------------+-------------------------------------+
+| Project | [Content Factory](/portfolio/content-factory/)                                                          | Where generating content, not just  |
+|         |                                                                                                         | code, went next.                    |
++---------+---------------------------------------------------------------------------------------------------------+-------------------------------------+
+
++-------------------------------------------------------------------------------------------+
+| Author Box                                                                                |
++------+------------------------------------------------------------------------------------+
+| JJ   | Jack Jin                                                                           |
+|      |                                                                                    |
+|      | Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM        |
+|      | Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe  |
+|      | Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then |
+|      | write up what I learn.                                                             |
+|      |                                                                                    |
+|      | [Portfolio](/portfolio/) [Talks](/talks/) [GitHub](https://github.com/jackzhaojin) |
++------+------------------------------------------------------------------------------------+
+
++-------------------+
+| Section Metadata  |
++---------+---------+
+| style   | related |
++---------+---------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Metadata                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| title                   | AI in Professional Services: Winning the AI Race \| Jack Jin                                                                                                                                                                                                                                                                                                                                                                                                              |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| description             | My Columbus AI Week 2025 talk, written up: why AI breaks the old consulting silos, how firms invest, outcomes already showing up, and six ways firms will win.                                                                                                                                                                                                                                                                                                            |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| template                | article                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| image                   | ![Four illustrated frames from the talk's opening story: a client CEO hires a strategy firm, a client director calls his implementation partner, the partner's team uses AI, and the director hands over an AI strategy deck][image7]                                                                                                                                                                                                                                     |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| image:alt               | Four illustrated frames from the talk's opening story: a client CEO hires a strategy firm, a client director calls his implementation partner, the partner's team uses AI, and the director hands over an AI strategy deck                                                                                                                                                                                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| published-time          | 2025-09-10                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| json-ld                 | {"@context":"https\://schema.org","@graph":\[{"@type":"Person","@id":"https\://www\.jackzhaojin.com/#person","name":"Jack Jin","url":"https\://www\.jackzhaojin.com/","jobTitle":"Associate Director","worksFor":{"@type":"Organization","name":"Accenture","department":{"@type":"Organization","name":"Adobe Business                                                                                                                                                   |
+|                         | Group"}},"sameAs":\["https\://www\.linkedin.com/in/jackjin","https\://github.com/jackzhaojin","https\://www\.youtube.com/@jackjin8467","https\://www\.credly.com/users/jack-jin"],"award":\["Adobe Experience Manager Champion, class of 2026-2027","AEM Rockstar winner, Adobe Summit 2024"]},{"@type":"WebSite","@id":"https\://www\.jackzhaojin.com/#website","url":"https\://www\.jackzhaojin.com/","name":"Jack                                                      |
+|                         | Jin","publisher":{"@id":"https\://www\.jackzhaojin.com/#person"}},{"@type":"Article","@id":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/#article","headline":"AI in Professional Services: Winning the AI Race","description":"My Columbus AI Week 2025 talk, written up: why AI breaks the old consulting silos, how firms invest, outcomes already showing up, and six ways firms will                                                 |
+|                         | win.","author":{"@id":"https\://www\.jackzhaojin.com/#person"},"publisher":{"@id":"https\://www\.jackzhaojin.com/#person"},"image":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/media\_13935d7f48cc999336bd0d974d32e4bde6feb4d60.jpg","mainEntityOfPage":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/","isPartOf":{"@id":"https\://www\.jackzhaojin.com/#website"},"about":\["Professional             |
+|                         | services","Consulting","Artificial intelligence","AI-driven development","Data migration","Columbus AI Week"],"datePublished":"2025-09-10","inLanguage":"en"},{"@type":"Event","@id":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/#talk","name":"AI in Professional Services","startDate":"2025-09-10","eventAttendanceMode":"https\://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Columbus,              |
+|                         | Ohio"},"superEvent":{"@type":"Event","name":"Columbus AI Week                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | 2025"},"performer":{"@id":"https\://www\.jackzhaojin.com/#person"},"subjectOf":{"@id":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/#article"}},{"@type":"BreadcrumbList","@id":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/#breadcrumb","itemListElement":\[{"@type":"ListItem","position":1,"name":"Home","item":"https\://www\.jackzhaojin.com/"},{"@type":"ListItem","position":2,"name":"Technical |
+|                         | Writing","item":"https\://www\.jackzhaojin.com/writing/"},{"@type":"ListItem","position":3,"name":"AI in Professional Services","item":"https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/"}]}]}                                                                                                                                                                                                                                               |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| og:image:alt            | Four illustrated frames from the talk's opening story: a client CEO hires a strategy firm, a client director calls his implementation partner, the partner's team uses AI, and the director hands over an AI strategy deck                                                                                                                                                                                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| article:published\_time | 2025-09-10                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| article:author          | https\://www\.jackzhaojin.com/                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| og:title                | AI in Professional Services: Winning the AI Race \| Jack Jin                                                                                                                                                                                                                                                                                                                                                                                                              |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| twitter:title           | AI in Professional Services: Winning the AI Race \| Jack Jin                                                                                                                                                                                                                                                                                                                                                                                                              |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-summary         | My first Columbus AI Week talk, September 2025: a meme about who writes the AI strategy, why AI breaks the old consulting silos, how firms invest, outcomes already showing up, and six ways firms will win.                                                                                                                                                                                                                                                              |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-image           | https\://www\.jackzhaojin.com/writing/2025-09-10-ai-in-professional-services/media\_13935d7f48cc999336bd0d974d32e4bde6feb4d60.jpg?width=750\&format=jpg\&optimize=medium                                                                                                                                                                                                                                                                                                  |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-topics          | AI Engineering                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-reading-time    | 13 min read                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-talk-url        | https\://www\.jackzhaojin.com/talks/#columbus-ai-2025                                                                                                                                                                                                                                                                                                                                                                                                                     |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-talk-label      | Given as a talk at Columbus AI Week, September 2025                                                                                                                                                                                                                                                                                                                                                                                                                       |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| listing-keywords        | ai in professional services consulting columbus ai week 2025 meme ai strategy silos product-market fit geographic arbitrage human plus ai accenture 3 billion investment genwizard reinvention services partner ecosystem foundation models saas adobe assessments change management ai-driven development vibe coding spec-driven rapid prototyping legacy code cobol data migration content migration                                                                   |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[image0]: https://main--www-eds--jackzhaojin.aem.page/media_1ca01038f91453b85077ff252f744f9d9d4dfc33b.jpg#width=288&height=184
+
+[image1]: https://main--www-eds--jackzhaojin.aem.page/media_1ee20dbdcff55dad7c70055d071287aee53da3b17.jpg#width=288&height=184
+
+[image2]: https://main--www-eds--jackzhaojin.aem.page/media_148da473ac637d78b07fc3fbd859e2a85f746e6ce.jpg#width=288&height=184
+
+[image3]: https://main--www-eds--jackzhaojin.aem.page/media_15eb535aa884697c30cda50c3c18058836392d4f5.jpg#width=288&height=184
+
+[image4]: https://main--www-eds--jackzhaojin.aem.page/media_154d514c538420587179912814b92fe055848e102.jpg#width=288&height=184
+
+[image5]: https://main--www-eds--jackzhaojin.aem.page/media_101d0adc444ba2f5a3c29b70c01317c2488f264dc.jpg#width=288&height=184
+
+[image6]: https://main--www-eds--jackzhaojin.aem.page/media_12048183501a2369fcfead58084a39e1010b91917.jpg#width=288&height=184
+
+[image7]: https://main--www-eds--jackzhaojin.aem.page/media_13935d7f48cc999336bd0d974d32e4bde6feb4d60.jpg#width=1600&height=900
+
+[image8]: https://main--www-eds--jackzhaojin.aem.page/media_19f7cd9844b2b9de72d4f3dc81f5be29de4f0652e.jpg#width=1600&height=900
+
+[image9]: https://main--www-eds--jackzhaojin.aem.page/media_155373ebef18a6acc9dd8a041bae719d75224effa.jpg#width=1600&height=900
+
+[image10]: https://main--www-eds--jackzhaojin.aem.page/media_1860439266ef5c39a4bb4c012c34dbc706f867713.jpg#width=1600&height=900
+
+[image11]: https://main--www-eds--jackzhaojin.aem.page/media_1c06d03895ab32af1846e7968bf01e70a2c477820.jpg#width=1600&height=900
+
+[image12]: https://main--www-eds--jackzhaojin.aem.page/media_1ffc2a747bb54464f0693b812e82a4df2b35b346c.jpg#width=1600&height=900
+
+[image13]: https://main--www-eds--jackzhaojin.aem.page/media_1373976b2ccfb1428ba2ed861e5f415e077ea3e60.jpg#width=1600&height=900
+
+[image14]: https://main--www-eds--jackzhaojin.aem.page/media_173cd9436d2d20075053150a7906af05f4ccc4a75.jpg#width=1600&height=900
