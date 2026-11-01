@@ -1,9 +1,9 @@
 {
-  "taken": "2026-11-01T00:01:44.458Z",
+  "taken": "2026-11-01T00:27:56.909Z",
   "base": "https://www.jackzhaojin.com",
   "code": {
     "repo": "jackzhaojin/www-eds",
-    "commit": "6efb8b60a31f300b304190bfa303f29d4cc78331"
+    "commit": "f94abb4515f0d978569d1aa26c722ef2284c9b67"
   },
   "counts": {
     "crawler": 2,
@@ -17,7 +17,7 @@
     "document": 3,
     "generated": 2
   },
-  "bytes": 75270720,
+  "bytes": 75275762,
   "warnings": [],
   "notPages": [
     "page /design-systems/v3/...: 404",
@@ -771,7 +771,7 @@
     "privacy/index.md": {"url":"/privacy/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":19317,"sha256":"881c8a8c8a64d43f3598def2fa86979d997199e0d9028c9a0004b211851fbb6d"},
     "privacy/index.plain.html": {"url":"/privacy/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":9653,"sha256":"03696ff47ef2115a732efa6df2dd1ad5ab98bded0e5079f149a0895e511ca94a"},
     "privacy/media_18d1255b1fbf5a8949c36c5d58a2d2043923be629.png": {"url":"/privacy/media_18d1255b1fbf5a8949c36c5d58a2d2043923be629.png","kind":"media","type":"image/png","bytes":46964,"sha256":"8a2d2941e6576f1288cc4ef99ee0a8adf4f6692775b1a703a3dafbf41c778d75"},
-    "query-index.json": {"url":"/query-index.json","kind":"sheet","type":"application/json","bytes":24948,"sha256":"130d2c0639428607407d0f9967bb7a9116659c735d622f590a826e74877571f5"},
+    "query-index.json": {"url":"/query-index.json","kind":"sheet","type":"application/json","bytes":24948,"sha256":"142b7477505e1dd50a28cd69f3d8f6c53587239abcac6edd7edeb1c9508a40a7"},
     "redirects.json": {"url":"/redirects.json","kind":"sheet","type":"application/json","bytes":14592,"sha256":"afaf3c3301cefb332aa9691b454ef278ac326a7fa867db5ce91799bb28fff0a8"},
     "robots.txt": {"url":"/robots.txt","kind":"crawler","type":"text/plain; charset=utf-8","bytes":421,"sha256":"42c425fb4d4b9807405f950c8504a511a369c9cce307ba0919a217f5285d9e1e"},
     "scripts/aem.js": {"url":"/scripts/aem.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":22310,"sha256":"786e8019b14b4c0bee9df38a3162f129c04310d9d00e7a6dd326c7e5830c84ae"},
@@ -783,12 +783,12 @@
     "scripts/portfolio-index.js": {"url":"/scripts/portfolio-index.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":3609,"sha256":"397edcaec72481878e4e74db79f2e08dc574c7a6f37062e32e251b942e157e36"},
     "scripts/query-index.js": {"url":"/scripts/query-index.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":3010,"sha256":"754f4b16c4b94d5c036dde433701191357f7fdfb0f79f4338306e6d23f39e258"},
     "scripts/scripts.js": {"url":"/scripts/scripts.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":11899,"sha256":"39b3da09ebf42e96cc62aee2e82d57e5a1112752ea840f41493afab51babd2c0"},
-    "scripts/talks-list.js": {"url":"/scripts/talks-list.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":2905,"sha256":"aedced11eddcbc56b7acb30d70a16ff6beb81373e13c61ee597352cc59ee8127"},
+    "scripts/talks-list.js": {"url":"/scripts/talks-list.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":3338,"sha256":"c4b066e5ea142140633c6d104a6d0d6014abb0ae8568e515c5d30300459c9644"},
     "scripts/theme-control.js": {"url":"/scripts/theme-control.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":2327,"sha256":"7b4e857428479ead8e93355506815ef1fa0297e8b2498f0993adba6ddd1e3de9"},
     "scripts/writing-index.js": {"url":"/scripts/writing-index.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":5652,"sha256":"08df7709461a544033af4332ff03e30635617a9c42e5f87f114d2af99f74570b"},
     "scripts/writing-list.js": {"url":"/scripts/writing-list.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":8802,"sha256":"11dd4bb67562c379ff8989536812187ef35cc406167e397c42164eebbf40fdb2"},
     "sitemap.json": {"url":"/sitemap.json","kind":"sheet","type":"application/json","bytes":3143,"sha256":"87a95429a501f49a488fdc5a4c89680b9ac2066bad40e3181ed3efede81840e5"},
-    "sitemap.xml": {"url":"/sitemap.xml","kind":"crawler","type":"application/xml; charset=utf-8","bytes":6674,"sha256":"7c144dd78c53ec80cf9a13946ec9a28f253c7651334ff41c44854d77b9808933"},
+    "sitemap.xml": {"url":"/sitemap.xml","kind":"crawler","type":"application/xml; charset=utf-8","bytes":6674,"sha256":"72463bf58bb7cce46164d14b5b1037e2b529e396a873da96d8e7a088bb9f3a06"},
     "styles/fonts.css": {"url":"/styles/fonts.css","kind":"code","type":"text/css; charset=utf-8","bytes":1623,"sha256":"7a4dbef91a512a4a0313f639c71cd7fc5110dd6e1cb49a7e18656bca0cac56b9"},
     "styles/lazy-styles.css": {"url":"/styles/lazy-styles.css","kind":"code","type":"text/css; charset=utf-8","bytes":181,"sha256":"fb57cb98d0d5b545b816c19bef41fba63b77b94ce2d6a404a975cde298959775"},
     "styles/styles.css": {"url":"/styles/styles.css","kind":"code","type":"text/css; charset=utf-8","bytes":26234,"sha256":"dd1631c4d91a827c3b28e24aed818da28d4363629cb89f626b5957d5c0ca7316"},
@@ -941,8 +941,8 @@
     "writing/2025-09-01-aem-caching-production-architectures/media_1ca93e1ddee02435e07bce6359c3a0fdd9b3b8f13.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1ca93e1ddee02435e07bce6359c3a0fdd9b3b8f13.png","kind":"media","type":"image/png","bytes":5101,"sha256":"53f45a6bb7e91f5a98c022a2370ed212f94b51cf932f5f79cc6bf53e18cca0b3"},
     "writing/2025-09-01-aem-caching-production-architectures/media_1e1565bde729efbe1b31752554ca29bd3c25e0b86.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1e1565bde729efbe1b31752554ca29bd3c25e0b86.png","kind":"media","type":"image/png","bytes":6617,"sha256":"10d99d65a1e433918f69da7fb280bfb251028cdd377de43c08832e7b9d2ff7d2"},
     "writing/2025-09-01-aem-caching-production-architectures/media_1f56ec09e286836897dec7522b517c88190f23527.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1f56ec09e286836897dec7522b517c88190f23527.png","kind":"media","type":"image/png","bytes":3529,"sha256":"ee902422d98a54bc5d602b8cf222f1c89aeb539dd28b1d97e553143a53a44b60"},
-    "writing/2025-09-10-ai-in-professional-services/index.html": {"url":"/writing/2025-09-10-ai-in-professional-services/","kind":"page","type":"text/html; charset=utf-8","bytes":42973,"sha256":"5f7685d9fa28b36d8c956eed261d462494b7f7672a4206461ccfad80be3e0622"},
-    "writing/2025-09-10-ai-in-professional-services/index.md": {"url":"/writing/2025-09-10-ai-in-professional-services/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":63896,"sha256":"a9eb9d60ae6140e723d079222bdc2427263c81d3519ca078585a3dbef6796492"},
+    "writing/2025-09-10-ai-in-professional-services/index.html": {"url":"/writing/2025-09-10-ai-in-professional-services/","kind":"page","type":"text/html; charset=utf-8","bytes":44123,"sha256":"b72e16011068c0dd6204fc751261a864562f9d14d9af4632f98c4c00ef3d2c38"},
+    "writing/2025-09-10-ai-in-professional-services/index.md": {"url":"/writing/2025-09-10-ai-in-professional-services/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":64872,"sha256":"a9fe96ce055be62c2b7fd7d1e4f428486d489cc585e8fd9d3afc899fa77b77c8"},
     "writing/2025-09-10-ai-in-professional-services/index.plain.html": {"url":"/writing/2025-09-10-ai-in-professional-services/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":32630,"sha256":"14bd3320e5cb96cad670fe1beb7caaf11644e2dad74e423b12bb1b781eac77ae"},
     "writing/2025-09-10-ai-in-professional-services/media_101d0adc444ba2f5a3c29b70c01317c2488f264dc.jpg": {"url":"/writing/2025-09-10-ai-in-professional-services/media_101d0adc444ba2f5a3c29b70c01317c2488f264dc.jpg","kind":"media","type":"image/jpeg","bytes":14253,"sha256":"295b77e88748b9b35ed32966a4e01c417f36ab2c414cf758d34c6872f4a8e3e1"},
     "writing/2025-09-10-ai-in-professional-services/media_12048183501a2369fcfead58084a39e1010b91917.jpg": {"url":"/writing/2025-09-10-ai-in-professional-services/media_12048183501a2369fcfead58084a39e1010b91917.jpg","kind":"media","type":"image/jpeg","bytes":12261,"sha256":"94abc31891e7b3aadbbd1ac9b1467d9e687db76d36b4ade063b9e5d92a4f895d"},
@@ -1178,8 +1178,8 @@
     "writing/2026-08-15-anima-mesh-company-of-zero/media_1a83409cfcdaad1a93deaa62b34f67a635be624a2.svg": {"url":"/writing/2026-08-15-anima-mesh-company-of-zero/media_1a83409cfcdaad1a93deaa62b34f67a635be624a2.svg","kind":"media","type":"image/svg+xml","bytes":8403,"sha256":"5092cab1bde0fd653752de1286d184624382836edb1369e526bd4fc102c9985a"},
     "writing/2026-08-15-anima-mesh-company-of-zero/media_1ebcc3bf546ff1cb03bd15ebb8b5187297ddd3dd2.png": {"url":"/writing/2026-08-15-anima-mesh-company-of-zero/media_1ebcc3bf546ff1cb03bd15ebb8b5187297ddd3dd2.png","kind":"media","type":"image/png","bytes":13250,"sha256":"3fed4cd010f615299cc98f049cd8de585a3280266a1de51fee8a2105f291340d"},
     "writing/2026-08-15-anima-mesh-company-of-zero/media_1ef62e95f0ed71b83f6a532ab817e8a5abc305f71.png": {"url":"/writing/2026-08-15-anima-mesh-company-of-zero/media_1ef62e95f0ed71b83f6a532ab817e8a5abc305f71.png","kind":"media","type":"image/png","bytes":10285,"sha256":"07cc7e5aa6b775f5a3416c85403b22eca32c5084a05c0388c09f861e61a69c44"},
-    "writing/2026-09-11-knowledge-work-as-a-product/index.html": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/","kind":"page","type":"text/html; charset=utf-8","bytes":51165,"sha256":"644b25ab80c651cd7feb75b855ee737b94f3754ed0d98bda35d867ab4efc5138"},
-    "writing/2026-09-11-knowledge-work-as-a-product/index.md": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":73460,"sha256":"f735d9a8b12a40da82239531b58be01da2f032fa66c95b4f2195f9ab4f9a7ab8"},
+    "writing/2026-09-11-knowledge-work-as-a-product/index.html": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/","kind":"page","type":"text/html; charset=utf-8","bytes":52199,"sha256":"d96dbe5f0fb97035cb3f95a17308684433dd7a20894d4dc622fe02949350335a"},
+    "writing/2026-09-11-knowledge-work-as-a-product/index.md": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":74909,"sha256":"e1a2ba731a648a924d9e1538e42550e73c486e223fad014c9b877b923fa35104"},
     "writing/2026-09-11-knowledge-work-as-a-product/index.plain.html": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":39765,"sha256":"f2238ed2dade848f84611b47fc0dd839d64a696c529526ff97e870072ffa30aa"},
     "writing/2026-09-11-knowledge-work-as-a-product/knowledge-work-as-a-product-slides.pdf": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/knowledge-work-as-a-product-slides.pdf","kind":"document","type":"application/pdf","bytes":1638370,"sha256":"cc52d8c736ed8a9bcc80fa949eca3d5661a70135cc02fe7be2e52aae42e44832"},
     "writing/2026-09-11-knowledge-work-as-a-product/media_111f4c23b6db30c6a0c765d15c59c0a315ac83f3e.jpg": {"url":"/writing/2026-09-11-knowledge-work-as-a-product/media_111f4c23b6db30c6a0c765d15c59c0a315ac83f3e.jpg","kind":"media","type":"image/jpeg","bytes":150303,"sha256":"7742c905a49aaa045a907bbb09b8c78ad24587b2d78bc72f01970a8b784312ad"},
