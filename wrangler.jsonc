@@ -1,17 +1,23 @@
-// archive.jackzhaojin.com: site/ served as static files by a Worker with no script of its own.
+// archive.jackzhaojin.com: site/ served as static files. The script (src/worker.mjs) answers only
+// /robots.txt: the archive's own, which turns crawlers away, on every host but workers.dev, which
+// keeps site/'s (www's copy) for www's fallback.
 // Deploy (Jack's call, after `npm run check` passes locally): npx wrangler deploy
 {
   "name": "www-archive",
+  "main": "src/worker.mjs",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/robots.txt"],
     // /writing/x/ serves writing/x/index.html, as on Edge Delivery
     "html_handling": "auto-trailing-slash",
     // a missing path gets site/404.html (the site's own 404 page) with a 404 status
     "not_found_handling": "404-page"
   },
-  // A Custom Domain, so the Worker is the hostname's origin: another Worker in the zone (www's,
-  // if it ever falls back to the archive) can fetch it. workers.dev is the copy outside the zone.
+  // A Custom Domain, so the Worker is the hostname's origin. workers.dev is the copy outside the
+  // zone, and the one www's fallback (ARCHIVE_ORIGIN) must use: any other host's robots.txt
+  // turns crawlers away, which on www would take the site out of search.
   "routes": [{ "pattern": "archive.jackzhaojin.com", "custom_domain": true }],
   "workers_dev": true,
   "preview_urls": false

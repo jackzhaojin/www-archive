@@ -7,7 +7,9 @@
  *   page names has templates/<name>/<name>.js, and each nav or footer it names is there;
  * - every _redirects line answers 301 to its destination;
  * - pages send X-Robots-Tag noindex (from _headers), and a missing path answers 404 with the
- *   site's 404 page.
+ *   site's 404 page;
+ * - robots.txt is the archive's own (src/robots.mjs), noindex too, on every host but
+ *   workers.dev, which keeps www's copy from site/ for www's fallback.
  *
  *   node tools/check.mjs --base http://localhost:8790          after `npm run serve`
  *   node tools/check.mjs --base https://archive.jackzhaojin.com after a deploy
@@ -18,9 +20,12 @@ import { readFile } from 'node:fs/promises';
 import {
   get, opt, pool, readManifest, sha256,
 } from './lib.mjs';
+import { FALLBACK_HOST, ROBOTS } from '../src/robots.mjs';
 
 const args = process.argv.slice(2);
 const base = opt(args, '--base', 'http://localhost:8790').replace(/\/$/, '');
+// wrangler dev serves as the custom domain, so local dev gets the archive's robots.txt too.
+const ownRobots = new URL(base).hostname !== FALLBACK_HOST;
 const manifest = await readManifest();
 if (!manifest) {
   console.error('check: no snapshot.json; run tools/snapshot.mjs first');
@@ -46,13 +51,14 @@ async function follow(path) {
   throw new Error(`${path}: too many redirects`);
 }
 
-// 1. Every file, byte for byte.
+// 1. Every file, byte for byte (robots.txt against ROBOTS where the archive's own is served).
 const entries = Object.entries(manifest.files).filter(([, entry]) => entry.url);
 await pool(entries, async ([file, entry]) => {
   const res = await follow(entry.url);
   const body = Buffer.from(await res.arrayBuffer());
+  const own = ownRobots && entry.url === '/robots.txt';
   if (res.status !== 200) fail(`${entry.url}: HTTP ${res.status}`);
-  else if (sha256(body) !== entry.sha256) fail(`${entry.url}: bytes differ from ${file}`);
+  else if (sha256(body) !== (own ? sha256(ROBOTS) : entry.sha256)) fail(`${entry.url}: bytes differ from ${own ? 'src/robots.mjs' : file}`);
 }, 12);
 
 // 2. The code each page needs.
@@ -102,6 +108,9 @@ await pool(redirects, async ([from, to, status]) => {
 const home = await follow('/');
 await home.arrayBuffer();
 if (home.headers.get('x-robots-tag') !== 'noindex, nofollow') fail(`/: x-robots-tag is ${home.headers.get('x-robots-tag')}`);
+const robots = await follow('/robots.txt');
+await robots.arrayBuffer();
+if (robots.headers.get('x-robots-tag') !== 'noindex, nofollow') fail(`/robots.txt: x-robots-tag is ${robots.headers.get('x-robots-tag')}`);
 const missing = await follow(`/archive-check-${Date.now()}/`);
 const missingBody = Buffer.from(await missing.arrayBuffer());
 if (missing.status !== 404) fail(`missing path: HTTP ${missing.status}, expected 404`);

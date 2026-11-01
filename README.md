@@ -8,7 +8,15 @@ The archive of [www.jackzhaojin.com](https://www.jackzhaojin.com) as it is serve
 | `snapshot.json` | Every file in `site/`: its URL, kind, type, size and sha256, when the snapshot was taken, and the [www-eds](https://github.com/jackzhaojin/www-eds) commit the code came from. One line per file, so `git log -p snapshot.json` is the history of every page. |
 | `wayback.json` | The latest [Wayback Machine](https://web.archive.org/) capture of each page: an outside, timestamped witness. |
 | `tools/` | `snapshot.mjs` takes it, `check.mjs` tests a served copy, `wayback.mjs` asks for the captures. |
-| `wrangler.jsonc` | The Worker: `site/` as static files, the custom domain, `workers.dev` on. |
+| `wrangler.jsonc`, `src/` | The Worker: `site/` as static files, the custom domain, `workers.dev` on. Its script answers only `/robots.txt` (below). |
+
+## Kept out of search
+
+The archive is a second copy of every page on www, so it must never compete with it:
+
+- Every response sends `X-Robots-Tag: noindex, nofollow` (`site/_headers`), and every page's canonical link is its page on www.
+- `robots.txt` on archive.jackzhaojin.com is the archive's own (`src/robots.mjs`), not the snapshot's. Google and Bing may crawl, only so they read the noindex: a page robots.txt blocks can still be listed from a link elsewhere, because the crawler never sees its noindex. Every other crawler is turned away, the AI ones included, since most of them read robots.txt but not noindex. Google-Extended and Applebot-Extended fall under `*`, so the archive isn't used to train Gemini or Apple's models either.
+- `site/robots.txt` stays www's copy, as served: it's the record, and www's fallback (below) serves it on www. So `workers.dev`, the host the fallback reads, answers with it. Every other host, local dev included (wrangler dev serves as the custom domain), gets the archive's.
 
 ## Taking a snapshot
 
@@ -18,7 +26,7 @@ After publishing on www. It reads the list of code files from a www-eds checkout
 nvm use && npm i                   # once
 npm run snapshot                   # prints what changed since the last one
 npm run serve                      # wrangler dev on :8790; leave it running
-npm run check                      # every file byte for byte, blocks, redirects, noindex, the 404
+npm run check                      # every file byte for byte, blocks, redirects, noindex, robots.txt, the 404
 git add -A && git commit -m "snapshot: <what changed>" && git push
 npm run deploy                     # archive.jackzhaojin.com
 npm run check:live
@@ -35,7 +43,7 @@ There's no schedule yet: a snapshot is taken by hand after a publish.
 | plain, md | each page's body fragment and Markdown copy, as Edge Delivery serves them | `<path>/index.plain.html`, `<path>/index.md` |
 | fragment | the nav and the footer | `nav.plain.html`, `footer.plain.html` and their `.md` |
 | sheet | the query, writing, talks and portfolio indexes, the redirects sheet, metadata, the sitemap config | `<name>.json` |
-| crawler | `robots.txt`, `sitemap.xml` | as is |
+| crawler | `robots.txt`, `sitemap.xml` | as is (archive.jackzhaojin.com answers with its own robots.txt, above) |
 | code | every file www-eds serves: its tracked files at `origin/main` minus `.hlxignore` (blocks, scripts, styles, templates, widgets, fonts, icons, `head.html`, `404.html`, the root files) | as is |
 | media | every `media_<hash>` file a page, fragment or sheet uses, at full size. The names are content hashes, so a later snapshot copies them instead of fetching them again | next to the page that uses it |
 | document | every same-site PDF a page links to, such as a talk's slides (since 2026-10-31) | next to the page that links it |
@@ -58,8 +66,8 @@ Links that turned out not to be pages (redirects, 404s) are listed in `snapshot.
    npx wrangler deploy --env="" --var ARCHIVE_ORIGIN:https://www-archive.jackzhaojin.workers.dev
    ```
 
-   The project sites keep passing through to GitHub Pages, and on www the Worker drops this host's noindex header, so search is unaffected. Deploy without the var to go back. (Pointing `ORIGIN_HOSTNAME` here doesn't work: Adobe's worker only accepts `*.aem.live` origins.) Checked on 2026-10-28 with the Worker in-process against this archive: every page kind, the fragments, code, sheets, crawler files, a redirect and the 404 answered as the archive does.
-2. **Or host it anywhere** that reads `_redirects` and `_headers` (Cloudflare, Netlify): take the noindex rule out of `_headers` first if it is to be the site itself.
+   The project sites keep passing through to GitHub Pages, and on www the Worker drops this host's noindex header, so search is unaffected. Keep the origin `workers.dev`: archive.jackzhaojin.com's robots.txt turns crawlers away, and on www that would take the site out of search. Deploy without the var to go back. (Pointing `ORIGIN_HOSTNAME` here doesn't work: Adobe's worker only accepts `*.aem.live` origins.) Checked on 2026-10-28 with the Worker in-process against this archive: every page kind, the fragments, code, sheets, crawler files, a redirect and the 404 answered as the archive does.
+2. **Or host it anywhere** that reads `_redirects` and `_headers` (Cloudflare, Netlify): take the noindex rule out of `_headers` first if it is to be the site itself. `site/robots.txt` is already www's.
 3. **To rebuild on another platform,** the `.md` copies are the content and `site/` shows how each page looked.
 
 The writing is CC BY 4.0 ([/terms/](https://www.jackzhaojin.com/terms/)).
