@@ -24,8 +24,8 @@
     <meta name="project-anchors" content="ch-rockstar p-rockstar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico">
-    <script nonce="ncrwTFxNFq2mmcl8MSdOUmoU" src="/scripts/aem.js" type="module"></script>
-    <script nonce="ncrwTFxNFq2mmcl8MSdOUmoU" src="/scripts/scripts.js" type="module"></script>
+    <script nonce="IXR7IfJGou6R3gu6ERXUfHwU" src="/scripts/aem.js" type="module"></script>
+    <script nonce="IXR7IfJGou6R3gu6ERXUfHwU" src="/scripts/scripts.js" type="module"></script>
     <link rel="stylesheet" href="/styles/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.jackzhaojin.com/#person","name":"Jack Jin","url":"https://www.jackzhaojin.com/","jobTitle":"Associate Director","worksFor":{"@type":"Organization","name":"Accenture","department":{"@type":"Organization","name":"Adobe Business Group"}},"homeLocation":{"@type":"Place","name":"Columbus, Ohio"},"sameAs":["https://www.linkedin.com/in/jackjin","https://github.com/jackzhaojin","https://www.youtube.com/@jackjin8467","https://www.credly.com/users/jack-jin"],"knowsAbout":["Adobe Experience Manager","Edge Delivery Services","DA.live","AI agents","Model Context Protocol","Cloud architecture"],"award":["Adobe Experience Manager Champion, class of 2026-2027","AEM Rockstar winner, Adobe Summit 2024"]},{"@type":"WebSite","@id":"https://www.jackzhaojin.com/#website","url":"https://www.jackzhaojin.com/","name":"Jack Jin","publisher":{"@id":"https://www.jackzhaojin.com/#person"}},{"@type":"WebPage","@id":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/#webpage","url":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/","name":"AEM Rockstar 2024 | Jack Jin","description":"The pitch that won AEM Rockstar at Adobe Summit 2024: personalization at scale, inside AEM's own authoring UI.","isPartOf":{"@id":"https://www.jackzhaojin.com/#website"},"breadcrumb":{"@id":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/#breadcrumb"},"mainEntity":{"@id":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/#project"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.jackzhaojin.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.jackzhaojin.com/portfolio/"},{"@type":"ListItem","position":3,"name":"AEM Rockstar 2024","item":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/"}]},{"@type":"SoftwareSourceCode","@id":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/#project","name":"AEM Rockstar 2024","alternativeHeadline":"The prologue","description":"The pitch that won AEM Rockstar at Adobe Summit 2024: personalization at scale, inside AEM's own authoring UI.","url":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/","image":"https://www.jackzhaojin.com/portfolio/aem-rockstar-2024/media_1daebae29162cf75b2538c707f9e832d905ed389a.svg?width=1200&format=pjpg&optimize=medium","author":{"@id":"https://www.jackzhaojin.com/#person"},"temporalCoverage":"2023/2024","codeRepository":"https://github.com/jackzhaojin/acn-aem-genai-rockstar-2024"}]}</script>
 </head>
@@ -99,7 +99,7 @@
           <div>
             <div>
               <p>The frontend is where most of the craft went. A ~270-line Granite/jQuery clientlib hooks <code>foundation-contentloaded</code>, derives the fragment path from the properties-editor URL, and builds the review table in the DOM: path, original value, generated value, one row per property the QueryBuilder walk found. A continue-chat toggle threads the chat id back, so the model refines its last answer instead of starting over. Approval clones the variation through <code>/bin/wcmcommand</code>, writes the accepted values with a Sling POST, and links straight into the new fragment's editor. A second clientlib does the same for whole pages.</p>
-              <p>None of this code was AI-written; in August 2023 the AI was the product, GPT-3.5 by default with GPT-4 behind a config. The shape it demoed is the one everything above formalizes later as propose and dispose: the model proposes values, a human reviews every row, and deterministic machinery does the writing. In 2023 that pattern was a jQuery table.</p>
+              <p>None of this code was AI-written; in August 2023 the AI was the product, GPT-4 by default with the model behind a config. The shape it demoed is the one everything above formalizes later as propose and dispose: the model proposes values, a human reviews every row, and deterministic machinery does the writing. In 2023 that pattern was a jQuery table.</p>
             </div>
             <div></div>
           </div>
@@ -143,9 +143,18 @@
         </div>
         <div class="proof-links">
           <div>
-            <div><a href="https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html">View event source ↗</a></div>
+            <div><a href="/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/">Read the write-up</a> <a href="https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html">View event source ↗</a></div>
           </div>
         </div>
+      </div>
+      <div>
+        <h2 id="related">Related</h2>
+        <div class="row-list related dynamic">
+          <div>
+            <div>Source</div>
+            <div><a href="/writing-index.json">/writing-index.json</a></div>
+          </div>
+        <div><div><p>2024-03-28</p></div><div><p><a href="/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/">AEM Rockstar 2024: Generative AI Inside AEM Authoring, From a Prompt to an Experience Fragment Variation</a></p></div><div><p>The demo that won AEM Rockstar at Adobe Summit 2024: generative AI inside AEM's own authoring screens. Type an audience, review every generated value, and one click saves a new experience fragment variation. With the code, my slides and what has changed since.</p></div></div></div>
       </div>
       <div>
         <p><a href="/portfolio/">All projects</a></p>

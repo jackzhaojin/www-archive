@@ -14,7 +14,7 @@
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Row List (talks)                                                                                                                                                                                                          |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| September 29, 2026     | ## [AI Agent-Driven Content Migration for Edge Delivery Services](https://youtu.be/V6vqbTWOiRU)                                                                 | adaptto-2026                   |
+| September 29, 2026     | ## [AI Agent-Driven Content Migration for Edge Delivery Services](/portfolio/content-factory/#adaptto-2026)                                                     | adaptto-2026                   |
 |                        |                                                                                                                                                                 |                                |
 | Conference session     | adaptTo() 2026 · Berlin · with Katie Phillips                                                                                                                   |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -30,7 +30,7 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | Write-up in progress                                                                                                                                            |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| September 2026         | ## [Conversion Factory](https://youtu.be/owIrEDroGJs)                                                                                                           | adaptto-2026-lightning         |
+| September 2026         | ## [Conversion Factory](/portfolio/conversion-factory/#adaptto-2026-lightning)                                                                                  | adaptto-2026-lightning         |
 |                        |                                                                                                                                                                 |                                |
 | Lightning talk         | adaptTo() 2026 · Berlin                                                                                                                                         |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -47,7 +47,7 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | Write-up in progress                                                                                                                                            |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| September 11, 2026     | ## [Knowledge Work as a Product: Professional Services in the AI Era](https://www.joineta.org/blog/preview-the-columbus-ai-week-agenda-september-10-11-2026)    | columbus-ai-2026-talk          |
+| September 11, 2026     | ## [Knowledge Work as a Product: Professional Services in the AI Era](/writing/2026-09-11-knowledge-work-as-a-product/)                                         | columbus-ai-2026-talk          |
 |                        |                                                                                                                                                                 | columbus-ai-2026               |
 | Featured presentation  | Columbus AI Week 2026, AI for Business Summit · Columbus, Ohio                                                                                                  |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -71,7 +71,7 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | [View event source](https://www.joineta.org/blog/preview-the-columbus-ai-week-agenda-september-10-11-2026)                                                      |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| August 3, 2026         | ## [AnimaMesh: An Engine for Running a Company with Agents](https://youtu.be/zYytfy1PAkc)                                                                       | ai-tinkerers-2026-animamesh    |
+| August 3, 2026         | ## [AnimaMesh: An Engine for Running a Company with Agents](/portfolio/anima-mesh/#ai-tinkerers-2026-animamesh)                                                 | ai-tinkerers-2026-animamesh    |
 |                        |                                                                                                                                                                 |                                |
 | Community talk         | AI Tinkerers Columbus · Columbus, Ohio                                                                                                                          |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -96,12 +96,12 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | [Live demo app](https://www.jackzhaojin.com/denison-2026-04-24/)                                                                                                |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| April 6, 2026          | ## [OpenClaw 24/7 Development Agent](https://youtu.be/l3wIHurjERk)                                                                                              | ai-tinkerers-2026              |
+| April 6, 2026          | ## [OpenClaw 24/7 Development Agent](/portfolio/continuous-executive-agent/#ai-tinkerers-2026)                                                                  | ai-tinkerers-2026              |
 |                        |                                                                                                                                                                 | openclaw-247-development-agent |
 | Community demo         | AI Tinkerers Columbus · Columbus, Ohio                                                                                                                          |                                |
 |                        |                                                                                                                                                                 |                                |
-|                        | A demo of a continuous coding agent, its execution loop, and the boundaries around autonomous work. Featured in AI Tinkerers' global Community Spotlights,      |                                |
-|                        | picked from hundreds of demos.                                                                                                                                  |                                |
+|                        | A demo of a continuous coding agent, its execution loop, and the boundaries around autonomous work. Picked as the #1 Top Global Demo in AI Tinkerers' April     |                                |
+|                        | 2026 Community Spotlights, out of hundreds of demos.                                                                                                            |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | [Read the write-up](/writing/2026-04-05-continuous-executive-agent-v2-1/)                                                                                       |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -111,7 +111,7 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | [Explore the project](/portfolio/continuous-executive-agent/)                                                                                                   |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| September 2025         | ## AI in Professional Services                                                                                                                                  | columbus-ai-2025               |
+| September 2025         | ## [AI in Professional Services](/writing/2025-09-10-ai-in-professional-services/)                                                                              | columbus-ai-2025               |
 |                        |                                                                                                                                                                 |                                |
 | Presentation           | Columbus AI Week 2025 · Columbus, Ohio                                                                                                                          |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -120,11 +120,13 @@
 |                        |                                                                                                                                                                 |                                |
 |                        | [Read the write-up](/writing/2025-09-10-ai-in-professional-services/)                                                                                           |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
-| March 28, 2024         | ## [AEM Rockstar](https://youtu.be/zDwBhpevuz8)                                                                                                                 | aem-rockstar-2024              |
+| March 28, 2024         | ## [AEM Rockstar](/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/)                                                                                       | aem-rockstar-2024              |
 |                        |                                                                                                                                                                 |                                |
 | Conference competition | Adobe Summit 2024 · Las Vegas                                                                                                                                   |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | A generative AI solution built into Adobe Experience Manager. Winner of the 2024 AEM Rockstar competition.                                                      |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | [Read the write-up](/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/)                                                                                     |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | [Watch the recorded talk](https://youtu.be/zDwBhpevuz8)                                                                                                         |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -133,8 +135,6 @@
 |                        | [Explore the project](/portfolio/aem-rockstar-2024/)                                                                                                            |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | [acn-aem-genai-rockstar-2024](https://github.com/jackzhaojin/acn-aem-genai-rockstar-2024)                                                                       |                                |
-|                        |                                                                                                                                                                 |                                |
-|                        | Write-up in progress                                                                                                                                            |                                |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 
 +-------------------------------------------------------------------------------------------------------------+

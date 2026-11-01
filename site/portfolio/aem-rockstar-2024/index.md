@@ -68,8 +68,8 @@
 | pages.                                                                             |            |
 |                                                                                    |            |
 | None of this code was AI-written; in August 2023 the AI was the                    |            |
-| product, GPT-3.5 by default with GPT-4 behind a config. The shape it               |            |
-| demoed is the one everything above formalizes later as propose and                 |            |
+| product, GPT-4 by default with the model behind a config. The shape                |            |
+| it demoed is the one everything above formalizes later as propose and              |            |
 | dispose: the model proposes values, a human reviews every row, and                 |            |
 | deterministic machinery does the writing. In 2023 that pattern was a               |            |
 | jQuery table.                                                                      |            |
@@ -104,11 +104,11 @@
 | id                                                                    | aem-rockstar-2024                                       |
 +-----------------------------------------------------------------------+---------------------------------------------------------+
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-| Proof Links                                                                                                                         |
-+-------------------------------------------------------------------------------------------------------------------------------------+
-| [View event source ↗](https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html) |
-+-------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Proof Links                                                                                                                                                                                                     |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [Read the write-up](/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/) [View event source ↗](https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +-------------------------+
 | Section Metadata        |
@@ -117,6 +117,16 @@
 +---------+---------------+
 | style   | chapter, lofi |
 +---------+---------------+
+
+---
+
+## Related
+
++-----------------------------------------------------------+
+| Row List (related, dynamic)                               |
++--------------+--------------------------------------------+
+| Source       | [/writing-index.json](/writing-index.json) |
++--------------+--------------------------------------------+
 
 ---
 

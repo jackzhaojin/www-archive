@@ -215,7 +215,7 @@
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ![AI Tinkerers Community Spotlight graphic: a black and gold halftone portrait of Jack, arms crossed, with the text Top Global Demo, number one top pick, my own version of OpenClaw focused on 24x7 development, Columbus, April 20, 2026.][image0] |
 |                                                                                                                                                                                                                                                      |
-| Two weeks later, AI Tinkerers picked the demo as their #1 top pick globally that week and made this graphic. Their design, not mine.                                                                                                                 |
+| Two weeks later, AI Tinkerers named it the #1 Top Global Demo in their April 2026 Community Spotlights and made this graphic. Their design, not mine.                                                                                                |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -285,20 +285,20 @@
 | [The memory design, in the repo ↗](https://github.com/jackzhaojin/continuous-agent) |
 +-------------------------------------------------------------------------------------+
 
-+-----------------------------------------------------------------------------------------------------------------+
-| Showcase (story, flip)                                                                                          |
-+-----------------------------------------------------------+-----------------------------------------------------+
-| *Apr 6, 2026* · community demo, AI Tinkerers Columbus     | The live talk, AI Tinkerers Columbus                |
-|                                                           |                                                     |
-| ### OpenClaw 24/7 Development Agent                       | [Watch the live talk](https://youtu.be/l3wIHurjERk) |
-|                                                           |                                                     |
-| A demo of a continuous coding agent, its execution loop,  |                                                     |
-| and the boundaries around autonomous work. Featured in AI |                                                     |
-| Tinkerers' global Community Spotlights, picked from       |                                                     |
-| hundreds of demos.                                        |                                                     |
-+-----------------------------------------------------------+-----------------------------------------------------+
-| id                                                        | ai-tinkerers-2026                                   |
-+-----------------------------------------------------------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+| Showcase (story, flip)                                                                                         |
++----------------------------------------------------------+-----------------------------------------------------+
+| *Apr 6, 2026* · community demo, AI Tinkerers Columbus    | The live talk, AI Tinkerers Columbus                |
+|                                                          |                                                     |
+| ### OpenClaw 24/7 Development Agent                      | [Watch the live talk](https://youtu.be/l3wIHurjERk) |
+|                                                          |                                                     |
+| A demo of a continuous coding agent, its execution loop, |                                                     |
+| and the boundaries around autonomous work. Picked as the |                                                     |
+| #1 Top Global Demo in AI Tinkerers' April 2026 Community |                                                     |
+| Spotlights, out of hundreds of demos.                    |                                                     |
++----------------------------------------------------------+-----------------------------------------------------+
+| id                                                       | ai-tinkerers-2026                                   |
++----------------------------------------------------------+-----------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Proof Links                                                                                                                                                                      |

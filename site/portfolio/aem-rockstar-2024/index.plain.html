@@ -66,7 +66,7 @@
     <div>
       <div>
         <p>The frontend is where most of the craft went. A ~270-line Granite/jQuery clientlib hooks <code>foundation-contentloaded</code>, derives the fragment path from the properties-editor URL, and builds the review table in the DOM: path, original value, generated value, one row per property the QueryBuilder walk found. A continue-chat toggle threads the chat id back, so the model refines its last answer instead of starting over. Approval clones the variation through <code>/bin/wcmcommand</code>, writes the accepted values with a Sling POST, and links straight into the new fragment's editor. A second clientlib does the same for whole pages.</p>
-        <p>None of this code was AI-written; in August 2023 the AI was the product, GPT-3.5 by default with GPT-4 behind a config. The shape it demoed is the one everything above formalizes later as propose and dispose: the model proposes values, a human reviews every row, and deterministic machinery does the writing. In 2023 that pattern was a jQuery table.</p>
+        <p>None of this code was AI-written; in August 2023 the AI was the product, GPT-4 by default with the model behind a config. The shape it demoed is the one everything above formalizes later as propose and dispose: the model proposes values, a human reviews every row, and deterministic machinery does the writing. In 2023 that pattern was a jQuery table.</p>
       </div>
       <div></div>
     </div>
@@ -110,7 +110,16 @@
   </div>
   <div class="proof-links">
     <div>
-      <div><a href="https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html">View event source ↗</a></div>
+      <div><a href="/writing/2024-03-28-aem-rockstar-generative-ai-in-aem/">Read the write-up</a> <a href="https://business.adobe.com/summit/2024/sessions/adobe-experience-manager-rockstar-the-finalists-fa-s412.html">View event source ↗</a></div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 id="related">Related</h2>
+  <div class="row-list related dynamic">
+    <div>
+      <div>Source</div>
+      <div><a href="/writing-index.json">/writing-index.json</a></div>
     </div>
   </div>
 </div>
