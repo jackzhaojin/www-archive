@@ -5,5 +5,6 @@ Columbus, Ohio
 - [LinkedIn](https://www.linkedin.com/in/jackjin)
 - [GitHub](https://github.com/jackzhaojin)
 - [Certifications](/certifications/)
+- [See design system](/design-systems/v3/)
 - [Privacy](/privacy/)
 - [Terms](/terms/)

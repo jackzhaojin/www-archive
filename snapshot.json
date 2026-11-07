@@ -1,9 +1,9 @@
 {
-  "taken": "2026-11-05T17:09:13.316Z",
+  "taken": "2026-11-07T19:30:15.352Z",
   "base": "https://www.jackzhaojin.com",
   "code": {
     "repo": "jackzhaojin/www-eds",
-    "commit": "1f6fe16dfaeb67906d4e8a0071f50cf6ea2ba911"
+    "commit": "bbf2f58d0c4a7201328a855f9227238754e54f5f"
   },
   "counts": {
     "crawler": 2,
@@ -17,7 +17,7 @@
     "document": 3,
     "generated": 2
   },
-  "bytes": 76557466,
+  "bytes": 76557574,
   "warnings": [],
   "notPages": [
     "page /design-systems/v3/...: 404",
@@ -284,7 +284,7 @@
     "blocks/writing-index/writing-index.js": {"url":"/blocks/writing-index/writing-index.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":2021,"sha256":"f3f0cac408f64d9cfd09d5c43e72e2904be84b19b448c5c8ee40ac085ece5e03"},
     "blocks/writing-list/writing-list.css": {"url":"/blocks/writing-list/writing-list.css","kind":"code","type":"text/css; charset=utf-8","bytes":88,"sha256":"02bb28cff3e070d0fd1432ddb4ff4baa4811022fe2106dbfcf9faec5e20e11d2"},
     "blocks/writing-list/writing-list.js": {"url":"/blocks/writing-list/writing-list.js","kind":"code","type":"text/javascript; charset=utf-8","bytes":1587,"sha256":"3240675feda68a57cc73cc3f65a032ded52aca6b17e5412311a3fbf9aeb032c7"},
-    "certifications/index.html": {"url":"/certifications/","kind":"page","type":"text/html; charset=utf-8","bytes":58412,"sha256":"934a3dd39d95c44e549f70e3b3cd5cb1dcf396d43d9bf9c15bdf10989996d059"},
+    "certifications/index.html": {"url":"/certifications/","kind":"page","type":"text/html; charset=utf-8","bytes":58412,"sha256":"3a76c5c56de7ad551b456c0686b12698a0c808e693a4e511d0bbb30221d6a520"},
     "certifications/index.md": {"url":"/certifications/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":95052,"sha256":"c98bbbd7d9f124e4a565c1b802ab21bcf97bf5975dce9e6f7e68c82dd9651c68"},
     "certifications/index.plain.html": {"url":"/certifications/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":33496,"sha256":"71a9459d8027f13da71d07690cdc58aea3d69a0e4d2f3589d35a67075eb5d407"},
     "certifications/media_11bd9803e3fc6376e5523bc1fd000e6b2c1aebc5b.png": {"url":"/certifications/media_11bd9803e3fc6376e5523bc1fd000e6b2c1aebc5b.png","kind":"media","type":"image/png","bytes":17664,"sha256":"a63b7c0482afd028e4b923fbbdaef9207fc0e95a40eee1293adf73fc575c1108"},
@@ -316,8 +316,8 @@
     "fonts/jetbrains-mono-latin.woff2": {"url":"/fonts/jetbrains-mono-latin.woff2","kind":"code","type":"font/woff2","bytes":31340,"sha256":"2c32b9b3ee358c119e210f6f5195f9bd34894d78a785ff2e95d60e718e400af4"},
     "fonts/playfair-display-italic-latin.woff2": {"url":"/fonts/playfair-display-italic-latin.woff2","kind":"code","type":"font/woff2","bytes":38888,"sha256":"c68530044e7c4ce6cd3c1c239d0a93be71af53821574714f83e1380d8b393d14"},
     "fonts/playfair-display-latin.woff2": {"url":"/fonts/playfair-display-latin.woff2","kind":"code","type":"font/woff2","bytes":38460,"sha256":"5d91eb5d522a03081946c44c8ca17c902230dfed5f0f9b5014262135d47b15b2"},
-    "footer.md": {"url":"/footer.md","kind":"fragment","type":"text/markdown; charset=utf-8","bytes":248,"sha256":"56d21225dd51c106e57dad53386b6de18ee29361a14d6917e3a803be7c068a8a"},
-    "footer.plain.html": {"url":"/footer.plain.html","kind":"fragment","type":"text/html; charset=utf-8","bytes":419,"sha256":"d014327a32ad323b46194b5ca733a05775f2aaaf38f4f8d04bf4916f1fb5abb3"},
+    "footer.md": {"url":"/footer.md","kind":"fragment","type":"text/markdown; charset=utf-8","bytes":291,"sha256":"dff923d1a9d45b2b3bc7c3fe5225f55dc955333fcc507cc3230c3cc8a52e4d8c"},
+    "footer.plain.html": {"url":"/footer.plain.html","kind":"fragment","type":"text/html; charset=utf-8","bytes":484,"sha256":"7a947c4d9f4bbbc2c16e505a5fd53ac13bcd31da2afb7926ff7b0d4df5027c66"},
     "google57906613577fdd42.html": {"url":"/google57906613577fdd42.html","kind":"code","type":"text/html; charset=utf-8","bytes":53,"sha256":"41c0bc08e7d0e8aacefff1d6c6078262bcb210744a40e0be5d543128a5977802"},
     "head.html": {"url":"/head.html","kind":"code","type":"text/html; charset=utf-8","bytes":339,"sha256":"ac78d8c36efeec2bd45fc8cf27e1138b5f2df505f3719179a103f7ea2d1df629"},
     "icons/arrow.svg": {"url":"/icons/arrow.svg","kind":"code","type":"image/svg+xml","bytes":200,"sha256":"6186f5d984b1c070b067f5f77d480ab46394aafe80982cf2befe1f0137b0e071"},
@@ -900,7 +900,7 @@
     "writing/2025-04-13-vibe-coding-star-story-generator/media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png": {"url":"/writing/2025-04-13-vibe-coding-star-story-generator/media_1124e336995375dd14a6fcac88fc954e5f4fa05c4.png","kind":"media","type":"image/png","bytes":7338,"sha256":"4ba50036ed6f4373388708f26944efe5245bb6db0b8f275d79030efa858cbb70"},
     "writing/2025-04-13-vibe-coding-star-story-generator/media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png": {"url":"/writing/2025-04-13-vibe-coding-star-story-generator/media_16fff23250e1f87bd006d6b583eb17db44ff357ce.png","kind":"media","type":"image/png","bytes":9260,"sha256":"2aeaf902263dc1e83d0f3d14ffceac49d1408ca122c0326e1e59c5685be6c890"},
     "writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg": {"url":"/writing/2025-04-13-vibe-coding-star-story-generator/media_1e6794397d316407dd2b0ab4d178edd1f89d6d70d.jpg","kind":"media","type":"image/jpeg","bytes":139828,"sha256":"6ebabc38b676c0dee333bdd0cb312d43f35542530380d3d4a3ae4aafc6c06fd2"},
-    "writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.html": {"url":"/writing/2025-05-28-aem-headless-when-frontend-teams-lead/","kind":"page","type":"text/html; charset=utf-8","bytes":27339,"sha256":"a5e2ab3e38fd8a158c2cc90c40c1308727672bc6da2f4f8cb4c1bec97ae8ffc7"},
+    "writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.html": {"url":"/writing/2025-05-28-aem-headless-when-frontend-teams-lead/","kind":"page","type":"text/html; charset=utf-8","bytes":27339,"sha256":"daf63b4d2273e0ad99d4a194c1c8bb5f393bdd9ee0f3b22d3b5a748448acd592"},
     "writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.md": {"url":"/writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":48045,"sha256":"6be2efb3fc5293102c5a1fc91aee0ac5c4d8499423ef587fc625c22ae1b08eab"},
     "writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.plain.html": {"url":"/writing/2025-05-28-aem-headless-when-frontend-teams-lead/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":18648,"sha256":"3c7598854bde7433482ec004e6af422d801db517a1629f51817ecebc6097e72d"},
     "writing/2025-05-28-aem-headless-when-frontend-teams-lead/media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg": {"url":"/writing/2025-05-28-aem-headless-when-frontend-teams-lead/media_177c80e5c547f2c46f370cc0b6d3de1204086eb6a.jpg","kind":"media","type":"image/jpeg","bytes":6378,"sha256":"9b23c67c8da430a007a4630a37db8dc7f53d232575965556c50a57cb60b08e82"},
@@ -1018,7 +1018,7 @@
     "writing/2025-09-01-aem-caching-production-architectures/media_1ca93e1ddee02435e07bce6359c3a0fdd9b3b8f13.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1ca93e1ddee02435e07bce6359c3a0fdd9b3b8f13.png","kind":"media","type":"image/png","bytes":5101,"sha256":"53f45a6bb7e91f5a98c022a2370ed212f94b51cf932f5f79cc6bf53e18cca0b3"},
     "writing/2025-09-01-aem-caching-production-architectures/media_1e1565bde729efbe1b31752554ca29bd3c25e0b86.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1e1565bde729efbe1b31752554ca29bd3c25e0b86.png","kind":"media","type":"image/png","bytes":6617,"sha256":"10d99d65a1e433918f69da7fb280bfb251028cdd377de43c08832e7b9d2ff7d2"},
     "writing/2025-09-01-aem-caching-production-architectures/media_1f56ec09e286836897dec7522b517c88190f23527.png": {"url":"/writing/2025-09-01-aem-caching-production-architectures/media_1f56ec09e286836897dec7522b517c88190f23527.png","kind":"media","type":"image/png","bytes":3529,"sha256":"ee902422d98a54bc5d602b8cf222f1c89aeb539dd28b1d97e553143a53a44b60"},
-    "writing/2025-09-10-ai-in-professional-services/index.html": {"url":"/writing/2025-09-10-ai-in-professional-services/","kind":"page","type":"text/html; charset=utf-8","bytes":44143,"sha256":"bbd983f49073ae54bf4b63b2239aad3d281c317c0ae132289af7980e3bf3c004"},
+    "writing/2025-09-10-ai-in-professional-services/index.html": {"url":"/writing/2025-09-10-ai-in-professional-services/","kind":"page","type":"text/html; charset=utf-8","bytes":44143,"sha256":"44f17b089b42953bc07cfec9543b537f7b53343d5ebef95695d0f3be63c3379b"},
     "writing/2025-09-10-ai-in-professional-services/index.md": {"url":"/writing/2025-09-10-ai-in-professional-services/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":64872,"sha256":"be3c222eab8db5b83dd1576484ef736c1655e2def595f8dfd8a6a11269563cbf"},
     "writing/2025-09-10-ai-in-professional-services/index.plain.html": {"url":"/writing/2025-09-10-ai-in-professional-services/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":32630,"sha256":"14bd3320e5cb96cad670fe1beb7caaf11644e2dad74e423b12bb1b781eac77ae"},
     "writing/2025-09-10-ai-in-professional-services/media_101d0adc444ba2f5a3c29b70c01317c2488f264dc.jpg": {"url":"/writing/2025-09-10-ai-in-professional-services/media_101d0adc444ba2f5a3c29b70c01317c2488f264dc.jpg","kind":"media","type":"image/jpeg","bytes":14253,"sha256":"295b77e88748b9b35ed32966a4e01c417f36ab2c414cf758d34c6872f4a8e3e1"},
@@ -1353,7 +1353,7 @@
     "writing/2026-10-10-adaptto-2026-25-talks/media_1e64f991d73700ac52aec4d8682ac43c52eecd9e2.jpg": {"url":"/writing/2026-10-10-adaptto-2026-25-talks/media_1e64f991d73700ac52aec4d8682ac43c52eecd9e2.jpg","kind":"media","type":"image/jpeg","bytes":4481,"sha256":"151b968a0e0028f9fea2f57c131c12bc7233e5fb287b1a6cc5d3e60d5060b8fc"},
     "writing/2026-10-10-adaptto-2026-25-talks/media_1f3bd531e0be0f761bb411c236b18313a3eb06229.jpg": {"url":"/writing/2026-10-10-adaptto-2026-25-talks/media_1f3bd531e0be0f761bb411c236b18313a3eb06229.jpg","kind":"media","type":"image/jpeg","bytes":110899,"sha256":"80c92811bcd9742915a4528d87a400c59786eb7d54fa24cf6cd7b417d6e0fabb"},
     "writing/2026-10-10-adaptto-2026-25-talks/media_1f73c391a7589d5fffdbc1b60356286cc33a76e8e.jpg": {"url":"/writing/2026-10-10-adaptto-2026-25-talks/media_1f73c391a7589d5fffdbc1b60356286cc33a76e8e.jpg","kind":"media","type":"image/jpeg","bytes":120560,"sha256":"0faa0c3b929dd8ed77648c4c80929ace9f5fc3b044801729f3abd64f4c93b713"},
-    "writing/2026-10-25-eds-migration-two-goal-prompts/index.html": {"url":"/writing/2026-10-25-eds-migration-two-goal-prompts/","kind":"page","type":"text/html; charset=utf-8","bytes":94450,"sha256":"1bb9947493bf7ecbe1f2b860b20256a9980cdaa152c7389ac4bc0a9babab3104"},
+    "writing/2026-10-25-eds-migration-two-goal-prompts/index.html": {"url":"/writing/2026-10-25-eds-migration-two-goal-prompts/","kind":"page","type":"text/html; charset=utf-8","bytes":94450,"sha256":"d125048e74b9909701d10150c69235cb0348ad6750833541290de8fcd7fad6da"},
     "writing/2026-10-25-eds-migration-two-goal-prompts/index.md": {"url":"/writing/2026-10-25-eds-migration-two-goal-prompts/index.md","kind":"md","type":"text/markdown; charset=utf-8","bytes":195972,"sha256":"6032a36afc81fcbfddffe16af303cf140456a03cc7722ac1be05709661c3b276"},
     "writing/2026-10-25-eds-migration-two-goal-prompts/index.plain.html": {"url":"/writing/2026-10-25-eds-migration-two-goal-prompts/index.plain.html","kind":"plain","type":"text/html; charset=utf-8","bytes":77005,"sha256":"220335bed8c21a4e5da08fc8d87a98c890e2a49727d810d843fc28298a6cc01a"},
     "writing/2026-10-25-eds-migration-two-goal-prompts/media_11ecf09f676a358c212a49eaaafa5ed2adb4c6575.jpg": {"url":"/writing/2026-10-25-eds-migration-two-goal-prompts/media_11ecf09f676a358c212a49eaaafa5ed2adb4c6575.jpg","kind":"media","type":"image/jpeg","bytes":97183,"sha256":"cf1b9f213fa94a4acd02293248e383669b403c4334e50ec7d76cd6f33992a3a3"},
