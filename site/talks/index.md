@@ -14,6 +14,21 @@
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Row List (talks)                                                                                                                                                                                                          |
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
+| November 11, 2026      | ## [Sites and AI: Leveraging AI to Create and Maintain AEM Content](/writing/2026-11-11-sites-and-ai/)                                                          | adobe-sites-ai-2026            |
+|                        |                                                                                                                                                                 |                                |
+| Webinar                | Adobe Experience Manager Sites webinar, Learn From Your Peers · Online                                                                                          |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | A webinar for Adobe's Learn From Your Peers series on where AI fits in AEM content work: research and briefs, authoring and evaluation, with nine short demos   |                                |
+|                        | from my own site.                                                                                                                                               |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | [Watch the recorded talk](https://experienceleague.adobe.com/en/on-demand-events/ai-create-maintain-aem-content)                                                |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | [Read the write-up](/writing/2026-11-11-sites-and-ai/)                                                                                                          |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | [Slides (PDF)](/writing/2026-11-11-sites-and-ai/sites-and-ai-deck.pdf)                                                                                          |                                |
+|                        |                                                                                                                                                                 |                                |
+|                        | [View event source](https://engage.adobe.com/sites-leveraging-ai-to-maintain-content.html)                                                                      |                                |
++------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 | September 29, 2026     | ## [AI Agent-Driven Content Migration for Edge Delivery Services](/portfolio/content-factory/#adaptto-2026)                                                     | adaptto-2026                   |
 |                        |                                                                                                                                                                 |                                |
 | Conference session     | adaptTo() 2026 · Berlin · with Katie Phillips                                                                                                                   |                                |
@@ -73,7 +88,7 @@
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 | August 3, 2026         | ## [AnimaMesh: An Engine for Running a Company with Agents](/portfolio/anima-mesh/#ai-tinkerers-2026-animamesh)                                                 | ai-tinkerers-2026-animamesh    |
 |                        |                                                                                                                                                                 |                                |
-| Community talk         | AI Tinkerers Columbus · Columbus, Ohio                                                                                                                          |                                |
+| Community talk         | [AI Tinkerers Columbus](https://columbus.aitinkerers.org/) · Columbus, Ohio                                                                                     |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | The Company of Zero demo: one open source engine on Cloudflare Workers, a private markdown brain per company, and agents that bring me the day's work. It took  |                                |
 |                        | second place in AI Tinkerers' global Top AI Demos that week.                                                                                                    |                                |
@@ -88,7 +103,7 @@
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 | April 2026             | ## AI, agents, and careers                                                                                                                                      | denison-2026                   |
 |                        |                                                                                                                                                                 |                                |
-| Guest lecture          | Denison University, CS 271 · Granville, Ohio                                                                                                                    |                                |
+| Guest lecture          | [Denison University](https://denison.edu/), CS 271 · Granville, Ohio                                                                                            |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | A guest lecture with a live demo and open-source materials for computer science students.                                                                       |                                |
 |                        |                                                                                                                                                                 |                                |
@@ -98,7 +113,7 @@
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 | April 6, 2026          | ## [OpenClaw 24/7 Development Agent](/portfolio/continuous-executive-agent/#ai-tinkerers-2026)                                                                  | ai-tinkerers-2026              |
 |                        |                                                                                                                                                                 | openclaw-247-development-agent |
-| Community demo         | AI Tinkerers Columbus · Columbus, Ohio                                                                                                                          |                                |
+| Community demo         | [AI Tinkerers Columbus](https://columbus.aitinkerers.org/) · Columbus, Ohio                                                                                     |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | A demo of a continuous coding agent, its execution loop, and the boundaries around autonomous work. Picked as the #1 Top Global Demo in AI Tinkerers' April     |                                |
 |                        | 2026 Community Spotlights, out of hundreds of demos.                                                                                                            |                                |
@@ -113,7 +128,7 @@
 +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+
 | September 2025         | ## [AI in Professional Services](/writing/2025-09-10-ai-in-professional-services/)                                                                              | columbus-ai-2025               |
 |                        |                                                                                                                                                                 |                                |
-| Presentation           | Columbus AI Week 2025 · Columbus, Ohio                                                                                                                          |                                |
+| Presentation           | [Columbus AI Week 2025](https://columbusaiweek.com/) · Columbus, Ohio                                                                                           |                                |
 |                        |                                                                                                                                                                 |                                |
 |                        | My first Columbus AI Week talk: why AI breaks the old consulting silos, how firms invest in talent, partners and AI-driven development, the outcomes already    |                                |
 |                        | showing up, and six ways firms will win.                                                                                                                        |                                |
@@ -140,8 +155,8 @@
 +--------------+----------------------------------------------------------------------------------------------+
 | title        | Talks & Presentations \| Jack Jin                                                            |
 +--------------+----------------------------------------------------------------------------------------------+
-| description  | Jack Jin's talks at adaptTo(), Adobe Summit, AI Tinkerers, Columbus AI Week and Denison      |
-|              | University, with event sources and related projects.                                         |
+| description  | Jack Jin's talks at adaptTo(), Adobe Summit, an Adobe AEM Sites webinar, AI Tinkerers,       |
+|              | Columbus AI Week and Denison University, with event sources and related projects.            |
 +--------------+----------------------------------------------------------------------------------------------+
 | template     | listing                                                                                      |
 +--------------+----------------------------------------------------------------------------------------------+
@@ -152,4 +167,4 @@
 | og:image:alt | Jack Jin: Adobe Experience Manager Champion, AI agents and Edge Delivery Services            |
 +--------------+----------------------------------------------------------------------------------------------+
 
-[image0]: https://main--www-eds--jackzhaojin.aem.page/media_18d1255b1fbf5a8949c36c5d58a2d2043923be629.png#width=1200&height=630
+[image0]: https://main--www-eds--jackzhaojin.aem.page/media_18d1255b1fbf5a8949c36c5d58a2d2043923be629.png#width=1200\&height=630

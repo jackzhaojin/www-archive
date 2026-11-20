@@ -1,17 +1,17 @@
 ## Topics
 
-- [AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
-- [Adobe AEM and EDS](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=adobe-aem)
-- [AI Agents](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=ai-agents)
-- [Working with AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=working-with-ai)
+- [AEM + AI](/writing/#topic=aem)
+- [Adobe AEM and EDS](/writing/#topic=aem)
+- [AI Agents](/writing/#topic=ai-engineering)
+- [Working with AI](/writing/#topic=ai-engineering)
 
 ## Sections
 
-- [Blog](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+- [Blog](/writing/)
 - [Portfolio](/portfolio/)
-- [Talks](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#talks)
+- [Talks](/talks/)
 - [Certifications](/certifications/)
-- [Contact](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)
+- [Contact](https://www.linkedin.com/in/jackjin)
 - [Design system](/design-systems/v3/)
 
 ## Elsewhere

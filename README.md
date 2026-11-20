@@ -56,6 +56,7 @@ Links that turned out not to be pages (redirects, 404s) are listed in `snapshot.
 - **DA itself:** drafts, unpublished pages, DA's version history, and the editor's block library (`/docs/library/`, preview only). Each published page's Markdown and fragment carry its full content, so a page can be authored again from here.
 - **The 7 GitHub Pages project sites** under www (`/bruce-lava-dash/` and the others): each one is its own repo.
 - **What pages embed from elsewhere:** the YouTube players, external links.
+- **Video:** a page's `media_<hash>` videos stay on www, listed in `snapshot.json` under `notArchived` with their sizes (since 2026-11-20). A static host serves no file over 25 MiB, and the webinar's nine demo videos alone are 196 MB. The masters are in Jack's Drive with the talk.
 - **Image sizes:** the host ignores Edge Delivery's resize query (`?width=750&format=webply`) and serves the original. Heavier, same picture.
 
 ## If Adobe goes away

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 912" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="dn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1280" height="912" fill="#ffffff"/>
+
+  <text x="40" y="44" font-size="22" fill="#1f2328" font-weight="700">AI using AI using AI - a coding agent that runs other coding agents</text>
+  <text x="40" y="70" font-size="13" fill="#57606a">Continuous Agent hands work from the human to the executive loop to the workers to the model - an agent spawning an agent calling an agent. Every handoff crosses deterministic code.</text>
+
+  <!-- ===================== TIER: HUMAN ===================== -->
+  <rect x="40" y="92" width="1200" height="98" rx="12" fill="#e9f5ee" stroke="#1a7f37" stroke-width="1.6"/>
+  <rect x="52" y="122" width="48" height="38" rx="9" fill="#1a7f37"/>
+  <text x="76" y="146" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">YOU</text>
+  <text x="120" y="126" font-size="16" fill="#116329" font-weight="700">The human - the async gate <tspan font-size="12" font-weight="400" fill="#57606a">(not an AI)</tspan></text>
+  <text x="120" y="150" font-size="12.5" fill="#2f4a3a">No prompting loop. You drop goals into a priority queue and answer workspace/needs-you.md only when the agent is blocked.</text>
+  <text x="120" y="169" font-size="12.5" fill="#2f4a3a">Minutes a day: set priorities, unblock, and review the [SELF-ENHANCE] / [SKILL-BUILD] branches. A constitution bounds what it may ever do.</text>
+
+  <!-- gate band: human -> executive -->
+  <line x1="240" y1="192" x2="240" y2="252" stroke="#57606a" stroke-width="1.6" marker-end="url(#dn)"/>
+  <text x="258" y="226" font-size="12" fill="#3d444d">drop goals in the queue (P0-P4)</text>
+  <line x1="1040" y1="252" x2="1040" y2="192" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#up)"/>
+  <text x="1022" y="226" font-size="12" fill="#1a7f37" text-anchor="end">needs-you.md: blocked asks</text>
+  <rect x="490" y="206" width="300" height="32" rx="8" fill="#ffffff" stroke="#57606a" stroke-width="1.3"/>
+  <text x="640" y="227" font-size="11.5" fill="#24292f" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">gate: constitution - 8 immutable limits</text>
+
+  <!-- ===================== TIER 1: THE EXECUTIVE (AI) ===================== -->
+  <rect x="40" y="254" width="1200" height="112" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="1.6"/>
+  <circle cx="74" cy="296" r="18" fill="#0969da"/>
+  <text x="74" y="302" font-size="17" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+  <text x="74" y="330" font-size="12" fill="#0550ae" font-weight="700" text-anchor="middle">AI</text>
+  <text x="112" y="284" font-size="16" fill="#0550ae" font-weight="700">The executive loop - 24/7 on PM2 <tspan font-size="12" font-weight="400" fill="#57606a">· an AI that runs the show</tspan></text>
+  <text x="112" y="308" font-size="12.5" fill="#33445c">An agentic Claude loop with no human in the inner loop. It selects the highest-priority goal, breaks goals over ~100 turns</text>
+  <text x="112" y="327" font-size="12.5" fill="#33445c">into steps, builds each worker's prompt, validates the result, and on failure retries with a different strategy - up to the</text>
+  <text x="112" y="346" font-size="12.5" fill="#33445c">constitutional limit of 10. It holds no state between iterations: goals, steps, and evidence are files and append-only ledgers.</text>
+
+  <!-- gate band: executive -> workers -->
+  <line x1="240" y1="368" x2="240" y2="428" stroke="#57606a" stroke-width="1.6" marker-end="url(#dn)"/>
+  <text x="258" y="402" font-size="12" fill="#3d444d">task contract + prompt + pattern</text>
+  <line x1="1040" y1="428" x2="1040" y2="368" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#up)"/>
+  <text x="1022" y="402" font-size="12" fill="#1a7f37" text-anchor="end">result + output_path, verified</text>
+  <rect x="490" y="382" width="300" height="32" rx="8" fill="#ffffff" stroke="#57606a" stroke-width="1.3"/>
+  <text x="640" y="403" font-size="11.5" fill="#24292f" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">gate: cred tiers · sandbox jail · 45-min</text>
+
+  <!-- ===================== TIER 2: THE WORKERS (AI) ===================== -->
+  <rect x="40" y="430" width="1200" height="152" rx="12" fill="#fff8e5" stroke="#d4a72c" stroke-width="1.6"/>
+  <circle cx="74" cy="474" r="18" fill="#d4a72c"/>
+  <text x="74" y="480" font-size="17" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+  <text x="74" y="508" font-size="12" fill="#7d4e00" font-weight="700" text-anchor="middle">AI</text>
+  <text x="112" y="460" font-size="16" fill="#7d4e00" font-weight="700">The coding workers - one spawned per goal <tspan font-size="12" font-weight="400" fill="#57606a">· each its own AI</tspan></text>
+
+  <rect x="112" y="474" width="196" height="26" rx="13" fill="#ffffff" stroke="#d4a72c" stroke-width="1.1"/>
+  <text x="210" y="491" font-size="12" fill="#7d4e00" font-weight="600" text-anchor="middle">Claude Agent SDK (default)</text>
+  <rect x="320" y="474" width="110" height="26" rx="13" fill="#ffffff" stroke="#d4a72c" stroke-width="1.1"/>
+  <text x="375" y="491" font-size="12" fill="#7d4e00" font-weight="600" text-anchor="middle">OpenAI Codex</text>
+  <rect x="442" y="474" width="136" height="26" rx="13" fill="#ffffff" stroke="#d4a72c" stroke-width="1.1"/>
+  <text x="510" y="491" font-size="12" fill="#7d4e00" font-weight="600" text-anchor="middle">Kimi (Wire / CLI)</text>
+
+  <text x="112" y="524" font-size="12.5" fill="#5c4813">Each worker is a full agentic coding session in its own ai-sandbox git worktree - it reads, writes, runs, and tests real code.</text>
+  <text x="112" y="543" font-size="12.5" fill="#5c4813">Workers never touch the agent's own codebase (constitution Art. I-6), and executive-tier credentials never reach them.</text>
+  <text x="112" y="562" font-size="12.5" fill="#5c4813">Execution pattern per goal: plan-then-execute (default), plan-mode, loop-until-progress, or a multi-agent harness pipeline.</text>
+
+  <!-- gate band: worker -> model -->
+  <line x1="240" y1="584" x2="240" y2="644" stroke="#57606a" stroke-width="1.6" marker-end="url(#dn)"/>
+  <text x="258" y="618" font-size="12" fill="#3d444d">job + tools, normalized per vendor</text>
+  <line x1="1040" y1="644" x2="1040" y2="584" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#up)"/>
+  <text x="1022" y="618" font-size="12" fill="#1a7f37" text-anchor="end">code · tool calls · thinking</text>
+  <rect x="490" y="598" width="300" height="32" rx="8" fill="#ffffff" stroke="#57606a" stroke-width="1.3"/>
+  <text x="640" y="619" font-size="11.5" fill="#24292f" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">seam: AgentWorkerProvider</text>
+
+  <!-- ===================== TIER 3: THE MODEL (AI) ===================== -->
+  <rect x="40" y="646" width="1200" height="152" rx="12" fill="#fbf5ff" stroke="#8250df" stroke-width="1.6"/>
+  <circle cx="74" cy="690" r="18" fill="#8250df"/>
+  <text x="74" y="696" font-size="17" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+  <text x="74" y="724" font-size="12" fill="#6639ba" font-weight="700" text-anchor="middle">AI</text>
+  <text x="112" y="676" font-size="16" fill="#6639ba" font-weight="700">The model - the vendor that writes the code <tspan font-size="12" font-weight="400" fill="#57606a">· an AI calling an AI</tspan></text>
+
+  <rect x="112" y="690" width="150" height="26" rx="13" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="187" y="707" font-size="12" fill="#6639ba" font-weight="600" text-anchor="middle">Claude (Anthropic)</text>
+  <rect x="274" y="690" width="130" height="26" rx="13" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="339" y="707" font-size="12" fill="#6639ba" font-weight="600" text-anchor="middle">Codex (OpenAI)</text>
+  <rect x="416" y="690" width="170" height="26" rx="13" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="501" y="707" font-size="12" fill="#6639ba" font-weight="600" text-anchor="middle">Kimi K2.5 (Moonshot)</text>
+
+  <text x="112" y="740" font-size="12.5" fill="#4a3a63">One AgentWorkerProvider interface, three backends; a goal runs identically on any. All output normalizes to AgentWorkerMessage</text>
+  <text x="112" y="759" font-size="12.5" fill="#4a3a63">- [tool_call], [tool_result], [thinking] - so the logs read the same across vendors.</text>
+  <text x="112" y="778" font-size="12.5" fill="#4a3a63">Billing follows the login, not a stray env key: Claude OAuth subscription, codex login (ChatGPT plan), or kimi login.</text>
+
+  <!-- ===================== META STRIP ===================== -->
+  <rect x="40" y="812" width="1200" height="60" rx="10" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.3" stroke-dasharray="6 4"/>
+  <text x="60" y="838" font-size="13.5" fill="#1f2328" font-weight="700">...and the agent improves the agent.</text>
+  <text x="60" y="858" font-size="12" fill="#57606a">[SELF-ENHANCE] and [SKILL-BUILD] goals spawn subagents that rewrite this codebase and add skills, on review branches. The V3.0 mem0 second brain is memory the executive reads and writes.</text>
+
+  <text x="40" y="900" font-size="12.5" fill="#57606a"><tspan font-weight="700" fill="#1f2328">The one invariant:</tspan> deterministic code holds the edges - health, gates, ledger appends, verifiers, the constitution. Everything else is model judgment; git is the only durable store.</text>
+</svg>

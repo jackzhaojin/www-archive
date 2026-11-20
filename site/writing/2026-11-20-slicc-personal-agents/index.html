@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Running Adobe SLICC Inside Four Personal Agents | Jack Jin</title>
+    <link rel="canonical" href="https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/">
+    <meta name="description" content="Adobe SLICC is an open-source browser agent. I tried running it inside Muse, Grok Bot, Claude Duet and ChatGPT dots. Here is how far each got.">
+    <meta property="og:title" content="Running Adobe SLICC Inside Four Personal Agents | Jack Jin">
+    <meta property="og:description" content="Adobe SLICC is an open-source browser agent. I tried running it inside Muse, Grok Bot, Claude Duet and ChatGPT dots. Here is how far each got.">
+    <meta property="og:url" content="https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/">
+    <meta property="og:image" content="https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/media_13d2f96ae3e0ca72e165ae2535b46353f4d9004e1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/media_13d2f96ae3e0ca72e165ae2535b46353f4d9004e1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:alt" content="A diagram in three tiers. Claude Code and I are the personal agent users. The agents are Muse, Grok Bot, ChatGPT dots and Claude Duet. Adobe SLICC is inside each: it works on Grok Bot, 4 of 4, and gets a 404 on Muse and dots. Claude Code is not allowed to drive Claude Duet, so I pasted its prompts by hand">
+    <meta property="article:published_time" content="2026-11-20">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running Adobe SLICC Inside Four Personal Agents | Jack Jin">
+    <meta name="twitter:description" content="Adobe SLICC is an open-source browser agent. I tried running it inside Muse, Grok Bot, Claude Duet and ChatGPT dots. Here is how far each got.">
+    <meta name="twitter:image" content="https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/media_13d2f96ae3e0ca72e165ae2535b46353f4d9004e1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Jack Jin">
+    <meta property="og:locale" content="en_US">
+    <meta name="template" content="article">
+    <meta property="image:alt" content="A diagram in three tiers. Claude Code and I are the personal agent users. The agents are Muse, Grok Bot, ChatGPT dots and Claude Duet. Adobe SLICC is inside each: it works on Grok Bot, 4 of 4, and gets a 404 on Muse and dots. Claude Code is not allowed to drive Claude Duet, so I pasted its prompts by hand">
+    <meta name="published-time" content="2026-11-20">
+    <meta property="article:author" content="https://www.jackzhaojin.com/">
+    <meta name="listing-summary" content="Adobe SLICC is an open-source browser agent. I tried running it inside Muse, Grok Bot, Claude Duet and ChatGPT dots. Here is how far each got.">
+    <meta name="listing-image" content="https://www.jackzhaojin.com/writing/media_13d2f96ae3e0ca72e165ae2535b46353f4d9004e1.png?width=750&#x26;format=jpg&#x26;optimize=medium">
+    <meta name="listing-topics" content="Adobe AEM &#x26; EDS|AI Engineering">
+    <meta name="listing-reading-time" content="15 min read">
+    <meta name="listing-keywords" content="adobe slicc sliccy adobe aem champion browser agent pi harness personal agents muse grok bot claude duet chatgpt dots claude code openai api key fetch proxy temperature gpt-5-nano skills upskill adobe skills ai ecoverse lars trieloff">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.jackzhaojin.com/#person",
+      "name": "Jack Jin",
+      "url": "https://www.jackzhaojin.com/",
+      "jobTitle": "Associate Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Accenture",
+        "department": {
+          "@type": "Organization",
+          "name": "Adobe Business Group"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jackjin",
+        "https://github.com/jackzhaojin",
+        "https://www.youtube.com/channel/UC0oOZvUGcmBrJvcIhUIwatA",
+        "https://www.credly.com/users/jack-jin"
+      ],
+      "award": [
+        "Adobe Experience Manager Champion, class of 2026-2027",
+        "AEM Rockstar winner, Adobe Summit 2024"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.jackzhaojin.com/#website",
+      "url": "https://www.jackzhaojin.com/",
+      "name": "Jack Jin",
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/#article",
+      "headline": "Running Adobe SLICC Inside Four Personal Agents",
+      "description": "Adobe SLICC is an open-source browser agent. I tried running it inside Muse, Grok Bot, Claude Duet and ChatGPT dots. Here is how far each got.",
+      "author": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.jackzhaojin.com/#person"
+      },
+      "image": "https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/media_13d2f96ae3e0ca72e165ae2535b46353f4d9004e1.png",
+      "mainEntityOfPage": "https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/",
+      "isPartOf": {
+        "@id": "https://www.jackzhaojin.com/#website"
+      },
+      "about": [
+        "Adobe SLICC",
+        "Adobe",
+        "Adobe Experience Manager",
+        "AI agents",
+        "Personal agents",
+        "Browser automation",
+        "Pi agent harness",
+        "Grok Bot",
+        "Claude Duet",
+        "ChatGPT dots",
+        "Meta Muse"
+      ],
+      "datePublished": "2026-11-20",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.jackzhaojin.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical Writing",
+          "item": "https://www.jackzhaojin.com/writing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Adobe SLICC inside four personal agents",
+          "item": "https://www.jackzhaojin.com/writing/2026-11-20-slicc-personal-agents/"
+        }
+      ]
+    }
+  ]
+}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <script nonce="51o2Aw8gQAtG2SvlW/6J+SYk" src="/scripts/aem.js" type="module"></script>
+    <script nonce="51o2Aw8gQAtG2SvlW/6J+SYk" src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/writing/">Technical Writing</a></li>
+          <li>Adobe SLICC inside four personal agents</li>
+        </ol>
+        <h1 id="running-adobe-slicc-inside-four-personal-agents">Running Adobe SLICC Inside Four Personal Agents</h1>
+        <p>By <a href="/">Jack Jin</a> · November 20, 2026 · 15 min read</p>
+        <p>Adobe SLICC is an open-source AI agent that lives in your browser. Over one weekend I tried to run it inside four personal agents, Muse, Grok Bot, Claude Duet and ChatGPT dots, so the agent that knows me could plan and check while SLICC did the browser work. One of the four made it. Below is what SLICC is, where each agent got stuck and why, and the bug one of them found in SLICC, which was fixed upstream by the next morning.</p>
+      </div>
+      <div>
+        <div class="rail">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1113b83e941503cd92d1c405fa501dd2b38d0f510.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1113b83e941503cd92d1c405fa501dd2b38d0f510.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1113b83e941503cd92d1c405fa501dd2b38d0f510.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1113b83e941503cd92d1c405fa501dd2b38d0f510.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 1</strong><br><a href="#part-1">AI using AI</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1b3eb4ea3629af059b399a369038e5e64c24f63db.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1b3eb4ea3629af059b399a369038e5e64c24f63db.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1b3eb4ea3629af059b399a369038e5e64c24f63db.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1b3eb4ea3629af059b399a369038e5e64c24f63db.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 2</strong><br><a href="#part-2">The idea</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1e90f41a1832334f53debbfb93c567c3c51cf0790.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1e90f41a1832334f53debbfb93c567c3c51cf0790.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1e90f41a1832334f53debbfb93c567c3c51cf0790.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1e90f41a1832334f53debbfb93c567c3c51cf0790.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 3</strong><br><a href="#part-3">What Adobe SLICC is</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1f244b1cefe56163f5ea461286a9b62b638c00e77.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1f244b1cefe56163f5ea461286a9b62b638c00e77.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1f244b1cefe56163f5ea461286a9b62b638c00e77.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1f244b1cefe56163f5ea461286a9b62b638c00e77.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 4</strong><br><a href="#part-4">How SLICC runs</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_103fd49819e28f332c383cd2f99c40e65b4ba4336.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_103fd49819e28f332c383cd2f99c40e65b4ba4336.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_103fd49819e28f332c383cd2f99c40e65b4ba4336.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_103fd49819e28f332c383cd2f99c40e65b4ba4336.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 5</strong><br><a href="#part-5">The test</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_19287c82cbb06391d051b1d2b8fde19090eaed464.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_19287c82cbb06391d051b1d2b8fde19090eaed464.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_19287c82cbb06391d051b1d2b8fde19090eaed464.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_19287c82cbb06391d051b1d2b8fde19090eaed464.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 6</strong><br><a href="#part-6">Four walls</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1f1abe9376ec3312b11f00b080900e1a03e6161c3.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1f1abe9376ec3312b11f00b080900e1a03e6161c3.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1f1abe9376ec3312b11f00b080900e1a03e6161c3.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1f1abe9376ec3312b11f00b080900e1a03e6161c3.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 7</strong><br><a href="#part-7">Grok Bot makes it</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_10aa5065591b1cf50c42d3fc6df8e970a8db4494f.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_10aa5065591b1cf50c42d3fc6df8e970a8db4494f.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_10aa5065591b1cf50c42d3fc6df8e970a8db4494f.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_10aa5065591b1cf50c42d3fc6df8e970a8db4494f.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 8</strong><br><a href="#part-8">The agent debugs SLICC</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1f5d322a603a542e10be1b0901ea30371b824a612.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1f5d322a603a542e10be1b0901ea30371b824a612.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1f5d322a603a542e10be1b0901ea30371b824a612.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1f5d322a603a542e10be1b0901ea30371b824a612.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 9</strong><br><a href="#part-9">SLICC grows skills</a></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1939ee50c8505e7bb6e8067aa8a4965e1e5cfa46d.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1939ee50c8505e7bb6e8067aa8a4965e1e5cfa46d.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1939ee50c8505e7bb6e8067aa8a4965e1e5cfa46d.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1939ee50c8505e7bb6e8067aa8a4965e1e5cfa46d.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="288" height="184">
+              </picture>
+            </div>
+            <div><strong>Part 10</strong><br><a href="#part-10">Scorecard</a></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="https://github.com/ai-ecoverse/slicc">The SLICC repo</a></p>
+              <p><a href="https://github.com/ai-ecoverse/slicc/pull/4240">The fix, PR #4240</a></p>
+              <p><a href="#references">References</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="picture">
+        <div class="figure shot">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_10e3dc0d1382fad72dd9d2052b44e76cf406bac1c.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_10e3dc0d1382fad72dd9d2052b44e76cf406bac1c.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_10e3dc0d1382fad72dd9d2052b44e76cf406bac1c.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="SLICC, a browser agent, open in a Chrome window inside the computer view of my Grok Bot, listing the skills it had before and after an install" src="./media_10e3dc0d1382fad72dd9d2052b44e76cf406bac1c.png?width=750&#x26;format=png&#x26;optimize=medium" width="1050" height="790">
+                </picture>
+              </p>
+              <p>Adobe SLICC working in its own Chrome window, inside the computer of Mochi, my Grok Bot, on Sunday, November 8. What I typed while watching it: "it's interesting seeing another harness run inside my personal assistant!" The address bar is covered.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fine-print">
+          <div>
+            <div>Tested on Saturday, November 7 and Sunday, November 8, 2026, on SLICC 6.258.3 to 6.258.5. SLICC has moved since (6.260 on November 15, and SLICC 7), so the results are a snapshot. Code: <a href="https://github.com/ai-ecoverse/slicc">ai-ecoverse/slicc</a>. The fix in this story: <a href="https://github.com/ai-ecoverse/slicc/issues/4239">issue #4239</a> and <a href="https://github.com/ai-ecoverse/slicc/pull/4240">PR #4240</a>. Screenshots are mine or were captured during the runs, cropped to keep private chats out.</div>
+          </div>
+        </div>
+      </div>
+      <div id="part-1">
+        <h2 id="ai-using-ai">1. AI using AI</h2>
+        <div class="figure shot">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1f58b91d8d456078f2daa97462f61122c2d1ae687.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1f58b91d8d456078f2daa97462f61122c2d1ae687.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1f58b91d8d456078f2daa97462f61122c2d1ae687.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="A diagram in three tiers. Claude Code and I are the personal agent users. The agents are Muse, Grok Bot, ChatGPT dots and Claude Duet. Adobe SLICC is inside each: it works on Grok Bot, 4 of 4, and gets a 404 on Muse and dots. Claude Code is not allowed to drive Claude Duet, so I pasted its prompts by hand" src="./media_1f58b91d8d456078f2daa97462f61122c2d1ae687.png?width=750&#x26;format=png&#x26;optimize=medium" width="2400" height="940">
+                </picture>
+              </p>
+              <p>How the weekend ran. Claude Code and I both used the agents, and each agent ran SLICC in its own computer. Claude Code wasn't allowed to drive Duet, so I pasted those prompts myself.</p>
+            </div>
+          </div>
+        </div>
+        <div class="figure shot">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1c5737267952e9f3eb8ff858f31c3afdd9d0b7431.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1c5737267952e9f3eb8ff858f31c3afdd9d0b7431.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1c5737267952e9f3eb8ff858f31c3afdd9d0b7431.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Three crops of one screenshot: a Chrome tab group holding Muse, Grok, Claude and ChatGPT dot tabs, Chrome&#x27;s notice that Claude started debugging the browser, and a pre-flight prompt in a chat with a note that Claude is active in this tab group" src="./media_1c5737267952e9f3eb8ff858f31c3afdd9d0b7431.png?width=750&#x26;format=png&#x26;optimize=medium" width="1153" height="530">
+                </picture>
+              </p>
+              <p>Three crops from my screenshot on Saturday, November 7: the tab group, Chrome's notice that Claude is driving the browser, and the pre-flight questions going to my dot. I cut the rest of the screen because it showed private chats.</p>
+            </div>
+          </div>
+        </div>
+        <p>On Saturday, November 7, one Claude Code session was driving three personal agents from a single Chrome tab group: Muse, Grok Bot and ChatGPT dots. I typed this while I watched it: "AI using AI is insane, lol, my claude code session is using 4 personal agents at once".</p>
+        <p>It was really three. Claude's Chrome tool refused claude.ai/duet as "not allowed due to safety restrictions", in the afternoon and again that evening. One Claude couldn't drive another, so I pasted Duet's prompts by hand.</p>
+        <p>There's a reason Claude Code is in the middle. Personal agents are meant to give up easily. They aren't built to run an agentic loop for 20 minutes. Claude Code is, so it kept working with the agents, and the problem solving didn't stop when one of them did. That turned out to be one of the biggest values of this project.</p>
+      </div>
+      <div id="part-2">
+        <h2 id="the-idea-plan-work-check">2. The idea: plan, work, check</h2>
+        <div class="explainer process-shift">
+          <div>
+            <div>
+              <ul>
+                <li><strong>You</strong></li>
+                <li><strong>Personal agent</strong></li>
+                <li><strong>SLICC</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div><em>The idea, or what ran</em></div>
+          </div>
+          <div>
+            <div><strong>The idea</strong></div>
+            <div>
+              <ol>
+                <li><strong>You</strong> Give the task once.</li>
+                <li><strong>Personal agent</strong> Turns it into an instruction for a worker.</li>
+                <li><strong>SLICC</strong> Does the clicking in a browser, on my ChatGPT plan.</li>
+                <li><strong>SLICC</strong> Comes back with an answer.</li>
+                <li><strong>Personal agent</strong> Checks the answer against what it knows about me.</li>
+                <li><strong>You</strong> Read an answer that was already checked.</li>
+              </ol>
+            </div>
+            <div>The personal agent knows me, so it plans and checks. The repetitive browser work goes to a worker on a cheaper model or my ChatGPT plan.</div>
+          </div>
+          <div>
+            <div>What ran on Grok Bot</div>
+            <div>
+              <ol>
+                <li><strong>You</strong> Paste an OpenAI API key into SLICC yourself.</li>
+                <li><strong>Personal agent</strong> Mochi types the task into SLICC.</li>
+                <li><strong>SLICC</strong> Opens my site and reads the page, on GPT-6.1 Terra.</li>
+                <li><strong>SLICC</strong> Reports the title, the description and the broken links.</li>
+                <li><strong>Personal agent</strong> Mochi checks the answer against the page and what it knows about me.</li>
+                <li><strong>You</strong> Read a checked answer, billed per token.</li>
+              </ol>
+            </div>
+            <div>The same pattern with one change: an API key in place of the ChatGPT plan, and a key bills per token.</div>
+          </div>
+          <div>
+            <div>The plan, and what one of four agents ran. The bar shows how the steps divide between me, the personal agent and SLICC.</div>
+          </div>
+        </div>
+        <p>I pay for a few AI plans, and I don't want the good tokens spent on browser clicking. Four personal agents came out between August and October: Meta's Muse, Grok Bot, Claude Duet and ChatGPT dots. Each one runs on a cloud computer of its own.</p>
+        <p>A personal agent knows me, so it should plan the work and check it. The clicking in the middle can go to a worker. I picked Adobe SLICC for that, a browser agent out of the Adobe and AEM world, because it can sign in to a ChatGPT plan and I already had one merged PR in it.</p>
+        <p>The ChatGPT-plan part never happened, and I'd rather say so here than at the end. The sign-in never finished on any of the four. I used an API key instead.</p>
+      </div>
+      <div id="part-3">
+        <h2 id="what-adobe-slicc-is">3. What Adobe SLICC is</h2>
+        <div class="explainer nested-layers">
+          <div>
+            <div>
+              <p><strong>Your browser tab</strong></p>
+              <p>Or a Chrome that <code>npx sliccy</code> starts for it.</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Tabs and sessions</strong> "It sees your tabs, your sessions, your logged-in apps."</li>
+                <li><strong>The outer wall</strong> Everything below lives inside this one tab.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><strong>SLICC</strong></p>
+              <p>The browser part, added on top of Pi.</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Virtual files</strong> A file system in browser storage.</li>
+                <li><strong>A shell</strong> <code>bash</code>, <code>git</code>, <code>node</code>, <code>python</code> and <code>playwright-cli</code>, running inside the page.</li>
+                <li><strong>Browser automation</strong> Over Chrome's debugging protocol.</li>
+                <li><strong>Scoops</strong> Sub-agents, each with its own sandbox.</li>
+                <li><strong>Skills</strong> About 30 built in, more with <code>upskill</code>.</li>
+                <li><strong>Secrets</strong> The agent sees a masked value.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Pi</strong></p>
+              <p>"A minimal agent harness", MIT licensed.</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong><code>pi-agent-core</code></strong> The agent loop.</li>
+                <li><strong><code>pi-ai</code></strong> One API for many model providers.</li>
+                <li><strong><code>pi-coding-agent</code></strong> The <code>edit</code> tool and context compaction.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Reaches out to</p>
+              <ul>
+                <li><strong>Model providers</strong> 46 of them in SLICC's list, through <code>pi-ai</code>.</li>
+                <li><strong>The pages it drives</strong> In the same browser it runs in.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>Close the tab</div>
+            <div>Open it again</div>
+            <div>"Close the browser tab and it's over."</div>
+          </div>
+          <div>
+            <div>Pi is the core, SLICC is the browser part around it, and the tab is the outer wall. Drawn from SLICC's README, <code>docs/architecture.md</code> and <code>packages/webapp/package.json</code>. Try closing the tab.</div>
+          </div>
+        </div>
+        <p>SLICC describes itself as "A browser-native AI agent for getting practical work done in and through the browser." It runs in a browser and controls the browser it runs in. The name stands for Self-Licking Ice Cream Cone, "a recursive system that can help build, extend, and operate itself."</p>
+        <p>It comes from Adobe. Lars Trieloff, a Principal Scientist at Adobe, wrote <a href="https://tessl.io/blog/three-kinds-of-ai-agent-only-one-of-them-lives-in-your-browser/">"I built SLICC"</a> in May. It's open source under Apache 2.0, at <a href="https://github.com/ai-ecoverse/slicc">github.com/ai-ecoverse/slicc</a>, part of the AI Ecoverse.</p>
+        <p>The middle of it is Pi. The agent loop, the model layer and some coding tools are Pi's packages, which is where SLICC's 46 model providers come from. <a href="https://pi.dev/">Pi</a> was started by Mario Zechner and is now published by Earendil. In SLICC's own words: "We use the most excellent pi APIs under the hood."</p>
+        <p>What SLICC adds is the browser part, and that's the reason I wanted it as a worker. Your logged-in sessions are right there. Lars's line is that "each web app becomes an open API once you've logged in". Containment is simple too: close the tab.</p>
+        <p>Skills work the way you'd expect if you use Claude Code. SLICC ships about 30, installs more with its <code>upskill</code> command, and reads the <code>.claude/skills</code> and <code>.agents/skills</code> folders it can reach. It speaks the same <code>SKILL.md</code> format as Pi and Claude Code, and loads them with its own code.</p>
+        <p>Keep the secrets row in mind for later. The agent sees a masked value, and the real key is only swapped in for requests to allowed domains. Where a key can be typed turned out to be most of this test.</p>
+        <p>SLICC also has its own ice cream vocabulary. The story below uses four of these words: cone, scoop, float and skill.</p>
+        <div class="data-table sr-caption row-heads">
+          <div>
+            <div>Word</div>
+            <div>What it is</div>
+          </div>
+          <div>
+            <div>Cone</div>
+            <div>The main agent</div>
+          </div>
+          <div>
+            <div>Scoops</div>
+            <div>Sub-agents, each with its own sandbox</div>
+          </div>
+          <div>
+            <div>Licks</div>
+            <div>Events that wake an agent</div>
+          </div>
+          <div>
+            <div>Floats</div>
+            <div>Runtimes: the ways SLICC can run</div>
+          </div>
+          <div>
+            <div>Tray</div>
+            <div>Several floats in one session</div>
+          </div>
+          <div>
+            <div>Sprinkles</div>
+            <div>Add-ons</div>
+          </div>
+          <div>
+            <div>SLICC's ice cream vocabulary, from its README</div>
+          </div>
+        </div>
+      </div>
+      <div id="part-4">
+        <h2 id="how-slicc-runs-and-the-detail-that-decided-the-test">4. How SLICC runs, and the detail that decided the test</h2>
+        <div class="explainer bridge-path">
+          <div>
+            <div><em>Where SLICC is running</em></div>
+          </div>
+          <div>
+            <div><strong>Plain sliccy.ai tab</strong></div>
+            <div>
+              <ol>
+                <li><strong>SLICC, in the tab</strong> Sends a model call to OpenAI.</li>
+                <li><strong>Its service worker</strong> Sends every cross-origin model call to <code>/api/fetch-proxy</code>.</li>
+                <li><strong>sliccy.ai, the hosted app</strong> Has no such proxy, and answers 404.</li>
+                <li><strong>OpenAI</strong> Never hears about it.</li>
+              </ol>
+            </div>
+            <div>Stops at hop 3</div>
+            <div>
+              <pre><code>Scoop "Cone" failed with unrecoverable error: OpenAI API error (404): 404 "Fetch proxy not available in worker mode"
+</code></pre>
+              <p>The error on Muse and on my dot, on every model I tried. The ChatGPT sign-in fails in a plain tab too, because nothing there can catch its redirect: "Login failed: OpenAI Codex OAuth login was cancelled or timed out".</p>
+            </div>
+          </div>
+          <div>
+            <div>Started by npx sliccy</div>
+            <div>
+              <ol>
+                <li><strong>SLICC, in the Chrome it started</strong> Sends the same model call.</li>
+                <li><strong>Its service worker</strong> Sends it to <code>/api/fetch-proxy</code>, as before.</li>
+                <li><strong>The local server</strong> Has the proxy, and passes the call on.</li>
+                <li><strong>OpenAI</strong> Answers.</li>
+              </ol>
+            </div>
+            <div>Comes back with an answer</div>
+            <div>
+              <pre><code>The model gpt-4 does not exist or you do not have access to it
+</code></pre>
+              <p>On Grok Bot, the first thing back was OpenAI turning down SLICC's default model. A refusal from OpenAI still means the request got through.</p>
+            </div>
+          </div>
+          <div>
+            <div>One model call, from the two places SLICC ran in this test. The messages are the ones SLICC showed.</div>
+          </div>
+        </div>
+        <p>SLICC runs as a hosted tab, a CLI (<code>npx sliccy</code>, Node 22.19 or newer), a thin Chrome extension, a macOS app, and in the cloud. The README calls these floats.</p>
+        <p>With <code>npx sliccy</code>, a small local server runs next to Chrome. It holds Chrome's debugging channel, the OAuth callback, and a fetch proxy that model calls go through. A plain sliccy.ai tab has none of that, and that decided the test.</p>
+        <p>In a plain tab, even with a valid key saved, SLICC 6 couldn't reach any model. Three of the four results below come down to that.</p>
+      </div>
+      <div id="part-5" class="prompt">
+        <h2 id="the-test-four-rungs-one-task">5. The test: four rungs, one task</h2>
+        <div class="data-table sr-caption row-heads">
+          <div>
+            <div></div>
+            <div>Muse</div>
+            <div>Grok Bot</div>
+            <div>ChatGPT dots</div>
+          </div>
+          <div>
+            <div>Operating system</div>
+            <div>Ubuntu 24.04.5</div>
+            <div>Debian 13</div>
+            <div>Debian 13.6</div>
+          </div>
+          <div>
+            <div>Node</div>
+            <div>v24.22.1</div>
+            <div>v20.19.2, older than SLICC needs</div>
+            <div>v24.22.1</div>
+          </div>
+          <div>
+            <div>Browser</div>
+            <div>Chromium-based Muse Browser 155</div>
+            <div>Google Chrome 155</div>
+            <div>Chromium 156</div>
+          </div>
+          <div>
+            <div>SLICC's page</div>
+            <div>Loads, "Welcome to SLICC"</div>
+            <div>Loads, setup screen</div>
+            <div>Opens, "Restoring session..."</div>
+          </div>
+          <div>
+            <div>Chrome extension</div>
+            <div>No: Muse blocks the Web Store</div>
+            <div>No: the browser is managed</div>
+            <div>Can't confirm: <code>chrome://extensions</code> is blocked</div>
+          </div>
+          <div>
+            <div>OpenAI's login page</div>
+            <div>Loads</div>
+            <div>Loads</div>
+            <div>Loads</div>
+          </div>
+          <div>
+            <div>What each agent reported about its own computer on Saturday at about 3 PM Eastern, before anything was installed</div>
+          </div>
+        </div>
+        <p>The same test went to all four, as a ladder with four rungs:</p>
+        <ol>
+          <li>Boots: the agent opens SLICC in its own browser.</li>
+          <li>Signs in: SLICC gets a model, from inside the agent's computer.</li>
+          <li>Works: the agent sends one task and SLICC does it.</li>
+          <li>Checks: the agent judges the answer, using what it knows about me.</li>
+        </ol>
+        <p>If an agent fails a rung, that's its result. No retakes. This is the task every agent typed into SLICC:</p>
+        <pre><code>The task for SLICC
+Open https://www.jackzhaojin.com, find the newest article, open it, and report its title, its meta description, and any broken links.
+</code></pre>
+        <p>The table is the pre-flight: the same read-only questions to each agent before any of this started. All three have a Linux computer with a terminal, Node and a Chromium browser, and SLICC's page opened in all three. Going in, my research said dots would be the easiest. That turned out wrong. Duet isn't in the table, because Claude Code couldn't reach it.</p>
+        <div class="figure shot narrow">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_12e38a7b828ff78bbc451a735fae7bb73383f099c.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_12e38a7b828ff78bbc451a735fae7bb73383f099c.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_12e38a7b828ff78bbc451a735fae7bb73383f099c.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="A chat reply listing seven pre-flight answers: Debian 13.6 with a Bash terminal, Node v24.22.1, Chromium 156, the SLICC page opening, extensions blocked, the OpenAI login page loading, and custom MCP possibly available" src="./media_12e38a7b828ff78bbc451a735fae7bb73383f099c.png?width=750&#x26;format=png&#x26;optimize=medium" width="1456" height="835">
+                </picture>
+              </p>
+              <p>My dot's pre-flight answer, about its own cloud computer. Its last line: "I didn't install anything, sign in, or change settings."</p>
+            </div>
+          </div>
+        </div>
+        <p>For the key, I made an OpenAI key that expires in a month, and I typed it myself every time, never in a chat. Claude Code wouldn't type it either, even with my OK. Each agent opened SLICC's key field and stopped there, and I took over its screen and pasted.</p>
+      </div>
+      <div id="part-6">
+        <h2 id="four-computers-four-walls">6. Four computers, four walls</h2>
+        <div class="explainer rung-ladder">
+          <div>
+            <div>
+              <ol>
+                <li><strong>Boots</strong> SLICC opens</li>
+                <li><strong>Signs in</strong> SLICC gets a model</li>
+                <li><strong>Works</strong> SLICC does the task</li>
+                <li><strong>Checks</strong> the agent checks it</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <div><em>Pick an agent</em></div>
+          </div>
+          <div>
+            <div><strong>Muse</strong></div>
+            <div>3</div>
+            <div>
+              <p>Stuck on rung 3</p>
+              <p>The key saved, but the plain SLICC tab can't reach the model.</p>
+              <p>It reported the failure and stopped: "I didn't run the site check myself, since the point was to let SLICC do it."</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Terminal</strong> Can't start Chrome: "Hatch WebGL domain policy is required for browser startup".</li>
+                <li><strong>Screen you can watch</strong> Its browser only, and that browser refuses localhost.</li>
+                <li><strong>Where the key goes</strong> You take over its screen.</li>
+                <li><strong>SLICC</strong> Plain tab, 404.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>dots</div>
+            <div>3</div>
+            <div>
+              <p>Stuck on rung 3</p>
+              <p>The same wall as Muse: its terminal is sandboxed, so SLICC ran in a plain tab.</p>
+              <p>Then it did the task itself, and caught that my homepage still labelled the October 10 recap "Latest".</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Terminal</strong> Sandboxed: "<code>socket()</code> failed: Operation not permitted". It asked before turning off a Chrome sandbox setting.</li>
+                <li><strong>Screen you can watch</strong> Its browser only.</li>
+                <li><strong>Where the key goes</strong> You take over its screen. SLICC 7 has a vault field there, untested.</li>
+                <li><strong>SLICC</strong> Plain tab, 404.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>Duet</div>
+            <div>2</div>
+            <div>
+              <p>Stuck on rung 2</p>
+              <p>No computer I can see or type into, so there is nowhere to put a key.</p>
+              <p>It wouldn't copy the key from my Chrome either: "that's the line I can't cross".</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Terminal</strong> Not seen. "My machine and browser run in the cloud."</li>
+                <li><strong>Screen you can watch</strong> None. "You only see what I report back."</li>
+                <li><strong>Where the key goes</strong> Nowhere.</li>
+                <li><strong>SLICC</strong> Never signed in.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>Grok Bot</div>
+            <div>4</div>
+            <div>
+              <p>Made it, 4 of 4</p>
+              <p>The only one where the terminal and the screen you can watch are the same computer.</p>
+              <p>On an API key, not the ChatGPT plan.</p>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Terminal</strong> Starts Chrome: "DevTools listening on".</li>
+                <li><strong>Screen you can watch</strong> <code>DISPLAY</code> is <code>:2</code>, a virtual screen streamed to the computer view.</li>
+                <li><strong>Where the key goes</strong> You take over its screen.</li>
+                <li><strong>SLICC</strong> <code>npx sliccy</code>, with the local server. Works.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>Where each agent stood on Sunday, November 8. Duet's first rung is by its own account and mine; Claude Code never saw the start of that thread.</div>
+          </div>
+        </div>
+        <p>None of the four computers is the same inside. Muse and my dot have a terminal and a browser that can't talk to each other. Duet has no computer I can see at all. Only on Grok Bot are the terminal and the screen the same machine, and that's the one thing SLICC's local server needs.</p>
+        <div class="compare narrow">
+          <div>
+            <div>Muse</div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_133b73d0725eedc2f390c4ad6a70051b5feb38aa9.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_133b73d0725eedc2f390c4ad6a70051b5feb38aa9.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_133b73d0725eedc2f390c4ad6a70051b5feb38aa9.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Muse&#x27;s chat beside its browser view: SLICC shows three red error cards, two of them reading OpenAI API error 404, Fetch proxy not available in worker mode" src="./media_133b73d0725eedc2f390c4ad6a70051b5feb38aa9.png?width=750&#x26;format=png&#x26;optimize=medium" width="817" height="538">
+                </picture>
+              </p>
+              <p>Muse's browser view on Saturday at 3:53 PM. SLICC took the task, then failed twice with the 404. The first card is SLICC's default model asking for an Anthropic key.</p>
+            </div>
+          </div>
+          <div>
+            <div>dots</div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_15b1f8a4dc16c1c9b3ee88af59d355c01ddf47d38.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_15b1f8a4dc16c1c9b3ee88af59d355c01ddf47d38.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_15b1f8a4dc16c1c9b3ee88af59d355c01ddf47d38.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="A chat reply from my dot explaining that the headless browser test failed with a socket permission error, ending with the line: I didn&#x27;t use --no-sandbox, restart SLICC, sign in, or approve anything" src="./media_15b1f8a4dc16c1c9b3ee88af59d355c01ddf47d38.png?width=750&#x26;format=png&#x26;optimize=medium" width="623" height="382">
+                </picture>
+              </p>
+              <p>My dot's read of why its terminal can't run a browser. It stopped there and asked before turning off a Chrome safety setting.</p>
+            </div>
+          </div>
+        </div>
+        <p>They also behaved differently when SLICC failed. Muse reported the failure and stopped. My dot did the job itself, and found a real problem on my site that way. Mochi, my Grok Bot, debugged SLICC, and asked before killing a process.</p>
+        <p>Duet is the most locked down, and it said so: "for this kind of test I'm the most locked-down of the four." It offered another route, with SLICC on my Mac and Duet driving my Chrome, and flagged that this "bends your rule". I didn't take it. Two Claudes held the same line on the key that day: Claude Code wouldn't hand it out, and Duet wouldn't copy it. Where I left it: "we'll try this again once you've added more features to claude duet".</p>
+        <div class="figure shot slim">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_16e44566c2283443d7f600f6931632ce95e04f7ce.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_16e44566c2283443d7f600f6931632ce95e04f7ce.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_16e44566c2283443d7f600f6931632ce95e04f7ce.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="A chat with Claude Duet: it calls itself the most locked-down of the four, points to its connected apps, and refuses to copy a key because that would mean reading and handling the key" src="./media_16e44566c2283443d7f600f6931632ce95e04f7ce.png?width=750&#x26;format=png&#x26;optimize=medium" width="678" height="608">
+                </picture>
+              </p>
+              <p>The end of my Duet thread on Saturday evening.</p>
+            </div>
+          </div>
+        </div>
+        <p>These are the walls in the tools' own words:</p>
+        <div class="data-table sr-caption row-heads stack">
+          <div>
+            <div>Where</div>
+            <div>What it said</div>
+          </div>
+          <div>
+            <div>Muse's terminal, starting Chrome</div>
+            <div><code>Hatch WebGL domain policy is required for browser startup</code></div>
+          </div>
+          <div>
+            <div>Muse's browser, opening the terminal's localhost</div>
+            <div><code>invalid_request</code></div>
+          </div>
+          <div>
+            <div>My dot's terminal, <code>npx sliccy</code></div>
+            <div><code>Chrome exited with code null before reporting CDP port</code></div>
+          </div>
+          <div>
+            <div>My dot's terminal, headless Chromium</div>
+            <div><code>socket() failed: Operation not permitted</code></div>
+          </div>
+          <div>
+            <div>A plain SLICC tab, ChatGPT sign-in</div>
+            <div><code>Login failed: OpenAI Codex OAuth login was cancelled or timed out</code></div>
+          </div>
+          <div>
+            <div>A plain SLICC tab, any model call</div>
+            <div><code>404 "Fetch proxy not available in worker mode"</code></div>
+          </div>
+          <div>
+            <div>Claude's Chrome tool, opening Duet</div>
+            <div><code>This site is not allowed due to safety restrictions</code></div>
+          </div>
+          <div>
+            <div>Every wall in the test, as the tool reported it</div>
+          </div>
+        </div>
+      </div>
+      <div id="part-7">
+        <h2 id="grok-bot-makes-it">7. Grok Bot makes it</h2>
+        <div class="compare">
+          <div>
+            <div>The loop</div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_10f5b2dd398f9e121e85b6be647b50246921a753a.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_10f5b2dd398f9e121e85b6be647b50246921a753a.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_10f5b2dd398f9e121e85b6be647b50246921a753a.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="SLICC&#x27;s window on Grok Bot&#x27;s screen: a long list alternating Read SKILL.md and Use Sliccy&#x27;s computer, every step marked done" src="./media_10f5b2dd398f9e121e85b6be647b50246921a753a.png?width=750&#x26;format=png&#x26;optimize=medium" width="770" height="482">
+                </picture>
+              </p>
+              <p>Saturday at 4:03 PM, on GPT-6.1 Sol. The same two steps, over and over, each one marked done.</p>
+            </div>
+          </div>
+          <div>
+            <div>The meter</div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1eed7609f48004b8fcb59902da646eb8de45852ea.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1eed7609f48004b8fcb59902da646eb8de45852ea.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1eed7609f48004b8fcb59902da646eb8de45852ea.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Two zooms of the same SLICC window: the cost meter reading $29.70 an hour, and the two repeating steps, Read SKILL.md and Use Sliccy&#x27;s computer" src="./media_1eed7609f48004b8fcb59902da646eb8de45852ea.png?width=750&#x26;format=png&#x26;optimize=medium" width="853" height="460">
+                </picture>
+              </p>
+              <p>Two zooms of that window, top and bottom: the meter at $29.70 an hour, and the two steps it kept repeating.</p>
+            </div>
+          </div>
+          <div>
+            <div>The answer</div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_133db3201eae51289b36498400763991a400b2557.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_133db3201eae51289b36498400763991a400b2557.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_133db3201eae51289b36498400763991a400b2557.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="SLICC&#x27;s chat after the task: two steps done, then an answer naming the adaptTo() 2026 recap, its meta description, and 25 image links returning 401 Unauthorized" src="./media_133db3201eae51289b36498400763991a400b2557.png?width=750&#x26;format=png&#x26;optimize=medium" width="1100" height="644">
+                </picture>
+              </p>
+              <p>Saturday evening, on GPT-6.1 Terra: SLICC's first finished answer, from a screenshot on my phone. The meter in the corner reads $3.68 an hour.</p>
+            </div>
+          </div>
+        </div>
+        <p>Mochi is my Grok Bot. Its Node was 20, older than SLICC needs, so it installed Node 22 for its own user only and ran <code>DISPLAY=:2 npx sliccy</code>. SLICC came up on the screen I can watch. The ChatGPT sign-in opened OpenAI's login page and stopped there, waiting for me. I said "I do want to just get it done" and switched to an API key.</p>
+        <div class="figure native">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_18860617140756bf79f93298e0faf7d23b70238a2.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_18860617140756bf79f93298e0faf7d23b70238a2.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_18860617140756bf79f93298e0faf7d23b70238a2.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Mochi&#x27;s chat with two thumbnails of its screen: SLICC open, then OpenAI&#x27;s Welcome back login page in SLICC&#x27;s Chrome window" src="./media_18860617140756bf79f93298e0faf7d23b70238a2.png?width=750&#x26;format=png&#x26;optimize=medium" width="322" height="440">
+                </picture>
+              </p>
+              <p>As far as the ChatGPT sign-in got: OpenAI's login page, in SLICC's Chrome on Mochi's screen.</p>
+            </div>
+          </div>
+        </div>
+        <p>For the first run, Mochi switched SLICC to GPT-6.1 Sol, the highest version it had seen in the list. SLICC opened my site in its own tab. Then it alternated "Read SKILL.md" and "Use Sliccy's computer" more than 128 times, each step marked done, and never produced an answer. Claude Code noticed the cost meter at $29.70 an hour and asked Mochi to stop it. SLICC's stop button didn't stop it: about 50 more requests went out in the next 20 seconds. Mochi asked before killing the process.</p>
+        <div class="explainer value-bars">
+          <div>
+            <div>SLICC's cost meter, the same task on three runs</div>
+          </div>
+          <div>
+            <div>
+              <p>GPT-6.1 Sol</p>
+              <p>Saturday afternoon. Looped, never answered.</p>
+            </div>
+            <div><em>$31.49 an hour</em></div>
+          </div>
+          <div>
+            <div>
+              <p>GPT-6.1 Terra</p>
+              <p>Saturday evening. Finished, no loop.</p>
+            </div>
+            <div>$3.68 an hour</div>
+          </div>
+          <div>
+            <div>
+              <p>GPT-6.1 Terra, after the fix</p>
+              <p>Sunday morning. Finished in about 2 minutes.</p>
+            </div>
+            <div>$2.55 an hour</div>
+          </div>
+          <div>
+            <div>SLICC shows an hourly rate, not a total. The real cost is on OpenAI's usage page: the looping run alone made 1,838 OpenAI calls on my key.</div>
+          </div>
+        </div>
+        <p>I picked it up again that evening from my phone: "We need to select the newest models". The newest model was hiding at the bottom of the list. GPT-6.1 Terra was below o4-mini and GPT-5.6 Cyber. On Terra, SLICC finished the task with no loop, and the meter read $3.68 an hour, down from about $30. What I typed next: "grok bot does make it!"</p>
+        <p>SLICC's answer named my adaptTo() 2026 recap as the newest article, with its meta description, and reported that all 25 talk images link to full-size pictures on <code>content.da.live</code> that return "401 Unauthorized". Mochi checked the title and description against the page and said it sounds like me: first person, practical, a "my take" for each talk.</p>
+        <p>Both of them missed something. The newest article was the October 25 one. My homepage still labelled the October 10 recap "Latest", so SLICC reported that one and Mochi agreed. The worker and its checker can both trust the page's own label. The 25 image links were a real find, though: a reader who clicked a talk image would have hit a login.</p>
+        <p>That same evening, Mochi's first try went to the wrong window and landed on SLICC's marketing site, which, as Mochi reported it, "had hidden instructions aimed at AI agents". Mochi didn't follow them, and nothing was sent to SLICC until it had the right window.</p>
+      </div>
+      <div id="part-8">
+        <h2 id="the-agent-debugs-its-worker">8. The agent debugs its worker</h2>
+        <div class="explainer request-tally">
+          <div>
+            <div><em>Which run</em></div>
+          </div>
+          <div>
+            <div><strong>Saturday, before the fix</strong></div>
+            <div>
+              <p>One step, about three requests at once</p>
+              <ul>
+                <li><strong>Main call</strong> <code>gpt-6.1-terra</code>, reasoning effort "none", 17 tools, no temperature. <em>200 after 1.5 to 2.3 s</em></li>
+                <li><strong>Side call</strong> <code>gpt-5-nano</code>, <code>temperature: 0.3</code>, a 40-token limit. <em>400 after about 130 ms</em></li>
+                <li><strong>Side call</strong> <code>gpt-5-nano</code>, <code>temperature: 0.3</code>, a 40-token limit. <em>400 after about 130 ms</em></li>
+              </ul>
+            </div>
+            <div><strong>701 of 951</strong> requests failed across both Saturday runs</div>
+            <div>OpenAI's answer to the side calls: "Unsupported parameter: 'temperature' is not supported with this model." 130 ms is too fast for a model to do anything, so OpenAI was rejecting them on validation.</div>
+          </div>
+          <div>
+            <div>Sunday, after the fix</div>
+            <div>
+              <p>One step, the same three requests</p>
+              <ul>
+                <li><strong>Main call</strong> <code>gpt-6.1-terra</code>. <em>200</em></li>
+                <li><strong>Side call</strong> <code>gpt-5-nano</code>, no temperature. <em>200</em></li>
+                <li><strong>Side call</strong> <code>gpt-5-nano</code>, no temperature. <em>200</em></li>
+              </ul>
+            </div>
+            <div><strong>45 of 45</strong> requests came back 200 on Sunday's run</div>
+            <div>About 2 minutes, no loop, $2.55 an hour. Sunday's log has no timings, so these rows have a mark and no bar.</div>
+          </div>
+          <div>
+            <div>Counts are Mochi's, from SLICC's logs and developer tools. One dot is one request: Saturday's 951 cover two runs, Sunday's 45 cover one.</div>
+          </div>
+        </div>
+        <p>Even on Grok Bot, two of every three requests were failing. The tasks still finished.</p>
+        <p>Mochi read SLICC's logs first. On almost every step SLICC sent about three requests at once. One got a 200 after 1.5 to 2.3 seconds, and the other two got a 400 after about 130 milliseconds. The log doesn't keep the error text, so Mochi offered to open developer tools on SLICC's window and send it one word, "hi".</p>
+        <p>That found it. The main model calls were fine. The ones failing were small side calls to <code>gpt-5-nano</code> with <code>temperature: 0.3</code>. Claude Code checked SLICC's source and it matched: SLICC's quick helper calls, the ones that write labels and session titles, pick the cheapest model in the same family and always send a temperature. SLICC already had code that strips <code>temperature</code> for models that reject it, but the helper path didn't use it. With a plain OpenAI key, every step made two calls that were bound to fail.</p>
+        <div class="explainer trail">
+          <div>
+            <div>Sat 4 PM</div>
+            <div>The first run loops on GPT-6.1 Sol. Mochi's read of the log: 666 requests failed with error 400.</div>
+          </div>
+          <div>
+            <div>Sat 9 PM</div>
+            <div>Mochi opens developer tools on SLICC and finds <code>temperature: 0.3</code> on the <code>gpt-5-nano</code> calls.</div>
+          </div>
+          <div>
+            <div>Sat 9:40 PM</div>
+            <div><a href="https://github.com/ai-ecoverse/slicc/issues/4239">Issue #4239</a> filed.</div>
+          </div>
+          <div>
+            <div>Sat 9:42 PM</div>
+            <div><a href="https://github.com/ai-ecoverse/slicc/pull/4240">PR #4240</a> opened, with tests. SLICC's full suite passed: 27,613 tests.</div>
+          </div>
+          <div>
+            <div>Sun 9:43 AM</div>
+            <div>Lars Trieloff merges it, mid-afternoon in Potsdam, with no review comments.</div>
+          </div>
+          <div>
+            <div>Sun morning</div>
+            <div>It ships in SLICC 6.258.4, then 6.258.5.</div>
+          </div>
+          <div>
+            <div>Sun 11:15 AM</div>
+            <div>Retest on Grok Bot: 45 of 45 requests succeed.</div>
+          </div>
+        </div>
+        <p>Claude Code wrote the fix in my fork: the helper calls now drop <code>temperature</code> for models that reject it, and that list now includes <code>gpt-5</code>, <code>gpt-5-mini</code> and <code>gpt-5-nano</code>. I sent the issue and the PR on Saturday night, and Lars Trieloff merged it on Sunday morning. Thank you, Lars. It's my second merged PR in SLICC, and SLICC's source still documents the bug with "(seen 2026-11-07)".</p>
+        <div class="figure shot">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1e9c8bf53f60f1dc22788dbe7318aa1b814ae4d62.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1e9c8bf53f60f1dc22788dbe7318aa1b814ae4d62.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1e9c8bf53f60f1dc22788dbe7318aa1b814ae4d62.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="The GitHub page of pull request 4240 in ai-ecoverse/slicc, fix(webapp): strip temperature from quick-llm calls that reject it, marked Merged by trieloff" src="./media_1e9c8bf53f60f1dc22788dbe7318aa1b814ae4d62.png?width=750&#x26;format=png&#x26;optimize=medium" width="1500" height="901">
+                </picture>
+              </p>
+              <p>The merged PR on GitHub, captured November 15.</p>
+            </div>
+          </div>
+        </div>
+        <p>The fix changed nothing on Muse and my dot. They hit a different wall, the plain-tab 404, and Sunday's retest ended the same way on both.</p>
+        <div class="figure native">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1d778262056cc3006488dadec65e2365107de8362.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1d778262056cc3006488dadec65e2365107de8362.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1d778262056cc3006488dadec65e2365107de8362.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="A chat reply from Muse: Still failing, the fix didn&#x27;t change this one, with the same Fetch proxy not available in worker mode error and a cost meter at $0.00 an hour" src="./media_1d778262056cc3006488dadec65e2365107de8362.png?width=750&#x26;format=png&#x26;optimize=medium" width="502" height="322">
+                </picture>
+              </p>
+              <p>Muse on Sunday, after the fix.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="part-9">
+        <h2 id="slicc-grows-skills">9. SLICC grows skills</h2>
+        <div class="figure native">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_13d7b7c0166d273afa241154b7c342882a86c0401.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_13d7b7c0166d273afa241154b7c342882a86c0401.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_13d7b7c0166d273afa241154b7c342882a86c0401.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="SLICC&#x27;s own report: 30 skills before installation, 27 Adobe Edge Delivery Services skills installed with one upskill command, a weekly-news skill created, and 58 skills after" src="./media_13d7b7c0166d273afa241154b7c342882a86c0401.png?width=750&#x26;format=png&#x26;optimize=medium" width="465" height="472">
+                </picture>
+              </p>
+              <p>SLICC's report of what it installed, on Mochi's screen, Sunday at 11:36 AM.</p>
+            </div>
+          </div>
+        </div>
+        <p>With SLICC working, I wanted to see it do more than one test. Mochi gave it two jobs: add skills, and find the past week's AEM Edge Delivery Services news.</p>
+        <div class="stat-chips">
+          <div>
+            <div>
+              <ul>
+                <li><strong>30</strong> skills built in</li>
+                <li><strong>27</strong> installed from adobe/skills</li>
+                <li><strong>1</strong> written by SLICC</li>
+                <li><strong>58</strong> skills after</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p>One <code>upskill</code> command installed all 27 skills in Adobe's public <a href="https://github.com/adobe/skills">adobe/skills</a> repo under <code>plugins/aem/edge-delivery-services</code>. SLICC also wrote a skill of its own, <code>aem-eds-weekly-news</code>, for the weekly roundup. No approval prompts came up.</p>
+        <p>For the news, SLICC split the work into four parallel scoops, one per source, and together they hit my key's limit of 1 million tokens a minute. Told to run one source at a time, it started four scoops again anyway. That second run finished.</p>
+        <div class="figure shot">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_17aa268f6e3b7e4aaf6719f724852b1f6cc58d670.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_17aa268f6e3b7e4aaf6719f724852b1f6cc58d670.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_17aa268f6e3b7e4aaf6719f724852b1f6cc58d670.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="SLICC&#x27;s finished news list in its chat window, with four scoop tabs along the top and GPT-6.1 Terra selected: dated Experience League items and Document Authoring releases from November 3 to 6" src="./media_17aa268f6e3b7e4aaf6719f724852b1f6cc58d670.png?width=750&#x26;format=png&#x26;optimize=medium" width="942" height="588">
+                </picture>
+              </p>
+              <p>The second run's list, with the four scoops as tabs along the top.</p>
+            </div>
+          </div>
+        </div>
+        <div class="data-table sr-caption row-heads stack">
+          <div>
+            <div>Source</div>
+            <div>What SLICC listed, November 1 to 8</div>
+            <div>What Mochi's check found</div>
+          </div>
+          <div>
+            <div>Experience League</div>
+            <div>Six items from November 3 to 5</div>
+            <div>Four of the six are troubleshooting articles, not news, and two of them returned 404</div>
+          </div>
+          <div>
+            <div>Adobe's GitHub</div>
+            <div>Nine Document Authoring releases, and AEM Edge Functions CLI v1.2.0</div>
+            <div>Missed <code>adobe/skills</code> v3.3.0 on November 5, the same repo it had just installed from</div>
+          </div>
+          <div>
+            <div>aem.live</div>
+            <div>Nothing that qualified</div>
+            <div>Missed the Experience Workspace doc updates</div>
+          </div>
+          <div>
+            <div>Universal Editor</div>
+            <div>Not in the list</div>
+            <div>Missed the November 5 release, the first thing Mochi would put in front of me</div>
+          </div>
+          <div>
+            <div><code>adobe-rnd/aem-apps</code></div>
+            <div>Never checked</div>
+            <div>A new Find/Replace app and an MSM refactor</div>
+          </div>
+          <div>
+            <div>SLICC's weekly AEM news list against Mochi's own search of the same sources</div>
+          </div>
+        </div>
+        <p>Mochi's verdict: "Nothing in it is older than a week, the dates I could check are right ... But it missed the biggest items of the week and padded the list with support articles." Then it ranked what matters to me as an AEM Champion, with Universal Editor's Content Fragment features first.</p>
+      </div>
+      <div id="part-10">
+        <h2 id="scorecard-and-what-i-learned">10. Scorecard and what I learned</h2>
+        <div class="data-table sr-caption row-heads stack">
+          <div>
+            <div>Agent</div>
+            <div>A computer you can see</div>
+            <div>Where the key goes</div>
+            <div>SLICC</div>
+            <div>Rung</div>
+            <div>When SLICC failed</div>
+          </div>
+          <div>
+            <div>Grok Bot</div>
+            <div>Yes, the terminal and the screen are the same machine</div>
+            <div>You take over its screen</div>
+            <div>Local server, works</div>
+            <div>4 of 4</div>
+            <div>Debugged it, and asked before killing it</div>
+          </div>
+          <div>
+            <div>Muse</div>
+            <div>Browser only. Its terminal can't start Chrome</div>
+            <div>You take over its screen</div>
+            <div>Plain tab, 404</div>
+            <div>3</div>
+            <div>Reported it and stopped</div>
+          </div>
+          <div>
+            <div>dots</div>
+            <div>Browser only. Its terminal is sandboxed</div>
+            <div>You take over its screen</div>
+            <div>Plain tab, 404</div>
+            <div>3</div>
+            <div>Did the task itself and caught the stale "Latest" label</div>
+          </div>
+          <div>
+            <div>Duet</div>
+            <div>No</div>
+            <div>Nowhere</div>
+            <div>Never started</div>
+            <div>2</div>
+            <div>Would not touch the key</div>
+          </div>
+          <div>
+            <div>Where each agent stood after the weekend of November 7 and 8, 2026</div>
+          </div>
+        </div>
+        <p>One of four made it. The pattern works where there is a computer you can see and a safe way to hand over a key. Six things I took from the weekend:</p>
+        <ol>
+          <li>Personal agents are meant to give up easily. Pairing them with Claude Code kept the problem solving going after an agent stopped.</li>
+          <li>The checker that knows you caught what the worker missed, three times. The table below has all three.</li>
+          <li>What's missing is plumbing: a computer you can see, a terminal that can start a browser, and a safe place to type a secret.</li>
+          <li>The safety lines held everywhere. They also keep agents from working with each other.</li>
+          <li>Model choice mattered more than anything else. The newest model was at the bottom of the list, and it cut the meter from about $30 to $3.68 an hour and ended the loop.</li>
+          <li>An open-source worker got fixed overnight, by the people using it.</li>
+        </ol>
+        <div class="data-table sr-caption row-heads stack">
+          <div>
+            <div>What was missed</div>
+            <div>Who missed it</div>
+            <div>Who caught it</div>
+          </div>
+          <div>
+            <div>The stale "Latest" label on my homepage</div>
+            <div>SLICC and Mochi, on both days</div>
+            <div>My dot, doing the task itself</div>
+          </div>
+          <div>
+            <div>25 image links that return 401</div>
+            <div>SLICC on Sunday. It had found them on Saturday</div>
+            <div>Mochi, opening all 111 links itself</div>
+          </div>
+          <div>
+            <div>The week's biggest AEM news</div>
+            <div>SLICC's own news skill</div>
+            <div>Mochi, against its own search</div>
+          </div>
+          <div>
+            <div>Three things the worker missed, and who caught each one</div>
+          </div>
+        </div>
+        <p>The original idea is the part that didn't happen. The ChatGPT sign-in never finished on any of the four, so every working run was on an API key, which bills per token. SLICC's own monitor put Sunday's whole session, the retest, the skills and the news, at $0.80 and 7.1 million tokens.</p>
+        <p>Credit to Lars and the Adobe team for building this agent native to the browser. I'm happy to see it working inside my personal agent.</p>
+        <p>Next on my list: SLICC 7's key vault on my dot, the ChatGPT sign-in on Grok Bot, which never got past the login page, and a Duet rematch when it can take a key. If you've gotten further with a worker inside any of these four, I'd like to compare notes.</p>
+      </div>
+      <div id="references">
+        <h2 id="references">References</h2>
+        <ul>
+          <li><a href="https://github.com/ai-ecoverse/slicc">ai-ecoverse/slicc</a>: the SLICC repo, with its README, <code>docs/architecture.md</code> and its own architecture diagram.</li>
+          <li><a href="https://www.sliccy.com">sliccy.com</a>: SLICC's home page.</li>
+          <li><a href="https://tessl.io/blog/three-kinds-of-ai-agent-only-one-of-them-lives-in-your-browser/">I built SLICC, an agent that runs in your browser</a>, Lars Trieloff, on the Tessl blog, May 2026.</li>
+          <li><a href="https://github.com/ai-ecoverse/slicc/issues/4239">Issue #4239</a> and <a href="https://github.com/ai-ecoverse/slicc/pull/4240">PR #4240</a>: the temperature bug and its fix. My earlier PR, <a href="https://github.com/ai-ecoverse/slicc/pull/3985">#3985</a>, keeps the ChatGPT subscription model list current.</li>
+          <li><a href="https://pi.dev/">pi.dev</a> and the <a href="https://docs.pi.dev/latest">Pi docs</a>: the harness SLICC is built on. <a href="https://flaviocopes.com/pi/">Flavio Copes on Pi</a> has its history.</li>
+          <li><a href="https://github.com/adobe/skills">adobe/skills</a>: Adobe's public skills repo. SLICC installed the 27 under <code>plugins/aem/edge-delivery-services</code>.</li>
+          <li>Docs for three of the four agents: <a href="https://docs.x.ai/grok-bot/computer-and-apps">Grok Bot's computer and apps</a>, <a href="https://claude.com/product/claude-duet">Claude Duet</a>, and <a href="https://learn.chatgpt.com/codex/dots/computers-and-apps">dots, computers and apps</a>. Plans and features on all four are moving fast, so check them before you rely on anything here.</li>
+        </ul>
+      </div>
+      <div class="related">
+        <h2 id="related">Related</h2>
+        <div class="row-list">
+          <div>
+            <div>Writing</div>
+            <div><a href="/writing/2026-10-25-eds-migration-two-goal-prompts/">Migrating My Site to AEM Edge Delivery Services in Two Prompts</a></div>
+            <div>The article SLICC should have found as my newest.</div>
+          </div>
+          <div>
+            <div>Writing</div>
+            <div><a href="/writing/2026-05-17-adobe-eds-skills-hands-on/">Adobe's EDS Skills, Hands-On</a></div>
+            <div>The skills SLICC installed, when I first tried them.</div>
+          </div>
+          <div>
+            <div>Writing</div>
+            <div><a href="/writing/2026-01-05-from-prompts-to-harness/">From Prompts to Harness</a></div>
+            <div>What I mean by a harness.</div>
+          </div>
+        </div>
+        <div class="author-box">
+          <div>
+            <div>JJ</div>
+            <div>
+              <p>Jack Jin</p>
+              <p>Associate Director in Accenture's Adobe Business Group, Columbus, Ohio. AEM Champion (class of 2026-2027), AEM Rockstar winner at Adobe Summit 2024 and Adobe Certified Master. I build AI agent systems on AEM and Edge Delivery Services, then write up what I learn.</p>
+              <p><a href="/portfolio/">Portfolio</a> <a href="/talks/">Talks</a> <a href="https://github.com/jackzhaojin">GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

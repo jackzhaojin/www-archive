@@ -64,6 +64,71 @@
   <div class="showcase story wide">
     <div>
       <div>
+        <p>Repository SVGs · drawn Nov 19, 2026</p>
+        <h3 id="three-views-of-the-same-agent">Three views of <em>the same agent</em></h3>
+        <p>Who hands work to whom, one turn of the loop, and the whole system on one page.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-cea-diagrams</div>
+    </div>
+  </div>
+  <div class="tabs diagram-deck">
+    <div>
+      <div>label</div>
+      <div>Continuous agent engineering diagrams</div>
+    </div>
+    <div>
+      <div>System index</div>
+    </div>
+    <div>
+      <div>Delegation</div>
+      <div>
+        <p>01 · delegation</p>
+        <h4 id="ai-using-ai-using-ai">AI using AI using AI</h4>
+        <p>I drop goals into a priority queue and answer only when the agent is blocked. The executive loop spawns coding workers, each its own AI, and each worker's cognition is a vendor model. Every handoff crosses deterministic code.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/continuous-executive-agent/media_18934561dd07474d048c6eb80a7e9acad1f10b526.svg"><picture>
+              <source type="image/webp" srcset="./media_18934561dd07474d048c6eb80a7e9acad1f10b526.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_18934561dd07474d048c6eb80a7e9acad1f10b526.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_18934561dd07474d048c6eb80a7e9acad1f10b526.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="AI using AI using AI: the delegation stack. The human at the top is the async gate; below it the executive loop running 24/7 on PM2, then the coding workers spawned per goal on Claude Agent SDK, OpenAI Codex or Kimi, then the vendor model. A deterministic gate sits on every handoff: the constitution, credential tiers and the sandbox, and the AgentWorkerProvider seam." src="./media_18934561dd07474d048c6eb80a7e9acad1f10b526.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="912">
+            </picture></a></p>
+      </div>
+    </div>
+    <div>
+      <div>The loop</div>
+      <div>
+        <p>02 · runtime</p>
+        <h4 id="one-iteration-then-again-forever">One iteration, then again, forever</h4>
+        <p>Select the top goal, spawn a worker, verify the output, pick up the next. A failed worker never kills the loop: it retries with a different strategy, diagnoses after 3 failures, and blocks for a human after 10.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/continuous-executive-agent/media_1e4234333e753f6d9ce3ce2ca6762ff09f94bf5fc.svg"><picture>
+              <source type="image/webp" srcset="./media_1e4234333e753f6d9ce3ce2ca6762ff09f94bf5fc.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_1e4234333e753f6d9ce3ce2ca6762ff09f94bf5fc.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_1e4234333e753f6d9ce3ce2ca6762ff09f94bf5fc.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="The executive loop, one iteration: check inbox, health check, process inputs, select work, breakdown, execute, validate, update state, then continue immediately. On failure it diagnoses and retries with a new strategy, and blocks after 10 failures. Agentic phases are blue, deterministic phases gray." src="./media_1e4234333e753f6d9ce3ce2ca6762ff09f94bf5fc.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="760">
+            </picture></a></p>
+      </div>
+    </div>
+    <div>
+      <div>Architecture</div>
+      <div>
+        <p>03 · structure</p>
+        <h4 id="two-repos-three-layers-many-vendors">Two repos, three layers, many vendors</h4>
+        <p>The agent's brain is its own repo, and everything it builds lands in a sibling repo. Intelligence is agentic, the edges are plain code, and git is the only durable store.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/continuous-executive-agent/media_118daa7e9e3c7cd8fc666f297202d57a99c991dd1.svg"><picture>
+              <source type="image/webp" srcset="./media_118daa7e9e3c7cd8fc666f297202d57a99c991dd1.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_118daa7e9e3c7cd8fc666f297202d57a99c991dd1.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_118daa7e9e3c7cd8fc666f297202d57a99c991dd1.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Architecture: the goal queue, needs-you.md, identity and the constitution on the left; the continuous-agent repo in the middle with core, agentic, deterministic, skills, ledgers and execution patterns; the vendor abstraction, the ai-sandbox output repo, the V3.0 second brain and the credential tiers on the right." src="./media_118daa7e9e3c7cd8fc666f297202d57a99c991dd1.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="900">
+            </picture></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
         <p>v1.0.0 → v3.0.0 · 16 tags</p>
         <h3 id="release-history">Release history</h3>
         <p>Dates from git tags. Summaries from the changelog.</p>

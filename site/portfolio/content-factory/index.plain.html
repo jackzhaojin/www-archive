@@ -170,6 +170,85 @@
   <div class="showcase story wide">
     <div>
       <div>
+        <p>Repository SVGs · the v2 design</p>
+        <h3 id="four-views-of-the-mesh">Four views of <em>the mesh</em></h3>
+        <p>The whole mesh, the two protocols, the server side, and dev ops. One color code throughout: a person in black, deterministic code in blue, a model deciding in red, a mix of both in purple.</p>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>id</div>
+      <div>p-factory-diagrams</div>
+    </div>
+  </div>
+  <div class="tabs diagram-deck">
+    <div>
+      <div>label</div>
+      <div>Content factory architecture diagrams</div>
+    </div>
+    <div>
+      <div>System index</div>
+    </div>
+    <div>
+      <div>The mesh</div>
+      <div>
+        <p>01 · the whole mesh</p>
+        <h4 id="four-agents-one-worker-one-store">Four agents, one Worker, one store</h4>
+        <p>Four agents behind one Cloudflare Worker, one shared store (D1 in the cloud, SQLite locally, same SQL), and artifacts on R2. Every agent writes full task state on every change, so any consumer can recover from tasks/get.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_16e973cd55264b91bb4091f79fbe0f2034db547a9.svg"><picture>
+              <source type="image/webp" srcset="./media_16e973cd55264b91bb4091f79fbe0f2034db547a9.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_16e973cd55264b91bb4091f79fbe0f2034db547a9.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_16e973cd55264b91bb4091f79fbe0f2034db547a9.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="The whole mesh: humans on the dashboard, GitHub Actions schedules, external systems through an edge shim, and the mesh itself all enter one Cloudflare Worker. Inside it the coordinator container routes A2A messages to the content-gen, migration and eval containers, with D1 as the one store and R2 for artifact bytes. Pages land on da.live as preview only, and two model vendors share one protocol." src="./media_16e973cd55264b91bb4091f79fbe0f2034db547a9.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="1000">
+            </picture></a></p>
+      </div>
+    </div>
+    <div>
+      <div>A2A and MCP</div>
+      <div>
+        <p>02 · protocols</p>
+        <h4 id="two-protocols-two-jobs">Two protocols, two jobs</h4>
+        <p>A2A is agent to agent: Agent Cards, tasks, streams. MCP is agent to tool: a browser, a CMS, a filesystem. Every door into the mesh, every MCP server, and every named tool behind each. The mesh also exposes its own read-only MCP server, so a person can ask Claude Desktop how a run scored.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_11019a9ec7d2dfa91996b7a936df27e708ffd62f3.svg"><picture>
+              <source type="image/webp" srcset="./media_11019a9ec7d2dfa91996b7a936df27e708ffd62f3.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_11019a9ec7d2dfa91996b7a936df27e708ffd62f3.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_11019a9ec7d2dfa91996b7a936df27e708ffd62f3.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Two protocols, two jobs: the coordinator is both an A2A client and server, calling content-gen, migration and eval over A2A. Migration and eval reach their tools over MCP: the da.live MCP server for the CMS, Playwright MCP for a browser, and a filesystem MCP for eval screenshots. A read-only store-mcp lets a person in Claude Desktop query the store." src="./media_11019a9ec7d2dfa91996b7a936df27e708ffd62f3.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="1090">
+            </picture></a></p>
+      </div>
+    </div>
+    <div>
+      <div>Server side</div>
+      <div>
+        <p>03 · cloud</p>
+        <h4 id="one-worker-four-containers-one-database-one-bucket">One Worker, four containers, one database, one bucket</h4>
+        <p>One Worker, four containers with their sizes, D1, R2, the tunnel, the custom domains, and everything outside Cloudflare: Google OAuth, the da.live MCP on Azure Functions, the model vendors, and da.live.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_1c6893fa959cf07e36966c5fc03e7cc9049b6082f.svg"><picture>
+              <source type="image/webp" srcset="./media_1c6893fa959cf07e36966c5fc03e7cc9049b6082f.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_1c6893fa959cf07e36966c5fc03e7cc9049b6082f.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_1c6893fa959cf07e36966c5fc03e7cc9049b6082f.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="The server side on Cloudflare: five custom domains routed to one Worker that holds every binding and secret, four containers with their vCPU and memory sizes, D1, R2, container scratch disk and a legacy tunnel. Outside Cloudflare: GitHub Actions, Google OAuth, the da.live MCP on Azure Functions, the model vendors and da.live." src="./media_1c6893fa959cf07e36966c5fc03e7cc9049b6082f.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="960">
+            </picture></a></p>
+      </div>
+    </div>
+    <div>
+      <div>Dev ops</div>
+      <div>
+        <p>04 · release</p>
+        <h4 id="trunk-based-and-tag-driven">Trunk-based and tag-driven</h4>
+        <p>A release is a git tag. The tag builds four images and rolls the Worker, and the same GitHub Actions scheduler runs the daily production loop. Also shown: the four test tiers and what heals itself.</p>
+        <p><a href="https://www.jackzhaojin.com/portfolio/content-factory/media_1d860dfef6af0e7dbdf9aae929acd1949f56bb281.svg"><picture>
+              <source type="image/webp" srcset="./media_1d860dfef6af0e7dbdf9aae929acd1949f56bb281.svg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+              <source type="image/webp" srcset="./media_1d860dfef6af0e7dbdf9aae929acd1949f56bb281.svg?width=750&#x26;format=webply&#x26;optimize=medium">
+              <source type="image/svg+xml" srcset="./media_1d860dfef6af0e7dbdf9aae929acd1949f56bb281.svg?width=2000&#x26;format=svg&#x26;optimize=medium" media="(min-width: 600px)">
+              <img loading="lazy" alt="Dev ops: local dev, CI on main and pull requests, cutting a release tag, the deploy-agents workflow and Cloudflare live, with v1 tags taking a separate road to the frozen 1.0 app. Below: four test tiers (fast, live, soak, cloud), the loops GitHub Actions runs, and what the system watches and heals on its own." src="./media_1d860dfef6af0e7dbdf9aae929acd1949f56bb281.svg?width=750&#x26;format=svg&#x26;optimize=medium" width="1280" height="880">
+            </picture></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase story wide">
+    <div>
+      <div>
         <p><em>Dec 2025 - Jan 2026</em> · v1.0 as designed · recovered from git</p>
         <h3 id="the-v1-platform-in-its-planned-final-form">The v1 platform, <em>in its planned final form</em></h3>
         <p>Five subsystems around one EDS site. Color is the semantic axis this page's diagrams still use: deterministic in blue, agentic in red, mixed in purple.</p>

@@ -950,14 +950,14 @@ light, current page Blog (the toggle shows below 1024px)
 
 :menu: :close: Menu Close
 
-- [AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
-- **[Blog](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)**
+- [AEM + AI](/writing/#topic=aem)
+- **[Blog](/writing/)**
 - [Portfolio](/portfolio/)
-- [Talks](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#talks)
+- [Talks](/talks/)
 - [Certifications](/certifications/)
-- [Contact](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)
+- [Contact](https://www.linkedin.com/in/jackjin)
 
-**[Book a talk](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)**
+**[Book a talk](https://www.linkedin.com/in/jackjin)**
 
 **Light**
 
@@ -983,14 +983,14 @@ dark, menu open state of the toggle
 
 :menu: :close: Menu Close
 
-- **[AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)**
-- [Blog](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+- **[AEM + AI](/writing/#topic=aem)**
+- [Blog](/writing/)
 - [Portfolio](/portfolio/)
-- [Talks](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#talks)
+- [Talks](/talks/)
 - [Certifications](/certifications/)
-- [Contact](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)
+- [Contact](https://www.linkedin.com/in/jackjin)
 
-**[Book a talk](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)**
+**[Book a talk](https://www.linkedin.com/in/jackjin)**
 
 Light
 
@@ -1078,13 +1078,13 @@ A mono trail directly above the H1 on every page except home. Mirrors the URL. S
 
 three levels
 
-+------------------------------------------------------------------------------+
-| Hero (page)                                                                  |
-+------------------------------------------------------------------------------+
-| 1. [Home](https://www.jackzhaojin.com/design-systems/v3/templates/home.html) |
-| 2. [Blog](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html) |
-| 3. Adobe Stardust Explained                                                  |
-+------------------------------------------------------------------------------+
++-----------------------------+
+| Hero (page)                 |
++-----------------------------+
+| 1. [Home](/)                |
+| 2. [Blog](/writing/)        |
+| 3. Adobe Stardust Explained |
++-----------------------------+
 
 +------------------------------------+
 | Section Metadata                   |
@@ -1098,12 +1098,12 @@ three levels
 
 dark, two levels
 
-+------------------------------------------------------------------------------+
-| Hero (page)                                                                  |
-+------------------------------------------------------------------------------+
-| 1. [Home](https://www.jackzhaojin.com/design-systems/v3/templates/home.html) |
-| 2. Blog                                                                      |
-+------------------------------------------------------------------------------+
++--------------+
+| Hero (page)  |
++--------------+
+| 1. [Home](/) |
+| 2. Blog      |
++--------------+
 
 +-----------------------------------------+
 | Section Metadata                        |
@@ -1177,7 +1177,7 @@ Video · AEM + AI
 
 Adobe Stardust Explained: Design Agent Skills on Edge Delivery Services (EDS)
 
-By [Jack Jin](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact) · Published 2026-08-09 · Updated \[date] · \[watch time to confirm] · Video
+By [Jack Jin](/) · Published 2026-08-09 · Updated \[date] · \[watch time to confirm] · Video
 
 Adobe Stardust is a skill in the public adobe/skills repo, not a product. It builds on impeccable, the 57K-star UX design skill library that does the design work.
 
@@ -1349,11 +1349,11 @@ Mono text, 6px radius, one hairline. Primary is filled with ink (the identity ma
 
 variants
 
-**[Book a talk](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)**
+**[Book a talk](https://www.linkedin.com/in/jackjin)**
 
-*[All posts](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)*
+*[All posts](/writing/)*
 
-[Ghost](https://www.jackzhaojin.com/design-systems/v3/templates/home.html)
+[Ghost](/)
 
 +-------------------------------------------------+
 | Section Metadata                                |
@@ -1367,11 +1367,11 @@ variants
 
 small and with an icon
 
-**[Book a talk](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)**
+**[Book a talk](https://www.linkedin.com/in/jackjin)**
 
 *[:repo:GitHub](https://github.com/jackzhaojin)*
 
-[Ghost small](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+[Ghost small](/writing/)
 
 +----------------------------------------------------------+
 | Section Metadata                                         |
@@ -1404,11 +1404,11 @@ Button element
 
 dark
 
-**[Book a talk](https://www.jackzhaojin.com/design-systems/v3/templates/home.html#contact)**
+**[Book a talk](https://www.linkedin.com/in/jackjin)**
 
-*[All posts](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)*
+*[All posts](/writing/)*
 
-[Ghost](https://www.jackzhaojin.com/design-systems/v3/templates/home.html)
+[Ghost](/)
 
 Disabled
 
@@ -1632,7 +1632,7 @@ A surface with a hairline and a 10px radius. Three kinds: post (meta, title, exc
 
 post card, linked
 
-### [Adobe Stardust Explained: Design Agent Skills on EDS](https://www.jackzhaojin.com/design-systems/v3/templates/post.html)
+### [Adobe Stardust Explained: Design Agent Skills on EDS](/writing/2026-08-09-adobe-stardust-explained/)
 
 **Video** *2026-08-09*
 
@@ -1656,13 +1656,13 @@ What Adobe Stardust actually is: a skill in the public adobe/skills repo, not a 
 
 hub cards on a ruled grid, the flagship first
 
-### [How do AI agents, skills and MCP servers work on AEM, EDS and DA.live?](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
+### [How do AI agents, skills and MCP servers work on AEM, EDS and DA.live?](/writing/#topic=aem)
 
 AEM + AI **Flagship**
 
 6 posts, provisional set
 
-### [When does headless AEM make sense, and how do the EDS offerings compare?](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=adobe-aem)
+### [When does headless AEM make sense, and how do the EDS offerings compare?](/writing/#topic=aem)
 
 Adobe AEM and EDS
 
@@ -1718,7 +1718,7 @@ Pre-read deck for the AI Tinkerers Columbus talk on AnimaMesh, an engine for run
 
 **AI Agents**
 
-### [How do continuous agents, harnesses and safety that lives in code fit together?](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=ai-agents)
+### [How do continuous agents, harnesses and safety that lives in code fit together?](/writing/#topic=ai-engineering)
 
 AI Agents
 
@@ -1834,20 +1834,21 @@ Key and value rows under a page head or a project. Row headers are mono uppercas
 
 post facts
 
-+---------------------------------------------------------------------------------------------------------+
-| Facts                                                                                                   |
-+---------------------------------------------------------------------------------------------------------+
-| Key facts                                                                                               |
-+-----------+---------------------------------------------------------------------------------------------+
-| Topic     | [AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai) |
-+-----------+---------------------------------------------------------------------------------------------+
-| Format    | Video, \[watch time to confirm]                                                             |
-+-----------+---------------------------------------------------------------------------------------------+
-| Tools     | Adobe Edge Delivery Services (EDS), Stardust in the public adobe/skills repo, impeccable,   |
-|           | DA.live, Google Stitch as the baseline                                                      |
-+-----------+---------------------------------------------------------------------------------------------+
-| Published | 2026-08-09                                                                                  |
-+-----------+---------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+| Facts                                                             |
++-------------------------------------------------------------------+
+| Key facts                                                         |
++-----------+-------------------------------------------------------+
+| Topic     | [AEM \+ AI](/writing/#topic=aem)                      |
++-----------+-------------------------------------------------------+
+| Format    | Video, \[watch time to confirm]                       |
++-----------+-------------------------------------------------------+
+| Tools     | Adobe Edge Delivery Services (EDS), Stardust in the   |
+|           | public adobe/skills repo, impeccable, DA.live, Google |
+|           | Stitch as the baseline                                |
++-----------+-------------------------------------------------------+
+| Published | 2026-08-09                                            |
++-----------+-------------------------------------------------------+
 
 +------------------+
 | Section Metadata |
@@ -2147,7 +2148,7 @@ dark, related items with a kind column
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Row List                                                                                                                                                                                                                   |
 +------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-| Hub        | [AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)                                                                            | AI agents, skills and MCP servers on |
+| Hub        | [AEM \+ AI](/writing/#topic=aem)                                                                                                                                       | AI agents, skills and MCP servers on |
 |            |                                                                                                                                                                        | AEM, EDS and DA.live.                |
 +------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
 | 2026-05-24 | [Theming a Brand-New EDS Site with Google Stitch \+ MCP](https://www.linkedin.com/posts/jackjin_edgedeliveryservices-aem-claudecode-ugcPost-7464766955137191936-2kip/) | The Google Stitch baseline.          |
@@ -2319,15 +2320,15 @@ light (static; the live one is on the blog template)
 
 Topic
 
-[All](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+[All](/writing/)
 
-[AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
+[AEM + AI](/writing/#topic=aem)
 
-[Adobe AEM and EDS](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=adobe-aem)
+[Adobe AEM and EDS](/writing/#topic=aem)
 
-[AI Agents](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=ai-agents)
+[AI Agents](/writing/#topic=ai-engineering)
 
-[Working with AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=working-with-ai)
+[Working with AI](/writing/#topic=ai-engineering)
 
 Format
 
@@ -2360,11 +2361,11 @@ dark, video pressed
 
 Topic
 
-[All](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+[All](/writing/)
 
-[AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
+[AEM + AI](/writing/#topic=aem)
 
-[AI Agents](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=ai-agents)
+[AI Agents](/writing/#topic=ai-engineering)
 
 Format
 
@@ -2443,15 +2444,15 @@ Numbered links in 44px boxes, the current page filled with ink. Appears only whe
 
 page 2 of 3
 
-+----------------------------------------------------------------------------------+
-| Pagination                                                                       |
-+----------------------------------------------------------------------------------+
-| 1. [Previous](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html) |
-| 2. [1](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)        |
-| 3. **[2](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)**    |
-| 4. [3](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)        |
-| 5. [Next](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)     |
-+----------------------------------------------------------------------------------+
++--------------------------+
+| Pagination               |
++--------------------------+
+| 1. [Previous](/writing/) |
+| 2. [1](/writing/)        |
+| 3. **[2](/writing/)**    |
+| 4. [3](/writing/)        |
+| 5. [Next](/writing/)     |
++--------------------------+
 
 +------------------------------------+
 | Section Metadata                   |
@@ -2465,13 +2466,13 @@ page 2 of 3
 
 dark, page 1
 
-+-------------------------------------------------------------------------------+
-| Pagination                                                                    |
-+-------------------------------------------------------------------------------+
-| 1. **[1](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)** |
-| 2. [2](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)     |
-| 3. [Next](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)  |
-+-------------------------------------------------------------------------------+
++-----------------------+
+| Pagination            |
++-----------------------+
+| 1. **[1](/writing/)** |
+| 2. [2](/writing/)     |
+| 3. [Next](/writing/)  |
++-----------------------+
 
 +-----------------------------------------+
 | Section Metadata                        |
@@ -3218,11 +3219,11 @@ A row of mono links that name where the evidence lives, each typed by destinatio
 
 light, all four kinds
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Proof Links                                                                                                                                                                                                                                    |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| [anima-mesh on GitHub](https://github.com/jackzhaojin/anima-mesh) [Portfolio write-up](/portfolio/anima-mesh/) [Adobe Stardust Explained, video](https://www.jackzhaojin.com/design-systems/v3/templates/post.html) [jackzhaojin.com, live](/) |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Proof Links                                                                                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [anima-mesh on GitHub](https://github.com/jackzhaojin/anima-mesh) [Portfolio write-up](/portfolio/anima-mesh/) [Adobe Stardust Explained, video](/writing/2026-08-09-adobe-stardust-explained/) [jackzhaojin.com, live](/) |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +------------------+
 | Section Metadata |
@@ -3662,7 +3663,7 @@ A description list of dated facts from the shared data, used in the home hero so
 
 light
 
-- **Latest** [Adobe Stardust Explained: Design Agent Skills on EDS](https://www.jackzhaojin.com/design-systems/v3/templates/post.html)\
+- **Latest** [Adobe Stardust Explained: Design Agent Skills on EDS](/writing/2026-08-09-adobe-stardust-explained/)\
   2026-08-09 · Video · AEM + AI
 - **Shipping** [Anima Mesh](/portfolio/anima-mesh/)\
   v0.16.2 · 36 tags in 29 days · nine agents
@@ -3988,7 +3989,7 @@ The motif layer: six tiny accent dots tiled at half opacity. Decorative only.
 | Every token is set again inside the inverse band, per theme, from primitives, so links, buttons and chips read |
 | without their own dark rules.                                                                                  |
 |                                                                                                                |
-| **[Start with AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)**     |
+| **[Start with AEM \+ AI](/writing/#topic=aem)**                                                                |
 |                                                                                                                |
 | AEM \+ AI                                                                                                      |
 |                                                                                                                |
@@ -4079,17 +4080,17 @@ The dark alternate ground.
 
 ---
 
-+------------------------------------------------------------------------------------------------------------+
-| Cta Band                                                                                                   |
-+------------------------------------------------------------------------------------------------------------+
-| **Follow the work**                                                                                        |
-|                                                                                                            |
-| In dark, inverse is the light ground.                                                                      |
-|                                                                                                            |
-| **[Start with AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)** |
-|                                                                                                            |
-| *[Certifications](/certifications/)*                                                                       |
-+------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------+
+| Cta Band                                        |
++-------------------------------------------------+
+| **Follow the work**                             |
+|                                                 |
+| In dark, inverse is the light ground.           |
+|                                                 |
+| **[Start with AEM \+ AI](/writing/#topic=aem)** |
+|                                                 |
+| *[Certifications](/certifications/)*            |
++-------------------------------------------------+
 
 +-----------------------------------------+
 | Section Metadata                        |
@@ -4258,21 +4259,21 @@ A panel with a factual heading, one sentence and two buttons, plus an optional c
 
 light
 
-+------------------------------------------------------------------------------------------------------------+
-| Cta Band                                                                                                   |
-+------------------------------------------------------------------------------------------------------------+
-| ### Follow the work                                                                                        |
-|                                                                                                            |
-| Posts and videos publish here first. LinkedIn and YouTube carry the syndicated copies.                     |
-|                                                                                                            |
-| **[Start with AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)** |
-|                                                                                                            |
-| *[All 39 posts and videos](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)*             |
-|                                                                                                            |
-| **Book a talk.** Send the event, date and audience to \[email address to be supplied].                     |
-|                                                                                                            |
-| [LinkedIn profile](https://www.linkedin.com/in/jackjin) [GitHub profile](https://github.com/jackzhaojin)   |
-+------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+| Cta Band                                                                                                 |
++----------------------------------------------------------------------------------------------------------+
+| ### Follow the work                                                                                      |
+|                                                                                                          |
+| Posts and videos publish here first. LinkedIn and YouTube carry the syndicated copies.                   |
+|                                                                                                          |
+| **[Start with AEM \+ AI](/writing/#topic=aem)**                                                          |
+|                                                                                                          |
+| *[All 39 posts and videos](/writing/)*                                                                   |
+|                                                                                                          |
+| **Book a talk.** Send the event, date and audience to \[email address to be supplied].                   |
+|                                                                                                          |
+| [LinkedIn profile](https://www.linkedin.com/in/jackjin) [GitHub profile](https://github.com/jackzhaojin) |
++----------------------------------------------------------------------------------------------------------+
 
 +-------------------------------------+
 | Section Metadata                    |
@@ -4286,19 +4287,19 @@ light
 
 dark
 
-+------------------------------------------------------------------------------------------------------------+
-| Cta Band                                                                                                   |
-+------------------------------------------------------------------------------------------------------------+
-| ### Follow the work                                                                                        |
-|                                                                                                            |
-| Posts and videos publish here first. LinkedIn and YouTube carry the syndicated copies.                     |
-|                                                                                                            |
-| **[Start with AEM \+ AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)** |
-|                                                                                                            |
-| *[All 39 posts and videos](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)*             |
-|                                                                                                            |
-| **Book a talk.** Send the event, date and audience to \[email address to be supplied].                     |
-+------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+| Cta Band                                                                               |
++----------------------------------------------------------------------------------------+
+| ### Follow the work                                                                    |
+|                                                                                        |
+| Posts and videos publish here first. LinkedIn and YouTube carry the syndicated copies. |
+|                                                                                        |
+| **[Start with AEM \+ AI](/writing/#topic=aem)**                                        |
+|                                                                                        |
+| *[All 39 posts and videos](/writing/)*                                                 |
+|                                                                                        |
+| **Book a talk.** Send the event, date and audience to \[email address to be supplied]. |
++----------------------------------------------------------------------------------------+
 
 +---------------------------------------+
 | Section Metadata                      |
@@ -4369,12 +4370,12 @@ dark (the light one closes this page)
 
 ### Topics
 
-- [AEM + AI](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=aem-ai)
-- [Adobe AEM and EDS](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html?topic=adobe-aem)
+- [AEM + AI](/writing/#topic=aem)
+- [Adobe AEM and EDS](/writing/#topic=aem)
 
 ### Sections
 
-- [Blog](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html)
+- [Blog](/writing/)
 - [Portfolio](/portfolio/)
 
 ### Elsewhere
@@ -4518,7 +4519,7 @@ None beyond `currentColor`.
 
 ## Patterns
 
-The page rules come from the SEO and GEO blueprint at [ai-docs/2026-09-13-seo-geo-redesign/seo-page-blueprint.md](https://www.jackzhaojin.com/ai-docs/2026-09-13-seo-geo-redesign/seo-page-blueprint.md). Tags there say who a rule serves: humans, search engines or AI engines.
+The page rules come from the SEO and GEO blueprint at [ai-docs/2026-09-13-seo-geo-redesign/seo-page-blueprint.md](https://github.com/jackzhaojin/jackzhaojin.github.io/blob/main/ai-docs/2026-09-13-seo-geo-redesign/seo-page-blueprint.md). Tags there say who a rule serves: humans, search engines or AI engines.
 
 ### Page anatomy
 
@@ -4620,24 +4621,24 @@ Every section between the page head and the footer is a [section band](#c-band),
 
 Three pages built from the components with content from `shared/data`. Hub links point to the blog filtered by topic because hub pages are not built in this round.
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-| Row List                                                                                                                                |
-+------+------------------------------------------------------------------------------------------+---------------------------------------+
-| Home | [templates/home.html](https://www.jackzhaojin.com/design-systems/v3/templates/home.html) | Hero with the proof list, four        |
-|      |                                                                                          | question-led hub cards on a ruled     |
-|      |                                                                                          | grid, latest three posts, the         |
-|      |                                                                                          | featured project in an inverse panel, |
-|      |                                                                                          | credentials strip, talks with status  |
-|      |                                                                                          | chips, the Follow the work band.      |
-+------+------------------------------------------------------------------------------------------+---------------------------------------+
-| Post | [templates/post.html](https://www.jackzhaojin.com/design-systems/v3/templates/post.html) | The Stardust video post in its video  |
-|      |                                                                                          | state: facts, embed, chapters, body,  |
-|      |                                                                                          | transcript, FAQ, related, author box. |
-+------+------------------------------------------------------------------------------------------+---------------------------------------+
-| Blog | [templates/blog.html](https://www.jackzhaojin.com/design-systems/v3/templates/blog.html) | All 39 posts newest first with the    |
-|      |                                                                                          | filter bar and query-string state,    |
-|      |                                                                                          | counts by facet, FAQ.                 |
-+------+------------------------------------------------------------------------------------------+---------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Row List                                                                                                                                                                   |
++------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+| Home | [templates/home.html](https://github.com/jackzhaojin/jackzhaojin.github.io/blob/main/design-systems/v3/templates/home.html) | Hero with the proof list, four        |
+|      |                                                                                                                             | question-led hub cards on a ruled     |
+|      |                                                                                                                             | grid, latest three posts, the         |
+|      |                                                                                                                             | featured project in an inverse panel, |
+|      |                                                                                                                             | credentials strip, talks with status  |
+|      |                                                                                                                             | chips, the Follow the work band.      |
++------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+| Post | [templates/post.html](https://github.com/jackzhaojin/jackzhaojin.github.io/blob/main/design-systems/v3/templates/post.html) | The Stardust video post in its video  |
+|      |                                                                                                                             | state: facts, embed, chapters, body,  |
+|      |                                                                                                                             | transcript, FAQ, related, author box. |
++------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+| Blog | [templates/blog.html](https://github.com/jackzhaojin/jackzhaojin.github.io/blob/main/design-systems/v3/templates/blog.html) | All 39 posts newest first with the    |
+|      |                                                                                                                             | filter bar and query-string state,    |
+|      |                                                                                                                             | counts by facet, FAQ.                 |
++------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 
 +---------------------+
 | Section Metadata    |

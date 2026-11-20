@@ -1,12 +1,30 @@
-/* Presentation: one section is one slide. Sizes are the v3 type scale; only the rhythm and the
-   slide height are the template's. */
+/* Presentation: one section is one slide. Body text is the v3 type scale; the rhythm, the slide
+   height and the slide scale are the template's. */
+
+/* The slide scale: a deck is read on a shared screen, often in a small call window, so its
+   kickers, headings and labels run larger than the site's and grow with the window. */
+.presentation main {
+  --slide-kicker: clamp(0.8125rem, 0.4rem + 0.9vw, 1.375rem);   /* 13 to 22, 19 at 1440 */
+  --slide-label: clamp(0.75rem, 0.5rem + 0.55vw, 1rem);         /* 12 to 16 */
+  --slide-h2: clamp(2rem, 1.25rem + 2.2vw, 3.25rem);            /* 32 to 52 */
+  --slide-h3: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);              /* 24 to 40 */
+  --slide-card-title: clamp(1.25rem, 1rem + 0.45vw, 1.5rem);    /* 20 to 24 */
+}
+
 .presentation main > .section {
-  padding-block: clamp(var(--space-8), 11vh, var(--space-10));
+  padding-block: clamp(var(--space-7), 9vh, var(--space-10));
+
+  /* a link to a slide (the agenda's cards, #anchors) lands with the slide flush under the header */
+  scroll-margin-top: calc(var(--header-height) + 1px);
 }
 
 /* A diagram or a code block needs the height more than the slide needs the air. */
 .presentation main > .section:has(.explainer, .code):not(.plates, .split, .moment) {
-  padding-block: var(--space-6);
+  padding-block: var(--space-5);
+}
+
+.presentation main > .section:has(.explainer, .code):not(.plates, .split, .moment) > div + div {
+  margin-top: var(--space-5);
 }
 
 /* On a screen tall enough to present from, a slide fills it and centers its content. */
@@ -46,28 +64,29 @@
 
 .presentation main > .section > .default-content-wrapper h2 {
   max-width: 44ch;
-  font-size: var(--text-h1);
+  font-size: var(--slide-h2);
   text-wrap: balance;
 }
 
 .presentation main > .section > .default-content-wrapper h3 {
   max-width: 44ch;
-  font-size: var(--text-h2);
+  font-size: var(--slide-h3);
   text-wrap: balance;
 }
 
 /* The kicker: the short line right above a slide's heading. Descendant selectors, so the look
    holds in quick edit, where the editor sits between the wrapper and the text. */
-.presentation main > .section > .default-content-wrapper p:has(+ :is(h2, h3)) {
+.presentation main > .section > .default-content-wrapper p:has(+ :is(h1, h2, h3)) {
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--slide-kicker);
   font-weight: var(--weight-medium);
+  line-height: 1.3;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-accent);
 }
 
-.presentation main > .section > .default-content-wrapper :is(h2, h3) + p {
+.presentation main > .section > .default-content-wrapper :is(h1, h2, h3) + p {
   margin-top: var(--space-4);
   font-size: var(--text-h3);
   line-height: 1.5;
@@ -77,16 +96,17 @@
 /* Quick edit puts each text in its own editor (div.prosemirror-editor > div.ProseMirror > p), so
    the kicker and the lead are found through the editors (the site's edit-mode foundation), in
    default content only (a plate card's heading and line are not a kicker and a lead). */
-.presentation main .default-content-wrapper .prosemirror-editor:has(+ .prosemirror-editor :is(h2, h3)) p {
+.presentation main .default-content-wrapper .prosemirror-editor:has(+ .prosemirror-editor :is(h1, h2, h3)) p {
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--slide-kicker);
   font-weight: var(--weight-medium);
+  line-height: 1.3;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-accent);
 }
 
-.presentation main .default-content-wrapper .prosemirror-editor:has(:is(h2, h3)) + .prosemirror-editor p {
+.presentation main .default-content-wrapper .prosemirror-editor:has(:is(h1, h2, h3)) + .prosemirror-editor p {
   font-size: var(--text-h3);
   line-height: 1.5;
   color: var(--color-text);
@@ -118,8 +138,8 @@
   top: var(--space-4);
   left: 0;
   font-family: var(--font-mono);
-  font-size: var(--text-mono);
-  line-height: 2.3;
+  font-size: var(--slide-label);
+  line-height: calc(1.6 * var(--text-body-lg)); /* the item's first line */
   color: var(--color-accent);
 }
 
@@ -148,6 +168,22 @@
   border-color: currentcolor;
 }
 
+/* An explainer or a code block on a slide: its small type steps up with the slide's. */
+.presentation main .explainer {
+  --text-label: 0.8125rem;
+  --text-mono: 0.9375rem;
+  --text-small: 1rem;
+}
+
+.presentation main .code .code-bar {
+  font-size: 13px;
+}
+
+.presentation main .code pre {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
 /* A slide's facts (why it works, the demo, try it) read at slide size. */
 .presentation main .facts {
   max-width: 62rem;
@@ -159,13 +195,14 @@
 }
 
 .presentation main .facts th {
-  width: 180px;
-  line-height: 2.4;
+  width: 12.5em;
+  font-size: var(--slide-label);
+  line-height: calc(1.55 * var(--text-body-lg)); /* the cell's first line */
 }
 
 @media (width <= 767px) {
   .presentation main .facts th {
-    width: 104px;
+    width: 112px;
   }
 
   .presentation main .facts td {
@@ -178,12 +215,13 @@
    - split: the heading, then a scene on the left and the rest of the slide (the prompt, the
      facts) on the right;
    - moment: one large scene beside the slide's heading (the opener), stacked under it on a phone.
-   The slide is the grid, so its wrappers drop their own container width. */
+   The slide is the grid, so its wrappers drop their own container width.
+   A fourth style, notes, is not a slide: the words said over the slide before it (further down). */
 .presentation main > .section:is(.plates, .split, .moment) {
   display: grid;
   align-content: center;
   column-gap: var(--space-6);
-  padding-block: clamp(var(--space-7), 7vh, var(--space-8));
+  padding-block: clamp(var(--space-6), 5vh, var(--space-8));
   padding-inline: max(var(--gutter), (100% - var(--container-max)) / 2 + var(--gutter));
 }
 
@@ -225,14 +263,15 @@
   display: block;
   margin-bottom: var(--space-2);
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--slide-label);
+  line-height: 1.3;
   letter-spacing: var(--tracking-label);
   color: var(--color-accent);
 }
 
 .presentation main .plates .scene .scene-caption :is(h3, h4) {
   margin: 0 0 var(--space-2);
-  font-size: var(--text-h3);
+  font-size: var(--slide-card-title);
   line-height: 1.3;
   color: var(--color-text);
 }
@@ -260,7 +299,7 @@
   }
 
   .presentation main .split .facts th {
-    width: 112px;
+    width: 9.5em;
   }
 
   .presentation main > .section.moment {
@@ -283,14 +322,28 @@
   width: min(100%, 36rem);
 }
 
-/* a plate's labels, read from across a call */
+/* a plate's labels and its credit line, read from across a call */
 .presentation main > .section.moment .scene .scene-label p {
-  font-size: clamp(10px, 2.2cqi, 14px);
+  font-size: clamp(11px, 2.5cqi, 14.5px);
+  letter-spacing: 0.05em; /* tighter, so a larger label keeps its place in the drawing */
 }
 
-.presentation main > .section.moment > .default-content-wrapper h2 {
+.presentation main > .section.moment .scene .scene-caption {
+  font-size: var(--text-small);
+}
+
+.presentation main :is(.plates, .split) .scene .scene-label p {
+  font-size: clamp(10.5px, 3.5cqi, 12.5px);
+}
+
+.presentation main > .section.moment > .default-content-wrapper :is(h1, h2) {
   max-width: none;
   font-size: clamp(2.25rem, 1rem + 3vw, 4rem);
+}
+
+/* the title slide: a moment whose heading is the page's h1 */
+.presentation main > .section.moment > .default-content-wrapper h1 {
+  font-size: clamp(3rem, 1rem + 5.4vw, 6rem);
 }
 
 .presentation main .split .scene .scene-caption {
@@ -316,11 +369,145 @@
   margin-top: var(--space-2);
 }
 
+.presentation main > .section.video .figure figcaption p {
+  font-size: var(--text-body);
+}
+
 @media (width >= 900px) and (height >= 640px) {
   .presentation main > .section.video .figure {
-    max-width: calc((100svh - var(--header-height) - 13rem) * 16 / 9);
+    max-width: calc((100svh - var(--header-height) - 14.5rem) * 16 / 9);
     margin-inline: auto;
   }
+}
+
+/* ---------- notes (section style notes, since v1.7.7) ----------
+   What was said over a slide, for someone reading the deck afterwards: a section right after the
+   slide, as tall as its text, at reading size and width. Authored as plain paragraphs. A paragraph
+   that is only an italic phrase is the block's label ("Talk track, as planned"), and a bold run is
+   a time in the slide's video ("0:26"). Descendant selectors, so the look holds in quick edit. */
+.presentation main > .section.notes {
+  display: block;
+  min-height: 0;
+  padding-block: var(--space-7);
+  background: var(--color-surface);
+}
+
+.presentation main > .section.notes p {
+  max-width: var(--measure);
+  margin-top: var(--space-4);
+  font-size: var(--text-body-lg);
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.presentation main > .section.notes p > em:only-child {
+  font-family: var(--font-mono);
+  font-size: var(--slide-label);
+  font-style: normal;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.presentation main > .section.notes p strong {
+  margin-right: 0.35em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+}
+
+/* ---------- the deck's outline (a Rail block, placed by presentation.js since v1.7.8) ----------
+   Under the header at the right: shut, it is a small "On this page" control; open, a panel with
+   the outline. From 1800px the window has a margin beside the slides and the outline stays open
+   there, plain, as in an article. */
+.presentation .presentation-rail {
+  position: fixed;
+  z-index: calc(var(--z-header) - 1);
+  top: calc(var(--header-height) + var(--space-3));
+  right: var(--space-4);
+  width: min(20rem, calc(100vw - 2 * var(--space-4)));
+  pointer-events: none;
+}
+
+.presentation .presentation-rail .section {
+  padding: 0;
+}
+
+.presentation .presentation-rail .section > div {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.presentation .presentation-rail .rail-outline {
+  margin-left: auto;
+  width: fit-content;
+  max-height: calc(100svh - var(--header-height) - var(--space-6));
+  overflow-y: auto;
+  scrollbar-width: thin;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+  pointer-events: auto;
+}
+
+.presentation .presentation-rail .rail-outline > summary {
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.presentation .presentation-rail .rail-outline[open] {
+  width: 100%;
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-2);
+}
+
+.presentation .presentation-rail .rail-outline[open] > summary {
+  padding-inline: 0;
+}
+
+@media (width >= 1800px) {
+  .presentation .presentation-rail {
+    top: calc(var(--header-height) + var(--space-6));
+    left: calc(50% + var(--container-max) / 2 + var(--space-4));
+    right: var(--space-4);
+    width: auto;
+    max-width: 18rem;
+  }
+
+  .presentation .presentation-rail .rail-outline[open] {
+    padding: 0 var(--space-2) var(--space-4);
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+/* ---------- scroll progress (under the header, since v1.7.3) ---------- */
+.presentation .scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  pointer-events: none;
+}
+
+/* A plate whose title is a link: the whole card follows it. Its own buttons stay on top. */
+.presentation .plates .scene-caption h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.presentation .plates .scene-figure :is(.scene-toggle, .scene-replay) {
+  z-index: 1;
 }
 
 /* Printed or saved as PDF: each slide starts a page, no site chrome, tighter margins. */
@@ -330,7 +517,8 @@
 
 @media print {
   .presentation > header,
-  .presentation > footer {
+  .presentation > footer,
+  .presentation .presentation-rail {
     display: none;
   }
 
@@ -341,7 +529,8 @@
     break-before: page;
   }
 
-  .presentation main > .section:first-child {
+  .presentation main > .section:first-child,
+  .presentation main > .section.notes {
     break-before: auto;
   }
 

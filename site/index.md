@@ -70,21 +70,21 @@
 
 ---
 
-+-----------------------------------------------------------------------------------------------------------------------+
-| Columns                                                                                                               |
-+-----------------------------------------------------------+-----------------------------------------------------------+
-| ## Talks & presentations                                  | ## Technical Writing                                      |
-|                                                           |                                                           |
-| Most recent: adaptTo() 2026 in Berlin on Sep 29, 2026, on | Latest: [adaptTo() 2026 Recap: 25 AEM Conference Talks in |
-| AI agent-driven content migration for Edge Delivery       | 15 Minutes](/writing/2026-10-10-adaptto-2026-25-talks/).  |
-| Services. Earlier sessions include AEM Rockstar at Adobe  | All 25 full talks from the AEM developer conference in    |
-| Summit 2024, AI Tinkerers, Columbus AI Week, and Denison  | Berlin: what each one is, why to watch it, and my take,   |
-| University.                                               | with a 15-minute video. More of my video walkthroughs on  |
-|                                                           | AEM, Edge Delivery Services and AI are being written up   |
-| [Explore the talk history](/talks/)                       | here, each as a complete guide.                           |
-|                                                           |                                                           |
-|                                                           | [Visit Technical Writing](/writing/)                      |
-+-----------------------------------------------------------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+| Columns                                                                                                              |
++----------------------------------------------------------+-----------------------------------------------------------+
+| ## Talks & presentations                                 | ## Technical Writing                                      |
+|                                                          |                                                           |
+| Most recent: Adobe's AEM Sites webinar on Nov 11, 2026,  | Latest: [adaptTo() 2026 Recap: 25 AEM Conference Talks in |
+| on where AI fits in AEM content work. Earlier sessions   | 15 Minutes](/writing/2026-10-10-adaptto-2026-25-talks/).  |
+| include adaptTo() 2026 in Berlin, AEM Rockstar at Adobe  | All 25 full talks from the AEM developer conference in    |
+| Summit 2024, AI Tinkerers, Columbus AI Week, and Denison | Berlin: what each one is, why to watch it, and my take,   |
+| University.                                              | with a 15-minute video. More of my video walkthroughs on  |
+|                                                          | AEM, Edge Delivery Services and AI are being written up   |
+| [Explore the talk history](/talks/)                      | here, each as a complete guide.                           |
+|                                                          |                                                           |
+|                                                          | [Visit Technical Writing](/writing/)                      |
++----------------------------------------------------------+-----------------------------------------------------------+
 
 ---
 

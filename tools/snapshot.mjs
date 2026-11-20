@@ -16,7 +16,10 @@
  * - the crawler files: robots.txt and sitemap.xml;
  * - the code: every file www-eds serves (its files at origin/main, minus .hlxignore);
  * - media: every media_<hash> file a page, fragment or sheet uses, at full size. The names are
- *   content hashes, so a file kept from the last snapshot is copied, not fetched again;
+ *   content hashes, so a file kept from the last snapshot is copied, not fetched again. Video is
+ *   the exception: it is listed in snapshot.json (notArchived, with its size) and left on www,
+ *   since a static host serves no file over 25 MiB and a talk's demo videos are hundreds of MB
+ *   (their masters are in Drive);
  * - documents: every same-site PDF a page links to (slides next to the page that links them).
  * Written for the host: _redirects from the redirects sheet, _headers with noindex.
  * Exit 1 when a page, fragment, sheet or code file can't be fetched.
@@ -45,6 +48,8 @@ const MEDIA_HOSTS = new Set([new URL(base).host, 'www.jackzhaojin.com',
   'main--www-eds--jackzhaojin.aem.live', 'main--www-eds--jackzhaojin.aem.page']);
 const MEDIA = /(?:https?:\/\/[a-z0-9.-]+)?[^\s"'()<>,[\]]*media_[0-9a-f]{8,}\.[a-z0-9]+/gi;
 const DOCUMENT = /href="([^"#?]+\.pdf)(?:[#?][^"]*)?"/gi;
+/** Media left on www and listed instead (see the header). */
+const VIDEO = /\.(mp4|webm|mov|m4v)$/i;
 
 const git = (...cmd) => execFileSync('git', ['-C', code, ...cmd], { encoding: 'utf8' });
 const files = {};
@@ -109,7 +114,8 @@ function pageLinks(html, from, skip) {
 /** Media paths a text names: www or EDS origin URLs, or relative to where the text is served. */
 function mediaRefs(text, from) {
   const out = new Set();
-  for (const [match] of text.matchAll(MEDIA)) {
+  // Markdown escapes the URLs in a page's JSON-LD (https\://www\.jackzhaojin.com/...).
+  for (const [match] of text.replaceAll('\\', '').matchAll(MEDIA)) {
     try {
       const url = new URL(match, from);
       if (MEDIA_HOSTS.has(url.host)) out.add(url.pathname);
@@ -185,9 +191,14 @@ for (const file of CRAWLER) if (!files[fileFor(file)]) await save(file, 'crawler
 await pool(codePaths, (path) => save(path, 'code'));
 
 // Media: copied from the last snapshot when the hash-named file is already there.
-const media = new Set(texts.flatMap(([text, from]) => (text ? [...mediaRefs(text, from)] : [])));
+const allMedia = new Set(texts.flatMap(([text, from]) => (text ? [...mediaRefs(text, from)] : [])));
+const media = [...allMedia].filter((path) => !VIDEO.test(path));
+const notArchived = await pool([...allMedia].filter((path) => VIDEO.test(path)).sort(), async (path) => {
+  const res = await fetch(`${base}${path}`, { method: 'HEAD' });
+  return { url: path, kind: 'video', status: res.status, bytes: Number(res.headers.get('content-length')) || null };
+});
 let reused = 0;
-await pool([...media].sort(), async (path) => {
+await pool(media.sort(), async (path) => {
   const file = fileFor(path);
   const old = previous?.files?.[file];
   if (old && await exists(join(OUT, file))) {
@@ -235,6 +246,7 @@ const head = {
   bytes: Object.values(files).reduce((sum, { bytes }) => sum + bytes, 0),
   warnings: [...warnings].sort(),
   notPages: notPages.sort(),
+  notArchived,
 };
 const lines = Object.keys(files).sort().map((file) => `    ${JSON.stringify(file)}: ${JSON.stringify(files[file])}`);
 const json = JSON.stringify(head, null, 2).replace(/\n}$/, `,\n  "files": {\n${lines.join(',\n')}\n  }\n}\n`);
@@ -256,4 +268,8 @@ if (previous) {
   }
 }
 if (notPages.length) console.log(`  links that are not pages: ${notPages.length} (see snapshot.json notPages)`);
+if (notArchived.length) {
+  const mb = notArchived.reduce((sum, { bytes }) => sum + (bytes || 0), 0) / 1e6;
+  console.log(`  videos left on www: ${notArchived.length}, ${mb.toFixed(1)} MB (see snapshot.json notArchived)`);
+}
 warnings.forEach((warning) => console.log(`  warn ${warning}`));

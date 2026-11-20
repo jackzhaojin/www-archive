@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1280" height="900" fill="#ffffff"/>
+  <text x="40" y="46" font-size="21" fill="#1f2328" font-weight="700">Architecture - two repos, three layers, many vendors</text>
+  <text x="40" y="70" font-size="13" fill="#57606a">The agent's brain is this repo; everything it builds lands in a sibling repo. Intelligence is agentic (LLM); the edges are plain code; git is the only durable store.</text>
+
+  <!-- ===================== LEFT: INPUTS & HUMAN ===================== -->
+  <text x="40" y="104" font-size="11.5" fill="#57606a" font-weight="700" letter-spacing="0.6">INPUTS &amp; THE HUMAN</text>
+
+  <rect x="40" y="116" width="270" height="132" rx="10" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="56" y="142" font-size="14" fill="#1f2328" font-weight="700">Goal queue</text>
+  <text x="56" y="164" font-size="11.5" fill="#3d444d">drafts/ -&gt; ondeck/ -&gt; in-progress/</text>
+  <text x="56" y="182" font-size="11.5" fill="#3d444d">P0..P4 -&gt; completed/</text>
+  <text x="56" y="203" font-size="11.5" fill="#3d444d">each goal: a PROMPT.md bundle,</text>
+  <text x="56" y="221" font-size="11.5" fill="#3d444d">+ STEPS.json when broken down</text>
+  <text x="56" y="241" font-size="11.5" fill="#1f2328" font-weight="600">priority P0 &gt; P1 &gt; P2 &gt; P3 &gt; P4</text>
+
+  <rect x="40" y="262" width="270" height="118" rx="10" fill="#e9f5ee" stroke="#1a7f37" stroke-width="1.5"/>
+  <text x="56" y="288" font-size="14" fill="#116329" font-weight="700">needs-you.md - the async gate</text>
+  <text x="56" y="310" font-size="11.5" fill="#2f4a3a">blocked asks as a markdown table;</text>
+  <text x="56" y="328" font-size="11.5" fill="#2f4a3a">you reply in the Response column</text>
+  <text x="56" y="348" font-size="11.5" fill="#2f4a3a">[APPROVED] [DECISION] [INFO] [SKIP]</text>
+  <text x="56" y="368" font-size="11.5" fill="#2f4a3a">picked up in ~30s; no inner-loop wait</text>
+
+  <rect x="40" y="394" width="270" height="92" rx="10" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.5"/>
+  <text x="56" y="420" font-size="14" fill="#1f2328" font-weight="700">Identity <tspan font-size="11.5" font-weight="400" fill="#57606a">(opt-in)</tspan></text>
+  <text x="56" y="442" font-size="11.5" fill="#3d444d">Gmail: new goals &amp; approvals, in</text>
+  <text x="56" y="460" font-size="11.5" fill="#3d444d">Discord: completion / blocked, out</text>
+  <text x="56" y="478" font-size="11.5" fill="#3d444d">feature-flagged, off by default</text>
+
+  <rect x="40" y="500" width="270" height="130" rx="10" fill="#fff0f0" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="56" y="526" font-size="14" fill="#a40e26" font-weight="700">Constitution - 8 hard limits</text>
+  <text x="56" y="548" font-size="11.5" fill="#86303a">$20/mo cap · no deletes · no publish</text>
+  <text x="56" y="566" font-size="11.5" fill="#86303a">no key exposure · no access widening</text>
+  <text x="56" y="584" font-size="11.5" fill="#86303a">no output in agent repo · all logged</text>
+  <text x="56" y="602" font-size="11.5" fill="#86303a">10 retries before blocking</text>
+  <text x="56" y="617" font-size="11" fill="#57606a" font-style="italic">never auto-modified; enforced in code</text>
+
+  <!-- ===================== CENTER: THE BRAIN ===================== -->
+  <rect x="330" y="116" width="600" height="700" rx="14" fill="#f7faff" stroke="#0969da" stroke-width="1.6"/>
+  <text x="346" y="142" font-size="15" fill="#0550ae" font-weight="700">continuous-agent <tspan font-size="12" font-weight="400" fill="#57606a">- the agent brain (this repo); PM2 runs dist/core/executive-loop.js</tspan></text>
+
+  <rect x="346" y="156" width="568" height="52" rx="8" fill="#eaf1ff" stroke="#9ec5e8" stroke-width="1.2"/>
+  <text x="362" y="178" font-size="13" fill="#0550ae" font-weight="700">core/ <tspan font-size="11.5" font-weight="400" fill="#3d444d">- executive-loop.ts (the 8-phase loop) · vendor-registry · types · logging</tspan></text>
+  <text x="362" y="197" font-size="11.5" fill="#57606a">the one orchestration seam; logs tag every op [AGENTIC] or [DETERMINISTIC]</text>
+
+  <rect x="346" y="222" width="276" height="252" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1.3"/>
+  <text x="362" y="246" font-size="13.5" fill="#0550ae" font-weight="700">agentic/ <tspan font-size="11.5" font-weight="400" fill="#57606a">- decisions (LLM)</tspan></text>
+  <text x="362" y="272" font-size="11.5" fill="#33445c" font-weight="600">work-selection</text>
+  <text x="362" y="290" font-size="11.5" fill="#33445c">pick the goal, break it into steps</text>
+  <text x="362" y="314" font-size="11.5" fill="#33445c" font-weight="600">execution</text>
+  <text x="362" y="332" font-size="11.5" fill="#33445c">spawn workers, retry with new strategy</text>
+  <text x="362" y="356" font-size="11.5" fill="#33445c" font-weight="600">intelligence</text>
+  <text x="362" y="374" font-size="11.5" fill="#33445c">prompt-builder · strategy · intent</text>
+  <text x="362" y="398" font-size="11.5" fill="#33445c" font-weight="600">diagnosis</text>
+  <text x="362" y="416" font-size="11.5" fill="#33445c">investigate why a run failed</text>
+  <text x="362" y="440" font-size="11.5" fill="#33445c" font-weight="600">learning</text>
+  <text x="362" y="458" font-size="11.5" fill="#33445c">update capability confidence</text>
+
+  <rect x="638" y="222" width="276" height="252" rx="8" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.3"/>
+  <text x="654" y="246" font-size="13.5" fill="#1f2328" font-weight="700">deterministic/ <tspan font-size="11.5" font-weight="400" fill="#57606a">- mechanics (no LLM)</tspan></text>
+  <text x="654" y="272" font-size="11.5" fill="#3d444d" font-weight="600">health-checker</text>
+  <text x="654" y="290" font-size="11.5" fill="#3d444d">auth, disk, dependencies</text>
+  <text x="654" y="314" font-size="11.5" fill="#3d444d" font-weight="600">state-handler</text>
+  <text x="654" y="332" font-size="11.5" fill="#3d444d">PROMPT.md · STEPS.json · needs-you</text>
+  <text x="654" y="356" font-size="11.5" fill="#3d444d" font-weight="600">verifiers/</text>
+  <text x="654" y="374" font-size="11.5" fill="#3d444d">checks on result.output_path</text>
+  <text x="654" y="398" font-size="11.5" fill="#3d444d" font-weight="600">credential-tiers</text>
+  <text x="654" y="416" font-size="11.5" fill="#3d444d">leak guard, checked per spawn</text>
+  <text x="654" y="440" font-size="11.5" fill="#3d444d" font-weight="600">notion-reporter · backoff</text>
+  <text x="654" y="458" font-size="11.5" fill="#3d444d">reporting · exponential backoff</text>
+
+  <rect x="346" y="488" width="568" height="52" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <text x="362" y="510" font-size="13" fill="#1f2328" font-weight="700">skills <tspan font-size="11.5" font-weight="400" fill="#3d444d">- the intelligence lives here, not in TypeScript</tspan></text>
+  <text x="362" y="529" font-size="11.5" fill="#57606a">.claude/skills/ (executive) · claude-files-to-output/skills/ (worker, synced per spawn)</text>
+
+  <rect x="346" y="554" width="568" height="48" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <text x="362" y="575" font-size="13" fill="#1f2328" font-weight="700">ledgers/ <tspan font-size="11.5" font-weight="400" fill="#3d444d">- append-only JSONL audit trail (work-ledger.jsonl + worker logs)</tspan></text>
+  <text x="362" y="593" font-size="11.5" fill="#57606a">evidence before words: every action is logged, whether applied or denied</text>
+
+  <rect x="346" y="616" width="568" height="52" rx="8" fill="#fffaf0" stroke="#d4a72c" stroke-width="1.2"/>
+  <text x="362" y="638" font-size="13" fill="#7d4e00" font-weight="700">execution patterns <tspan font-size="11.5" font-weight="400" fill="#5c4813">- resolved per goal</tspan></text>
+  <text x="362" y="657" font-size="11.5" fill="#5c4813">plan-then-execute (default) · plan-mode · loop-until-progress · harness (v2.2)</text>
+
+  <rect x="346" y="682" width="568" height="52" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="362" y="704" font-size="13" fill="#1f2328" font-weight="700">the principle</text>
+  <text x="362" y="723" font-size="11.5" fill="#57606a">agentic = LLM judgment; everything else is deterministic plumbing you can audit.</text>
+
+  <text x="346" y="762" font-size="11.5" fill="#57606a"><tspan font-weight="700" fill="#1f2328">Self-enhancement:</tspan> [SELF-ENHANCE] and [SKILL-BUILD] goals spawn subagents that edit</text>
+  <text x="346" y="780" font-size="11.5" fill="#57606a">this repo or add skills, on review branches - the only way the agent writes its own code.</text>
+
+  <!-- ===================== RIGHT: COGNITION & OUTPUT ===================== -->
+  <text x="950" y="104" font-size="11.5" fill="#57606a" font-weight="700" letter-spacing="0.6">COGNITION &amp; OUTPUT</text>
+
+  <rect x="950" y="116" width="290" height="150" rx="10" fill="#fbf5ff" stroke="#8250df" stroke-width="1.5"/>
+  <text x="966" y="142" font-size="14" fill="#6639ba" font-weight="700">Vendor abstraction <tspan font-size="11" font-weight="400" fill="#57606a">(v2.1)</tspan></text>
+  <text x="966" y="164" font-size="11.5" fill="#4a3a63">AgentWorkerProvider (full agentic)</text>
+  <text x="966" y="182" font-size="11.5" fill="#4a3a63">ChatCompletionProvider (text in/out)</text>
+  <text x="966" y="200" font-size="11.5" fill="#4a3a63">pick: worker_vendor &gt; env &gt; claude</text>
+  <rect x="966" y="212" width="112" height="24" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="1022" y="228" font-size="11" fill="#6639ba" font-weight="600" text-anchor="middle">Claude Agent SDK</text>
+  <rect x="1086" y="212" width="86" height="24" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="1129" y="228" font-size="11" fill="#6639ba" font-weight="600" text-anchor="middle">OpenAI Codex</text>
+  <rect x="1180" y="212" width="48" height="24" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="1.1"/>
+  <text x="1204" y="228" font-size="11" fill="#6639ba" font-weight="600" text-anchor="middle">Kimi</text>
+  <text x="966" y="254" font-size="11" fill="#57606a" font-style="italic">all normalize to AgentWorkerMessage</text>
+
+  <rect x="950" y="280" width="290" height="190" rx="10" fill="#fff8f0" stroke="#f6821f" stroke-width="1.5"/>
+  <text x="966" y="306" font-size="14" fill="#9a5b13" font-weight="700">ai-sandbox/ <tspan font-size="11.5" font-weight="400" fill="#57606a">- the output (sibling repo)</tspan></text>
+  <text x="966" y="330" font-size="11.5" fill="#5c4813">ALL worker output lands here - never the</text>
+  <text x="966" y="348" font-size="11.5" fill="#5c4813">agent repo (constitution Art. I-6)</text>
+  <text x="966" y="372" font-size="11.5" fill="#5c4813" font-weight="600">worktree-per-project</text>
+  <text x="966" y="390" font-size="11.5" fill="#5c4813">base -&gt; proj/&lt;slug&gt; (one per goal)</text>
+  <text x="966" y="408" font-size="11.5" fill="#5c4813">main (showcase) · monorepo/legacy-v2.2</text>
+  <text x="966" y="432" font-size="11.5" fill="#5c4813" font-weight="600">build_target</text>
+  <text x="966" y="450" font-size="11.5" fill="#5c4813">worktree (default) / existing / monorepo</text>
+
+  <rect x="950" y="484" width="290" height="172" rx="10" fill="#f9f0f9" stroke="#611f69" stroke-width="1.5"/>
+  <text x="966" y="510" font-size="14" fill="#4a154b" font-weight="700">V3.0 second brain <tspan font-size="11.5" font-weight="400" fill="#57606a">(mem0)</tspan></text>
+  <text x="966" y="532" font-size="11.5" fill="#3d2a3e">executive-tier only; workers never call it</text>
+  <text x="966" y="550" font-size="11.5" fill="#3d2a3e">workers get a baked-in memory pack instead</text>
+  <text x="966" y="574" font-size="11.5" fill="#3d2a3e">harvester writes · reader reads</text>
+  <text x="966" y="592" font-size="11.5" fill="#3d2a3e">5 memory types · 5 hooks (A-E), flag-gated</text>
+  <text x="966" y="610" font-size="11.5" fill="#3d2a3e">driven by the ./bin/mem0 CLI, not MCP</text>
+  <text x="966" y="636" font-size="11" fill="#57606a" font-style="italic">git is truth; mem0 is a rebuildable view</text>
+
+  <rect x="950" y="670" width="290" height="94" rx="10" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.5"/>
+  <text x="966" y="696" font-size="14" fill="#1f2328" font-weight="700">Credential tiers</text>
+  <text x="966" y="718" font-size="11.5" fill="#3d444d">.env.executive · .env.worker · .env.app</text>
+  <text x="966" y="736" font-size="11.5" fill="#3d444d">three separate files; validated per spawn</text>
+  <text x="966" y="754" font-size="11.5" fill="#3d444d">executive-tier keys never reach workers</text>
+
+  <!-- ===================== FLOW ARROWS ===================== -->
+  <line x1="312" y1="182" x2="328" y2="182" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="324" y="175" font-size="10.5" fill="#57606a" transform="rotate(-90 324 175)">select</text>
+  <line x1="328" y1="321" x2="312" y2="321" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <text x="324" y="314" font-size="10.5" fill="#57606a" transform="rotate(-90 324 314)">block / answer</text>
+  <line x1="328" y1="440" x2="312" y2="440" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="324" y="433" font-size="10.5" fill="#57606a" transform="rotate(-90 324 433)">notify</text>
+
+  <line x1="932" y1="360" x2="948" y2="360" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="944" y="353" font-size="10.5" fill="#57606a" transform="rotate(-90 944 353)">spawn</text>
+  <line x1="932" y1="560" x2="948" y2="560" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <text x="944" y="553" font-size="10.5" fill="#57606a" transform="rotate(-90 944 553)">memory</text>
+  <path d="M 1095 266 L 1095 278" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+  <text x="1108" y="276" font-size="10.5" fill="#57606a">cognition</text>
+
+  <!-- footer -->
+  <line x1="40" y1="836" x2="1240" y2="836" stroke="#d0d7de" stroke-width="1"/>
+  <text x="40" y="860" font-size="12.5" fill="#57606a"><tspan font-weight="700" fill="#0550ae">One pass:</tspan> queue -&gt; the executive selects and builds a prompt -&gt; a worker runs in an ai-sandbox worktree on a chosen vendor -&gt; verifiers check the output -&gt; the ledger records it.</text>
+  <text x="40" y="882" font-size="12.5" fill="#57606a"><tspan font-weight="700" fill="#1f2328">Isolation:</tspan> workers hold no secrets beyond their tier and write only to ai-sandbox; the executive is the only tier that holds memory. Git is the one durable store - everything is a commit.</text>
+</svg>
